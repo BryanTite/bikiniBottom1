@@ -10,7 +10,7 @@
                 <img src="../../assets/img/carusel 2.webp" class="d-block w-100" alt="imagen publicitaria">
                 </div>
                 <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="imagen publicitaria">
+                <img src="../../assets/img/carusel 3.webp" class="d-block w-100" alt="imagen publicitaria">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -30,7 +30,7 @@
                     <div class="col">
                         <h1>- SERVICIO -</h1>
                         <img src="" alt="Imagen del servicio">
-                        <a href="/login" class=""></a>
+                        <a href="" class=""> <img src="../../assets/img/consult.png" alt="imagen publicitaria"></a>
                     </div>
     
                     <div class="vr mt-4 separador"></div>
