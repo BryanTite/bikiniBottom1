@@ -35,12 +35,12 @@ export const routes = [
     component: Posts
    },
    {
-    name: 'addposts',
+    name: 'addpost',
     path: '/posts/add',
     component: AddPost
    },
    {
-    name: 'editposts',
+    name: 'editpost',
     path: '/posts/edit',
     component: EditPost
    }

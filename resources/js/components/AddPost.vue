@@ -93,7 +93,40 @@ import { read } from 'fs';
         }
 
 
+    },
+
+    /* INICIO */
+    addPost(e){
+        this.$axios.get('/sanctum/csrf-cookie').then(response => {
+            let existObj = this;
+            const config = {
+                headers:{
+                    'content-type': 'multipart/form-data'
+                }
+            }
+
+            const formData = new FormData();
+            formData.append('name', this.name);
+            formData.append('description', this.description);
+            formData.append('file', this.img);
+
+            this.$axios.post('/api/posts/add', formData, config)
+                .then(response => {
+                    existObj.strError = "";
+                    existObj.strSuccess = response.data.success;
+                }
+            )
+                .catch(function (error){
+                    existObj.strError = error.response.data.message;
+                    existObj.strSuccess = response.data.success;
+                }
+                );
+           
+        });
     }
+
+    /* FIN */
+
  }
  
  

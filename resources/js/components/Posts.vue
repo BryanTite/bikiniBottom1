@@ -22,13 +22,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td class="text-center">index</td>
-                    <td>post.name</td>
-                    <td>post.description</td>
+                <tr v-for="(post, index) in posts" :key="post.id">
+                    <td class="text-center">{{index}}</td>
+                    <td>{{post.name}}</td>
+                    <td>{{post.description}}</td>
                     <td class="text-center">
-                        <div >
-                            <img alt="post-img" width="100">
+                        <div v-if="post.image">
+                            <!-- se recoge la imagen de la ruta con el nombre guardado -->
+                            <img alt="post-img" width="100" v-bind:src="'/img/' + post.img">
                         </div>
                     </td>
                     <td class="text-center">
@@ -55,17 +56,32 @@
  export default {
     data() {
         return {
- 
+            
+            posts: [],
+            strSuccess: '',
+            strError: ''
  
         }
     },
     created() {
  
- 
+        this.$axios.get('/sanctum/csrf-cookie').then(response => {
+            this.$axios.get('api/posts')
+                .then(response => {
+                    this.posts = response.data;
+                
+                })
+                .catch(function (error){
+                    console.log(error);
+                });
+               
+        });
+
     },
     methods: {
  
  
     }
  }
+ </script>
  
