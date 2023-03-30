@@ -30,7 +30,7 @@
                     <div class="col">
                         <h1>- SERVICIO -</h1>
                         <img src="" alt="Imagen del servicio">
-                        <a href="/login" class=""></a>
+                        <a href="" class=""> <img src="../../assets/img/consult.png" alt="imagen publicitaria"></a>
                     </div>
     
                     <div class="vr mt-4 separador"></div>
