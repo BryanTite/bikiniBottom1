@@ -61,7 +61,6 @@
  
  
  <script>
-import { read } from 'fs';
 
  export default {
     data() {
