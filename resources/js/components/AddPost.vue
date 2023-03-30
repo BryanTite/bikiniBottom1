@@ -76,21 +76,22 @@ import { read } from 'fs';
         }
     },
     methods: {
-        onChangeImg(e){
+        
+        onChangeImg(e) {
             this.img = e.target.files[0];
             let reader = new FileReader();
-
-            reader.addEventListener("load", function(){
+            reader.addEventListener("load", function () {
                 this.imgPreview = reader.result;
-            }.bind(this),false);
+            }.bind(this), false);
 
-            if(this.img){
-                if(){
-                    reader.readAsDataURL(this.img);
+
+            if (this.img) {
+                if ( /\.(jpe?g|png|gif)$/i.test( this.img.name ) ) {
+                    reader.readAsDataURL( this.img );
                 }
             }
-
         }
+
 
     }
  }
