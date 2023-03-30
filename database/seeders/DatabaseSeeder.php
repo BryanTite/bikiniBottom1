@@ -12,8 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
+        //Te crea 10 usuarios aleatorios
         // \App\Models\User::factory(10)->create();
 
+        //Te crea un usuario aleatorio
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
