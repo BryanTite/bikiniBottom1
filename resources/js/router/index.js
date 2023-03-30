@@ -43,7 +43,7 @@ export const routes = [
     name: 'editpost',
     path: '/posts/edit',
     component: EditPost
-   }
+   },
 ];
 
 const router = createRouter({
