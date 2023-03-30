@@ -29,7 +29,7 @@
                     <td class="text-center">
                         <div v-if="post.image">
                             <!-- se recoge la imagen de la ruta con el nombre guardado -->
-                            <img alt="post-img" width="100" v-bind:src="'/img/' + post.img">
+                            <img alt="post-img" width="100" v-bind:src="'/img/' + post.image">
                         </div>
                     </td>
                     <td class="text-center">
