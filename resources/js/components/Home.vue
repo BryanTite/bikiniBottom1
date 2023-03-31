@@ -24,33 +24,33 @@
         </div>
         <!-- fin carrusel con imagenes -->
         <!-- consultar, informaion, calendario -->
-        
+
         <div class="row">
-    
+
                     <div class="col">
-                        <h1>- SERVICIOOS -</h1>
+                        <h1>- SERVICIOS -</h1>
                         <img src="" alt="Imagen del servicio">
                         <a href="" class=""> <img src="../../assets/img/consult.png" alt="imagen publicitaria"></a>
                     </div>
-    
+
                     <div class="vr mt-4 separador"></div>
-    
+
                     <div class="col invisibleMovil">
                         <h1>EXPERIENCIA -</h1>
                         <img src="" alt="Imagen de la experiencia">
                         <a href="/login" class=""></a>
                     </div>
-    
+
                     <div class="vr mt-4 separador"></div>
-    
+
                     <div class="col invisibleMovil">
                         <h1>- CALIDAD -</h1>
                         <img src="" alt="Imagen de la calidad">
                         <a href="/login" class=""></a>
                     </div>
-    
+
             </div>
-    
+
         <!-- fin consultar, informaion, calendario -->
     </div>
     </template>
@@ -60,7 +60,7 @@
       name: "Home"
   }
   </script>
-    
+
     <style scoped>
-    
+
     </style>
