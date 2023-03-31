@@ -48,6 +48,12 @@
                         <img src="" alt="Imagen de la calidad">
                         <a href="/login" class=""></a>
                     </div>
+                    
+                    <div class="col invisibleMovil">
+                        <h1>- CALIDAD -</h1>
+                        <img src="" alt="Imagen de la calidad">
+                        <a href="/login" class=""></a>
+                    </div>
 
             </div>
 
