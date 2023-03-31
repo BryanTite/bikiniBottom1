@@ -28,7 +28,7 @@
         <div class="row">
     
                     <div class="col">
-                        <h1>- SERVICIO -</h1>
+                        <h1>- SERVICIOOS -</h1>
                         <img src="" alt="Imagen del servicio">
                         <a href="" class=""> <img src="../../assets/img/consult.png" alt="imagen publicitaria"></a>
                     </div>
