@@ -1,6 +1,6 @@
 <template>
     <!-- header -->
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <nav class="navbar navbar-expand-sm navbar-light bg-info mb-4 titulos-navbar">
             <a class="navbar-brand" href="#">Laravel Vue</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"

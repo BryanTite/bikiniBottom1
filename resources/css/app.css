@@ -3,10 +3,15 @@
     src: url('../font/Aquatic-PersonalUse.otf');
     }
 
+@font-face {
+    font-family: 'Infantil';
+    src: url('../font/Fisherman FREE.otf');
+    }
 /* header */
     .titulos-navbar{
-        font-family: 'Aquatic';
+        font-family: 'Infantil';
     }
+
 
 
 /* fin header */
