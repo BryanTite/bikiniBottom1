@@ -60,7 +60,7 @@
                             <div class="form-group row">
                                 <label for="name" class="col-sm-4 col-form-label text-md-right">Avatar</label>
                                 <div class="col-md-8">
-                                    <input id="image" type="text" class="form-control" v-model="image" required
+                                    <input id="image" type="text" class="form-control" v-model="image"
                                            autofocus autocomplete="off"  placeholder="Enter your name">
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
 
 
 <script>
-export default {
+ export default {
     data() {
         return {
             email:"",
@@ -116,13 +116,13 @@ export default {
            if(this.password.length > 0) {
                this.$axios.get('/sanctum/csrf-cookie').then(response => {
                    this.$axios.post('api/register', {
-                       email: this.email,   
+                       email: this.email,
                        name: this.name,
                        surname: this.surname,
                        password: this.password,
                        phone: this.phone,
                        image: this.image
-                       
+
                    })
                        .then(response => {
                            if (response.data.success) {
@@ -138,6 +138,6 @@ export default {
            }
         }
     }
-   
+
 }
 </script>
