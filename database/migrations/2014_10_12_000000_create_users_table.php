@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('password');
-            $table->string('ROL')->nullable();
+            $table->string('ROL')->default('user');
             $table->integer('phone');
             $table->string('image')->nullable();
             $table->timestamps();
