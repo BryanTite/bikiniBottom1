@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('password');
-            $table->string('ROL')->default('user');
+            $table->string('rol')->default('user');
             $table->integer('phone');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }
