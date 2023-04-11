@@ -7,6 +7,8 @@ import Dashboard from '../components/Dashboard.vue';
 import Posts from '../components/Posts.vue';
 import AddPost from '../components/AddPost.vue';
 import EditPost from '../components/EditPost.vue';
+import Purchase from '../components/Purchase.vue';
+import Tickets from '../components/Tickets.vue';
 
 export const routes = [
    {
@@ -44,6 +46,16 @@ export const routes = [
     path: '/posts/edit',
     component: EditPost
    },
+   {
+    name: 'purchase',
+    path: '/purchase',
+    component: Purchase
+    },
+    {
+    name: 'tickets',
+    path: '/tickets',
+    component: Tickets
+    },
 ];
 
 const router = createRouter({

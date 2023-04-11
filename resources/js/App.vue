@@ -8,12 +8,15 @@
             <div class="navbar-nav" v-if="isLoggedin">
                 <router-link to="/dashboard" class="nav-item nav-link">Dashboard</router-link>
                 <router-link to="/posts" class="nav-item nav-link">xxxx</router-link>
+                <router-link to="/purchase" class="nav-item nav-link">xxxx</router-link>
                 <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">Logout</a>
             </div>
             <div class="navbar-nav" v-else>
                 <router-link to="/" class="nav-item nav-link">Home</router-link>
+                <router-link to="/tickets" class="nav-item nav-link">Servicios y tarifas</router-link>
                 <router-link to="/login" class="nav-item nav-link">Login</router-link>
                 <router-link to="/register" class="nav-item nav-link">Register</router-link>
+                
             </div>
         </nav>
 <!-- contenido componentes -->

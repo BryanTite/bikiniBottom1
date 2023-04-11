@@ -11,14 +11,14 @@
  
  
                 <div class="card card-default">
-                    <div class="card-header"><h5>Login</h5></div>
+                    <div class="card-header"><h5>REGISTRO</h5></div>
                     <div class="card-body">
                         <form>
                             <div class="form-group row">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
+                                <label for="email" class="col-sm-4 col-form-label text-md-right">Correo Electronico:</label>
                                 <div class="col-md-8">
                                     <input id="email" type="email" class="form-control" v-model="email" required
-                                           autofocus autocomplete="off" placeholder="Enter your email">
+                                           autofocus autocomplete="off" placeholder="Inserta correo electronico">
                                 </div>
                             </div>
  
@@ -26,10 +26,10 @@
  
  
                             <div class="form-group row mt-1">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña:</label>
                                 <div class="col-md-8">
                                     <input id="password" type="password" class="form-control" v-model="password"
-                                           required autocomplete="off" placeholder="Enter your password">
+                                           required autocomplete="off" placeholder="Inserta contraseña">
                                 </div>
                             </div>
  
@@ -37,7 +37,7 @@
                             <div class="form-group row mt-1 mb-0">
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-success" @click="doLogin">
-                                        Login
+                                        INICIAR SESION
                                     </button>
                                 </div>
                             </div>
@@ -46,8 +46,8 @@
                             <div class="row mt-1">
                                 <div class="col-md-8 offset-md-4">
                                     <small class="text-muted">
-                                        Don't have any account yet? Please
-                                        <router-link to="/register" >Register</router-link>
+                                        No tienes una cuenta aún?
+                                        <router-link to="/register" >Regsitrate</router-link>
                                     </small>
                                 </div>
                             </div>
