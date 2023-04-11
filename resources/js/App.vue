@@ -1,7 +1,7 @@
 <template>
     <!-- header -->
     <div class="container-fluid" >
-        <nav class="navbar navbar-expand-sm navbar-light bg-info mb-4 titulos-navbar">
+        <nav class="navbar navbar-expand-sm navbar-light bg-info mb-4 titulos">
             <a class="navbar-brand" href="#">Laravel Vue</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -43,10 +43,10 @@
                             </p>
                             <div class="alinearRedes">
                                 <div class="hoverRedes">
-                                    <a href="https://www.instagram.com/marisqueriasantos/?hl=es"><img src="assets/images/iconos/insta.svg" alt="Icono de Instagram"></a>
+                                    <a href="https://www.instagram.com/marisqueriasantos/?hl=es"><img src="../assets/icons/insta.svg" alt="Icono de Instagram"></a>
                                 </div>
                                 <div class="hoverRedes">
-                                    <a href="https://www.facebook.com/marisqueria.santos/"><img src="assets/images/iconos/fb.svg" alt="Icono de Facebook"></a>
+                                    <a href="https://www.facebook.com/marisqueria.santos/"><img src="../assets/icons/fb.svg" alt="Icono de Facebook"></a>
                                 </div>
                             </div>
 
@@ -60,15 +60,15 @@
                                 RESERVAS Y CONTACTO
                             </h6>
                             <p>
-                                <img src="assets/images/iconos/mail.svg" alt="Icono del Mail">
+                                <img src="../assets/icons/mail.svg" alt="Icono del Mail">
                                 seafoodreynas@gmail.com
                             </p>
                             <p>
-                                <img src="assets/images/iconos/movil.svg" alt="Icono del número de móvil">
+                                <img src="../assets/icons/movil.svg" alt="Icono del número de móvil">
                                 684759824
                             </p>
                             <p>
-                                <img src="assets/images/iconos/movil.svg" alt="Icono del númrero de teléfono fijo">
+                                <img src="../assets/icons/movil.svg" alt="Icono del númrero de teléfono fijo">
                                 936487258
                             </p>
                         </div>

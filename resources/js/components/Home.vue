@@ -25,28 +25,25 @@
         <!-- fin carrusel con imagenes -->
         <!-- consultar, informaion, calendario -->
 
-        <div class="row">
+        <div class="row titulos">
 
-                    <div class="col">
-                        <h1>- SERVICIOS -</h1>
-                        <img src="" alt="Imagen del servicio">
-                        <a href="" class=""> <img src="../../assets/icons/consult.png" alt="imagen publicitaria"></a>
+                    <div class="col centrado">
+                        <h1>SERVICIoS</h1>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/buscar.svg" alt="imagen publicitaria"></a>
                     </div>
 
                     <div class="vr mt-4 separador"></div>
 
-                    <div class="col invisibleMovil">
-                        <h1>EXPERIENCIA -</h1>
-                        <img src="" alt="Imagen de la experiencia">
-                        <a href="/login" class=""></a>
+                    <div class="col centrado">
+                        <h1>EXPERIENCIA</h1>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/form.svg" alt="imagen publicitaria"></a>
                     </div>
 
                     <div class="vr mt-4 separador"></div>
 
-                    <div class="col invisibleMovil">
-                        <h1>- CALIDAD -</h1>
-                        <img src="" alt="Imagen de la calidad">
-                        <a href="/login" class=""></a>
+                    <div class="col centrado">
+                        <h1>CALIDAD</h1>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/gps.svg" alt="imagen publicitaria"></a>
                     </div>
 
             </div>

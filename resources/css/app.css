@@ -2,14 +2,15 @@
     font-family: 'Aquatic';
     src: url('../font/Aquatic-PersonalUse.otf');
     }
-
 @font-face {
-    font-family: 'Infantil';
-    src: url('../font/Fisherman FREE.otf');
+    font-family: 'Bondrians';
+    src: url('../font/Bondrians.otf');
     }
+
+
 /* header */
-    .titulos-navbar{
-        font-family: 'Infantil';
+    .titulos{
+        font-family: 'Aquatic';
     }
 
 
@@ -17,6 +18,16 @@
 /* fin header */
 
 /* body */
+.centrado{
+    text-align: center;
+}
+.iconos-info{
+    width:70px;
+    height: 70px;
+}
+    /* panel informaivo - HOME */
+
+    /* fin panel informaivo - HOME */
 
 /* fin body */
 
