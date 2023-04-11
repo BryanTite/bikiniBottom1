@@ -101,9 +101,12 @@
 export default {
     data() {
         return {
-            name:"",
             email:"",
+            name:"",
+            surname:"",
             password:"",
+            phone:"",
+            image:"",
             error: null
         }
     },
@@ -113,9 +116,13 @@ export default {
            if(this.password.length > 0) {
                this.$axios.get('/sanctum/csrf-cookie').then(response => {
                    this.$axios.post('api/register', {
+                       email: this.email,   
                        name: this.name,
-                       email: this.email,
-                       password: this.password
+                       surname: this.surname,
+                       password: this.password,
+                       phone: this.phone,
+                       image: this.image
+                       
                    })
                        .then(response => {
                            if (response.data.success) {
