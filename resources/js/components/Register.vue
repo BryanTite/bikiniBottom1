@@ -29,14 +29,14 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="name" class="col-sm-4 col-form-label text-md-right">Apellido</label>
+                                <label for="surname" class="col-sm-4 col-form-label text-md-right">Apellido</label>
                                 <div class="col-md-8">
                                     <input id="surname" type="text" class="form-control" v-model="surname" required
                                            autofocus autocomplete="off"  placeholder="Enter your name">
                                 </div>
                             </div>
 
-                           
+
 
 
 
@@ -51,14 +51,14 @@
 
 
                             <div class="form-group row">
-                                <label for="name" class="col-sm-4 col-form-label text-md-right">tlf</label>
+                                <label for="phone" class="col-sm-4 col-form-label text-md-right">tlf</label>
                                 <div class="col-md-8">
                                     <input id="phone" type="number" class="form-control" v-model="phone" required
                                            autofocus autocomplete="off"  placeholder="Enter your name">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="name" class="col-sm-4 col-form-label text-md-right">Avatar</label>
+                                <label for="image" class="col-sm-4 col-form-label text-md-right">Avatar</label>
                                 <div class="col-md-8">
                                     <input id="image" type="text" class="form-control" v-model="image"
                                            autofocus autocomplete="off"  placeholder="Enter your name">

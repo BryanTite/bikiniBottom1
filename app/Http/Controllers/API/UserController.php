@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller{
     public function login(Request $request){
-        
+
 
         $credentials=[
             'email' => $request->email,
@@ -24,7 +24,7 @@ class UserController extends Controller{
             $message = "Usuario logeado correctamente";
         }else {
             $success = false;
-            $message = "Usuario no autorizado";  
+            $message = "Usuario no autorizado";
         }
 
         $response = [
@@ -39,18 +39,21 @@ class UserController extends Controller{
 
         try{
             $user = new User();
-            $user->name = $request->name;
             $user->email = $request->email;
+            $user->name = $request->name;
+            $user->surname = $request->surname;
             $user->password = Hash::make($request->password);
+            $user->phone = $request->phone;
+            $user->image = $request->image;
             $user->save();
-   
+
             $success = true;
             $message = "Usuario registrado correctamente";
         }catch(\Illuminate\Database\QueryException $ex){
             $success = false;
             $message = $ex->getMessage();
         }
-       
+
 
 
         $response=[
@@ -65,14 +68,14 @@ class UserController extends Controller{
     public function logout(){
         try{
             Session::flush();
-   
+
             $success = true;
             $message = "Logout correcto";
         }catch(\Illuminate\Database\QueryException $ex){
             $success = false;
             $message = $ex->getMessage();
         }
-       
+
         $response=[
             'success' => $success,
             'message' => $message,
