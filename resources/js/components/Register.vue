@@ -20,11 +20,12 @@
                                            autofocus autocomplete="off" placeholder="Enter your email">
                                 </div>
                             </div>
+
                             <div class="form-group row">
                                 <label for="name" class="col-sm-4 col-form-label text-md-right">Nombre</label>
                                 <div class="col-md-8">
                                     <input id="name" type="text" class="form-control" v-model="name" required
-                                           autofocus autocomplete="off"  placeholder="Enter your name">
+                                           autocomplete="off"  placeholder="Enter your name">
                                 </div>
                             </div>
 
@@ -32,12 +33,9 @@
                                 <label for="surname" class="col-sm-4 col-form-label text-md-right">Apellido</label>
                                 <div class="col-md-8">
                                     <input id="surname" type="text" class="form-control" v-model="surname" required
-                                           autofocus autocomplete="off"  placeholder="Enter your name">
+                                           autocomplete="off"  placeholder="Enter your name">
                                 </div>
                             </div>
-
-
-
 
 
 
@@ -45,7 +43,7 @@
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
                                 <div class="col-md-8">
                                     <input id="password" type="password" class="form-control" v-model="password"
-                                           required autocomplete="off" placeholder="Enter your password">
+                                           autocomplete="off" placeholder="Enter your password">
                                 </div>
                             </div>
 
@@ -54,14 +52,14 @@
                                 <label for="phone" class="col-sm-4 col-form-label text-md-right">tlf</label>
                                 <div class="col-md-8">
                                     <input id="phone" type="number" class="form-control" v-model="phone" required
-                                           autofocus autocomplete="off"  placeholder="Enter your name">
+                                           autocomplete="off"  placeholder="Enter your name">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="image" class="col-sm-4 col-form-label text-md-right">Avatar</label>
                                 <div class="col-md-8">
                                     <input id="image" type="text" class="form-control" v-model="image"
-                                           autofocus autocomplete="off"  placeholder="Enter your name">
+                                           autocomplete="off"  placeholder="Enter your name">
                                 </div>
                             </div>
 
@@ -82,15 +80,9 @@
                                     </small>
                                 </div>
                             </div>
-
-
-
-
                         </form>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
