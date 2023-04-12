@@ -1,5 +1,5 @@
 <template>
-    <div class="container-xl">
+    <div class="container-xl-fluid">
             <!-- carrusel con imagenes -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -25,25 +25,21 @@
         <!-- fin carrusel con imagenes -->
         <!-- consultar, informaion, calendario -->
 
-        <div class="row titulos">
+        <div class="row  titulos">
 
-                    <div class="col centrado">
-                        <h1>SERVICIoS</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/buscar.svg" alt="imagen publicitaria"></a>
+                    <div class="col centrado contenedor-info ">
+                        <h1>HORARIoS</h1>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/calendar.svg" alt="imagen publicitaria"></a>
                     </div>
 
-                    <div class="vr mt-4 separador"></div>
-
-                    <div class="col centrado">
+                    <div class="col centrado contenedor-info ">
                         <h1>EXPERIENCIA</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/form.svg" alt="imagen publicitaria"></a>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/experiencia.svg" alt="imagen publicitaria"></a>
                     </div>
 
-                    <div class="vr mt-4 separador"></div>
-
-                    <div class="col centrado">
-                        <h1>CALIDAD</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/gps.svg" alt="imagen publicitaria"></a>
+                    <div class="col centrado contenedor-info ">
+                        <h1>PRECIoS</h1>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/price.svg" alt="imagen publicitaria"></a>
                     </div>
 
             </div>

@@ -1,15 +1,15 @@
 <template>
     <!-- header -->
-    <div class="container-fluid" >
-        <nav class="navbar navbar-expand-sm navbar-light bg-info mb-4 titulos">
-            <a class="navbar-brand" href="#">Laravel Vue</a>
+    <div class="container-fluid background" >
+        <nav class="navbar navbar-expand-sm bg-info mb-4 txt-menu">
+            <a class="navbar-brand" href="#"><img src="../assets/icons/logoBB.svg" class="logo" alt="logo bikini bottom aquarium"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation"></button>
             <div class="navbar-nav" v-if="isLoggedin">
                 <router-link to="/dashboard" class="nav-item nav-link">Dashboard</router-link>
                 <router-link to="/posts" class="nav-item nav-link">xxxx</router-link>
                 <router-link to="/purchase" class="nav-item nav-link">xxxx</router-link>
-                <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">Logout</a>
+                <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">salir</a>
             </div>
             <div class="navbar-nav" v-else>
                 <router-link to="/" class="nav-item nav-link">Home</router-link>
@@ -22,22 +22,22 @@
 <!-- contenido componentes -->
         <router-view></router-view>
 <!-- footer -->
-        <footer class="text-lg-start bg-light">
+        <footer class="text-lg-start">
 
             <!-- Section: Links  -->
             <section>
-                <div class="footerColor">
+                <div >
                     <!-- Grid row -->
                     <div class="row tipografiaFooter">
                         <!-- Grid column -->
                         <div class= "col col-sm-2 pt-3 espacioLogo">
-                            <a href="producto/index"><img src="assets/images/img2/logo2.webp" alt="El logotipo de la página"></a>
-                        </div>
+                            <a class="navbar-brand" href="#"><img src="../assets/icons/logoBB-BN.svg" class="logoBN" alt="logo bikini bottom aquarium"></a>
+                         </div>
 
                         <div class="col col-lg-3 pt-4 redesSocial">
                             <!-- Content -->
 
-                            <h6 class="text-uppercase fw-bold mb-4">REDES Y LOCALIZACIÓN</h6>
+                            <h6 class="txt-menu mb-4">REDES Y LOCALIZACIÓN</h6>
                             <p>
                                 Carrer Ntra. Sra. de Lourde, 34, 08750 Molins de Rei, Barcelona
                             </p>
@@ -56,7 +56,7 @@
                         <!-- Grid column -->
                         <div class="col mb-4 col-sm-3 pt-4 iconosReserva">
                             <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
+                            <h6 class="txt-menu mb-4">
                                 RESERVAS Y CONTACTO
                             </h6>
                             <p>
@@ -77,7 +77,7 @@
                         <!-- Grid column -->
                         <div class="col mb-4 pt-4 politicas">
                             <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
+                            <h6 class="txt-menu mb-4">
                                 PRIVACIDAD
                             </h6>
                             <p>
@@ -99,13 +99,6 @@
                 </div>
             </section>
             <!-- Section: Links  -->
-
-            <!-- Copyright -->
-            <div class="text-center p-3 copy" style="background-color: black; color: white;">
-                © 2023 Copyright:
-                <a class="text-reset fw-bold" href="producto/index">BikiniBottom.com</a>
-            </div>
-            <!-- Copyright -->
         </footer>
 
     </div>

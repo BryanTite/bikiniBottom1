@@ -3,16 +3,39 @@
     src: url('../font/Aquatic-PersonalUse.otf');
     }
 @font-face {
-    font-family: 'Bondrians';
-    src: url('../font/Bondrians.otf');
+    font-family: 'Moons';
+    src: url('../font/TT Moons Trial Thin.otf');
     }
+
+.titulos{
+        font-family: 'Aquatic';
+        text-shadow: white 1px 1px;
+        color:#744a99;
+}
 
 
 /* header */
-    .titulos{
-        font-family: 'Aquatic';
-    }
-
+.txt-menu{
+    font-family: 'Aquatic';
+    color:#be9bde;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+.txt-menu:hover{
+    font-family: 'Aquatic';
+    color:#946fb5;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px white;
+}
+.logo{
+    width:70%;
+    height:70%;
+}
+.logoBN{
+    width: 210px;
+    height: auto;
+}
 
 
 /* fin header */
@@ -25,8 +48,19 @@
     width:70px;
     height: 70px;
 }
+.background{
+    background-color: #6fcbfe;
+}
+footer{
+    background-image: url('../assets/img/wallpaper.webp');
+    width:100%;
+    height: auto;
+}
     /* panel informaivo - HOME */
-
+.contenedor-info{
+    background-color: #0069b7;
+    padding:10px;
+}
     /* fin panel informaivo - HOME */
 
 /* fin body */
