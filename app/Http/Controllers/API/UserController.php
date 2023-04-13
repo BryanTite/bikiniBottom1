@@ -44,7 +44,6 @@ class UserController extends Controller{
             $user->surname = $request->surname;
             $user->password = Hash::make($request->password);
             $user->phone = $request->phone;
-            $user->image = $request->image;
             $user->save();
 
             $success = true;

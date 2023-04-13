@@ -9,15 +9,15 @@
 
 
                 <div class="card card-default">
-                    <div class="card-header"><h5>Register New User</h5></div>
+                    <div class="card-header"><h5>REGISTRAR NUEVA CUENTA</h5></div>
                     <div class="card-body">
                         <form>
 
                             <div class="form-group row mt-1">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
+                                <label for="email" class="col-sm-4 col-form-label text-md-right">Correo electrónico:</label>
                                 <div class="col-md-8">
                                     <input id="email" type="email" class="form-control" v-model="email" required
-                                           autofocus autocomplete="off" placeholder="Enter your email">
+                                           autofocus autocomplete="off" placeholder="Introduce tu email">
                                 </div>
                             </div>
 
@@ -25,7 +25,7 @@
                                 <label for="name" class="col-sm-4 col-form-label text-md-right">Nombre</label>
                                 <div class="col-md-8">
                                     <input id="name" type="text" class="form-control" v-model="name" required
-                                           autocomplete="off"  placeholder="Enter your name">
+                                           autocomplete="off"  placeholder="Introduce tu nombre">
                                 </div>
                             </div>
 
@@ -33,40 +33,33 @@
                                 <label for="surname" class="col-sm-4 col-form-label text-md-right">Apellido</label>
                                 <div class="col-md-8">
                                     <input id="surname" type="text" class="form-control" v-model="surname" required
-                                           autocomplete="off"  placeholder="Enter your name">
+                                           autocomplete="off"  placeholder="Introduce tus apellidos">
                                 </div>
                             </div>
 
 
 
                             <div class="form-group row mt-1">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
                                 <div class="col-md-8">
-                                    <input id="password" type="password" class="form-control" v-model="password"
-                                           autocomplete="off" placeholder="Enter your password">
+                                    <input id="password" type="password" class="form-control" v-model="password" minlength="4" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Mínimo de 5 carácteres y 1 número." required
+                                           autocomplete="off" placeholder="Introduce contraseña">
                                 </div>
                             </div>
 
 
                             <div class="form-group row">
-                                <label for="phone" class="col-sm-4 col-form-label text-md-right">tlf</label>
+                                <label for="phone" class="col-sm-4 col-form-label text-md-right">Teléfono</label>
                                 <div class="col-md-8">
                                     <input id="phone" type="number" class="form-control" v-model="phone" required
-                                           autocomplete="off"  placeholder="Enter your name">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="image" class="col-sm-4 col-form-label text-md-right">Avatar</label>
-                                <div class="col-md-8">
-                                    <input id="image" type="text" class="form-control" v-model="image"
-                                           autocomplete="off"  placeholder="Enter your name">
+                                           autocomplete="off"  placeholder="Introduce tu número">
                                 </div>
                             </div>
 
                             <div class="form-group row mt-1 mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-success">
-                                        Register
+                                    <button type="submit" class="btn btn-success" @click="register">
+                                        REGISTRAR-SE
                                     </button>
                                 </div>
                             </div>
@@ -75,8 +68,8 @@
                             <div class="row mt-1">
                                 <div class="col-md-8 offset-md-4">
                                     <small class="text-muted">
-                                        Have an account? Please
-                                        <router-link to="/login" >login</router-link>
+                                        Tienes cuenta?
+                                        <router-link to="/login" >INICIAR SESIÓN</router-link>
                                     </small>
                                 </div>
                             </div>
@@ -91,14 +84,14 @@
 
 <script>
  export default {
-    data() {
+     name: "Register",
+     data() {
         return {
             email:"",
             name:"",
             surname:"",
             password:"",
             phone:"",
-            image:"",
             error: null
         }
     },
@@ -112,8 +105,7 @@
                        name: this.name,
                        surname: this.surname,
                        password: this.password,
-                       phone: this.phone,
-                       image: this.image
+                       phone: this.phone
 
                    })
                        .then(response => {
