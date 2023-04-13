@@ -1,21 +1,22 @@
 <template>
     <!-- header -->
     <div class="container-fluid background" >
-        <nav class="navbar navbar-expand-sm bg-info mb-4 txt-menu">
-            <a class="navbar-brand" href="#"><img src="../assets/icons/logoBB.svg" class="logo" alt="logo bikini bottom aquarium"></a>
+        <nav class="navbar navbar-expand-sm mb-4">
+            <router-link to="/" class="logo"><img src="../assets/icons/logoBB.svg" class="logo" alt="logo bikini bottom aquarium"></router-link>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation"></button>
             <div class="navbar-nav" v-if="isLoggedin">
-                <router-link to="/dashboard" class="nav-item nav-link">Dashboard</router-link>
-                <router-link to="/posts" class="nav-item nav-link">xxxx</router-link>
-                <router-link to="/purchase" class="nav-item nav-link">xxxx</router-link>
-                <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">salir</a>
+                <router-link to="/dashboard" class="nav-item nav-link txt-menu">Dashboard</router-link>
+                <router-link to="/posts" class="nav-item nav-link txt-menu">xxxx</router-link>
+                <router-link to="/purchase" class="nav-item nav-link txt-menu">xxxx</router-link>
+                <a class="nav-item nav-link txt-menu" style="cursor: pointer;" @click="logout">salir</a>
             </div>
             <div class="navbar-nav" v-else>
-                <router-link to="/" class="nav-item nav-link">Home</router-link>
-                <router-link to="/tickets" class="nav-item nav-link">Servicios y tarifas</router-link>
-                <router-link to="/login" class="nav-item nav-link">Login</router-link>
-                <router-link to="/register" class="nav-item nav-link">Register</router-link>
+                <router-link to="/" class="nav-item nav-link txt-menu">Home</router-link>
+                <router-link to="/tickets" class="nav-item nav-link txt-menu">Servicios y tarifas</router-link>
+                <div class="iconografia-menu">
+                    <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/fb.svg" class="iconos" alt="logo bikini bottom aquarium"></router-link>
+                </div>
                 
             </div>
         </nav>
@@ -28,13 +29,13 @@
             <section>
                 <div >
                     <!-- Grid row -->
-                    <div class="row tipografiaFooter">
+                    <div class="row">
                         <!-- Grid column -->
-                        <div class= "col col-sm-2 pt-3 espacioLogo">
+                        <div class= "col col-sm-2 pt-3">
                             <a class="navbar-brand" href="#"><img src="../assets/icons/logoBB-BN.svg" class="logoBN" alt="logo bikini bottom aquarium"></a>
                          </div>
 
-                        <div class="col col-lg-3 pt-4 redesSocial">
+                        <div class="col col-lg-3 pt-4">
                             <!-- Content -->
 
                             <h6 class="txt-menu mb-4">REDES Y LOCALIZACIÓN</h6>
