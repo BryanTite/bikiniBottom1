@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('purchase', function (Blueprint $table) {
             $table->id('id_purchase');
+            $table->foreignId('id_user')->references('id_user')->on('users')->onDelete('cascade');
             $table->integer('total price');
             $table->timestamp('date');
 

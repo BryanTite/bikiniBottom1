@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id('id_service');
+            $table->foreignId('id_categorie')->references('id_categorie')->on('categories')->onDelete('cascade');;
             $table->string('name');
             $table->integer('price');
             $table->string('image');
-            $table->foreignId('id_categorie')->references('id_categorie')->on('categories')->onDelete('cascade');;
 
         });
     }

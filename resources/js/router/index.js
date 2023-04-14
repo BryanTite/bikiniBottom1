@@ -9,6 +9,9 @@ import AddPost from '../components/AddPost.vue';
 import EditPost from '../components/EditPost.vue';
 import Purchase from '../components/Purchase.vue';
 import Tickets from '../components/Tickets.vue';
+import Politics from '../components/Politics.vue';
+import Cookies from '../components/Cookies.vue';
+import Warning from '../components/Warning.vue';
 
 export const routes = [
    {
@@ -55,6 +58,21 @@ export const routes = [
     name: 'tickets',
     path: '/tickets',
     component: Tickets
+    },
+    {
+        name: 'politics',
+        path: '/politics',
+        component: Politics
+    },
+    {
+        name: 'cookies',
+        path: '/cookies',
+        component: Cookies
+    },
+    {
+        name: 'warning',
+        path: '/warning',
+        component: Warning
     },
 ];
 
