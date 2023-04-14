@@ -1,7 +1,7 @@
 <template>
     <!-- header -->
     <div class="container-fluid background" >
-        <nav class="navbar navbar-expand-sm mb-4">
+        <nav class="navbar navbar-expand-sm mb-4 cabecera-bg">
             <router-link to="/" class="logo"><img src="../assets/icons/logoBB.svg" class="logo" alt="logo bikini bottom aquarium"></router-link>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -23,7 +23,7 @@
 <!-- contenido componentes -->
         <router-view></router-view>
 <!-- footer -->
-        <footer class="text-lg-start">
+        <footer class="text-lg-start mt-2">
 
             <!-- Section: Links  -->
             <section>
@@ -42,9 +42,9 @@
                             <p>
                                 Carrer Ntra. Sra. de Lourde, 34, 08750 Molins de Rei, Barcelona
                             </p>
-                            
-                            <a class="redes" href="https://www.instagram.com/"><p><img class="iconos-footer" src="../assets/icons/ig.svg" alt="Icono de Instagram"> @aquariumBikiBottom</p></a>                                
-                            <a class="redes" href="https://www.facebook.com/"><p><img class="iconos-footer" src="../assets/icons/fb.svg" alt="Icono de Facebook"> Aquarium Bikini Bottom</p></a>                            </div>
+
+                            <a class="redes" href="https://www.instagram.com/"><img class="iconos-footer" src="../assets/icons/ig.svg" alt="Icono de Instagram"> @aquariumBikiBottom</a><p></p>                                
+                            <a class="redes" href="https://www.facebook.com/"><img class="iconos-footer" src="../assets/icons/fb.svg" alt="Icono de Facebook"> Aquarium Bikini Bottom</a>                            </div>
 
                         <!-- Grid column -->
 
@@ -76,16 +76,16 @@
                                 PRIVACIDAD
                             </h6>
                             <p>
-                                <router-link to="/politics">Política de privacidad de datos</router-link>
+                                <router-link class="redes" to="/politics">Política de privacidad de datos</router-link>
                             </p>
                             <p>
-                                <router-link to="/cookies">Política de cookies</router-link>
+                                <router-link class="redes" to="/cookies">Política de cookies</router-link>
                             </p>
                             <p>
-                                <router-link to="/warning">Aviso legal</router-link>
+                                <router-link class="redes" to="/warning">Aviso legal</router-link>
                             </p>
                             <p>
-                                <router-link to="/reviews">Reseñas</router-link>
+                                <router-link class="redes" to="/reviews">Reseñas</router-link>
                             </p>
                         </div>
 
@@ -139,5 +139,9 @@
     text-decoration: none;
     color:black;
 }
+.redes:hover{
+    color:#744a99;
+}
+
     </style>
 

@@ -2,8 +2,7 @@
 
     <div class="container-xl-fluid">
         <h1 class="titulos">USO DE COOKIES</h1>
-        <br>
-        <h2>1.- INFORMACIÓN AL USUARIO</h2>
+        <h2 class="subtitulos">1.- INFORMACIÓN AL USUARIO</h2>
         <p>
             Una cookie es un archivo de texto que un servidor web puede guardar en el disco duro de tu equipo para almacenar algún tipo de información sobre ti como usuario. Las cookies se utilizan con diversas finalidades tales como almacenar datos para próximas visitas, para reconocer al usuario y evitar pedir de nuevo la autentificación, para saber que paginas visitas, o para guardar tus preferencias en áreas personalizables…). Normalmente los sitios web utilizan las cookies para obtener información estadística sobre sus páginas web, y analizar el comportamiento de sus clientes/usuarios.
 
@@ -33,7 +32,7 @@
         </ul>
 
         <br>
-        <h2>2.- TIPOS DE COOKIES</h2>
+        <h2 class="subtitulos">2.- TIPOS DE COOKIES</h2>
 
         <p>
             Las cookies pueden clasificarse según los siguientes criterios:

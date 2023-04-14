@@ -10,29 +10,29 @@
                 </div>
 
 
-                <div class="card card-default">
-                    <div class="card-header"><h5>REGISTRO</h5></div>
+                <div class="card card-default bg-info">
+                    <div class="card-header"><h5 class="titulos">INICIAR SESION</h5></div>
                     <div class="card-body">
                         <form>
                             <div class="form-group row">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right">Correo Electronico:</label>
+                                <label for="email" class="col-sm-4 col-form-label text-md-right texto">Correo Electronico:</label>
                                 <div class="col-md-8">
-                                    <input id="email" type="email" class="form-control" v-model="email" required
+                                    <input id="email" type="email" class="form-control texto" v-model="email" required
                                            autofocus autocomplete="off" placeholder="Inserta correo electronico">
                                 </div>
                             </div>
 
 
                             <div class="form-group row mt-1">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña:</label>
+                                <label for="password" class="col-md-4 col-form-label texto text-md-right">Contraseña:</label>
                                 <div class="col-md-8">
-                                    <input id="password" type="password" class="form-control" v-model="password"
+                                    <input id="password" type="password" class="form-control texto" v-model="password"
                                            required autocomplete="off" placeholder="Inserta contraseña">
                                 </div>
                             </div>
 
 
-                            <div class="form-group row mt-1 mb-0">
+                            <div class="form-group row mt-1 mb-0 ">
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-success" @click="doLogin">
                                         INICIAR SESION
@@ -43,9 +43,9 @@
 
                             <div class="row mt-1">
                                 <div class="col-md-8 offset-md-4">
-                                    <small class="text-muted">
+                                    <small class="text-muted texto">
                                         No tienes una cuenta aún?
-                                        <router-link to="/register" >Registrate</router-link>
+                                        <router-link to="/register" class="texto redes">Registrate</router-link>
                                     </small>
                                 </div>
                             </div>
@@ -102,3 +102,12 @@
     }
  }
  </script>
+<style scoped>
+.redes{
+    text-decoration: none;
+    color:black;
+}
+.redes:hover{
+    color:#744a99;
+}
+</style>

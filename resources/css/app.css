@@ -6,12 +6,27 @@
     font-family: 'Cafe';
     src: url('../assets/font/Louis-George-Cafe.otf');
     }
+@font-face {
+    font-family: 'Bondrians';
+    src: url('../assets/font/Bondrians.otf');
+    }
 
 .titulos{
         font-family: 'Aquatic';
         text-shadow: white 1px 1px;
         color:#744a99;
 }
+.subtitulos{
+    font-family: 'Bondrians';
+    text-shadow: black 1px 1px;
+    color:#be9bde; 
+}
+.texto{
+    font-family:'Cafe';
+    font-size: 16px;
+    color:black;
+}
+
 
 
 /* header */
@@ -40,7 +55,9 @@
 .iconografia-menu{
     text-align: right;
 }
-
+.cabecera-bg{
+    background-image:url(../assets/img/wallpaper.webp);
+}
 /* fin header */
 
 /* body */
@@ -66,6 +83,7 @@ p{
     font-size: 16px;
     color:black;
 }
+
     /* panel informaivo - HOME */
 .contenedor-info{
     padding:10px;

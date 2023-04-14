@@ -1,8 +1,8 @@
 <template>
 
-    <div class="container-xl-fluid colorContenedor">
+    <div class="container-xl-fluid">
         <h1 class="titulos">Políticas de privacidat</h1>
-        <h2>1.- INFORMACIÓN AL USUARIO</h2>
+        <h2 class="subtitulos">1.- INFORMACIÓN AL USUARIO</h2>
         <p>
             BIKINI BOTTOM AQUARIUM, en adelante RESPONSABLE, es el Responsable del tratamiento de los datos
             personales del Usuario y le informa que estos datos serán tratados de conformidad con lo dispuesto
@@ -51,7 +51,7 @@
         </p>
 
         <br>
-        <h2>2.- CARÁCTER OBLIGATORIO O FACULTATIVO DE LA INFORMACIÓN FACILITADA POR EL USUARIO</h2>
+        <h2 class="subtitulos">2.- CARÁCTER OBLIGATORIO O FACULTATIVO DE LA INFORMACIÓN FACILITADA POR EL USUARIO</h2>
 
         <p>
             Los Usuarios, mediante la marcación de las casillas correspondientes y entrada de
@@ -72,7 +72,7 @@
         </p>
 
         <br>
-        <h2>3.- MEDIDAS DE SEGURIDAD</h2>
+        <h2 class="subtitulos">3.- MEDIDAS DE SEGURIDAD</h2>
 
         <p>
             Que de conformidad con lo dispuesto en las normativas vigentes en
@@ -98,7 +98,5 @@
   </script>
 
     <style scoped>
-    .colorContenedor{
-        background-color: rgba(255, 255, 255, 0.48);
-    }
+
     </style>

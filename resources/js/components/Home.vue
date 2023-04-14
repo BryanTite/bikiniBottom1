@@ -49,9 +49,33 @@
 
         <!-- fin consultar, informaion, calendario -->
         <!-- banner publi -->
-        <router-link to="/"><img src="../../assets/img/banner.webp" class="w-100"></router-link>
+        <router-link to="/"><img src="../../assets/img/banner.webp" class="w-100 mt-2 mb-2"></router-link>
 
         <!-- fin banner publi -->
+        <!-- noticias -->
+        <div class="row">
+            <div class="col-sm-9 mb-3 mb-sm-0">
+                <div class="card" style="width: 18rem; float:left;">
+                    <img src="../../assets/img/banner.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">lk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; float:left;">
+                    <img src="../../assets/img/banner.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">lk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../../assets/img/banner.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">lk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin noticias -->
     </div>
     </template>
 
