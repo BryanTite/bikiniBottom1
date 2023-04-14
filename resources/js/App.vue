@@ -42,16 +42,10 @@
                             <p>
                                 Carrer Ntra. Sra. de Lourde, 34, 08750 Molins de Rei, Barcelona
                             </p>
-                            <div class="alinearRedes">
-                                <div class="hoverRedes">
-                                    <a href="https://www.instagram.com/marisqueriasantos/?hl=es"><img src="../assets/icons/insta.svg" alt="Icono de Instagram"></a>
-                                </div>
-                                <div class="hoverRedes">
-                                    <a href="https://www.facebook.com/marisqueria.santos/"><img src="../assets/icons/fb.svg" alt="Icono de Facebook"></a>
-                                </div>
-                            </div>
+                            
+                            <a class="redes" href="https://www.instagram.com/"><p><img class="iconos-footer" src="../assets/icons/ig.svg" alt="Icono de Instagram"> @aquariumBikiBottom</p></a>                                
+                            <a class="redes" href="https://www.facebook.com/"><p><img class="iconos-footer" src="../assets/icons/fb.svg" alt="Icono de Facebook"> Aquarium Bikini Bottom</p></a>                            </div>
 
-                        </div>
                         <!-- Grid column -->
 
                         <!-- Grid column -->
@@ -61,16 +55,16 @@
                                 RESERVAS Y CONTACTO
                             </h6>
                             <p>
-                                <img src="../assets/icons/mail.svg" alt="Icono del Mail">
-                                seafoodreynas@gmail.com
+                                <img class="iconos-footer" src="../assets/icons/mail.svg" alt="Icono del Mail">
+                                bikinibottom@aquarium.com
                             </p>
                             <p>
-                                <img src="../assets/icons/movil.svg" alt="Icono del número de móvil">
-                                684759824
+                                <img class="iconos-footer" src="../assets/icons/whats.svg" alt="Icono del número de móvil">
+                                +34 651 35 78 74
                             </p>
                             <p>
-                                <img src="../assets/icons/movil.svg" alt="Icono del númrero de teléfono fijo">
-                                936487258
+                                <img class="iconos-footer" src="../assets/icons/phone.svg" alt="Icono del númrero de teléfono fijo">
+                                93 648 72 58
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -82,16 +76,16 @@
                                 PRIVACIDAD
                             </h6>
                             <p>
-                                <a href="producto/politicas" class="text-reset">Política de privacidad de datos</a>
+                                <router-link to="/politics">Política de privacidad de datos</router-link>
                             </p>
                             <p>
-                                <a href="producto/cookies" class="text-reset">Cookies</a>
+                                <router-link to="/cookies">Política de cookies</router-link>
                             </p>
                             <p>
-                                <a href="producto/aviso" class="text-reset">Aviso legal</a>
+                                <router-link to="/warning">Aviso legal</router-link>
                             </p>
                             <p>
-                                <a href="usuario/resena" class="text-reset">Reseña</a>
+                                <router-link to="/reviews">Reseñas</router-link>
                             </p>
                         </div>
 
@@ -140,3 +134,10 @@
     },
  }
  </script>
+     <style scoped>
+.redes{
+    text-decoration: none;
+    color:black;
+}
+    </style>
+
