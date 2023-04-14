@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Aquatic';
-    src: url('../font/Aquatic-PersonalUse.otf');
+    src: url('../assets/font/Aquatic-PersonalUse.otf');
     }
 @font-face {
     font-family: 'Cafe';
-    src: url('../font/Louis-George-Cafe.otf');
+    src: url('../assets/font/Louis-George-Cafe.otf');
     }
 
 .titulos{
@@ -64,10 +64,14 @@ footer{
 p{
     font-family:'Cafe';
     font-size: 16px;
+    color:black;
 }
     /* panel informaivo - HOME */
 .contenedor-info{
     padding:10px;
+}
+.card{
+    border-style:none!important;
 }
 .contenedor-info-grande{
     background-image: url('../assets/img/wallpaper-bg.webp');
@@ -78,5 +82,12 @@ p{
 /* fin body */
 
 /* footer */
-
+.iconos-footer{
+    width:25px;
+    height:25px;
+}
+.iconos-footer:hover{
+    width:25px;
+    height:25px;
+}
 /* fin footer */
