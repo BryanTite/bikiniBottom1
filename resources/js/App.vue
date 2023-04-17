@@ -8,7 +8,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 txt-menu">
         <li class="nav-item dropdown">
@@ -22,7 +22,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <router-link  to="/" class="nav-link">ENTRADAS</router-link>
+          <router-link  to="/tickets" class="nav-link">ENTRADAS</router-link>
         </li>
       </ul>
         <div class="d-flex iconografia-menu">
@@ -54,7 +54,7 @@
                                 Carrer Ntra. Sra. de Lourde, 34, 08750 Molins de Rei, Barcelona
                             </p>
 
-                            <a class="redes" href="https://www.instagram.com/"><img class="iconos-footer" src="../assets/icons/ig.svg" alt="Icono de Instagram"> @aquariumBikiBottom</a><p></p>                                
+                            <a class="redes" href="https://www.instagram.com/"><img class="iconos-footer" src="../assets/icons/ig.svg" alt="Icono de Instagram"> @aquariumBikiBottom</a><p></p>
                             <a class="redes" href="https://www.facebook.com/"><img class="iconos-footer" src="../assets/icons/fb.svg" alt="Icono de Facebook"> Aquarium Bikini Bottom</a>                            </div>
 
                         <!-- Grid column -->
