@@ -1,23 +1,20 @@
 @font-face {
     font-family: 'Aquatic';
-    src: url('../assets/font/Aquatic-PersonalUse.otf');
+    src: url('../assets/font/Bondrians.otf');
     }
 @font-face {
     font-family: 'Cafe';
     src: url('../assets/font/Louis-George-Cafe.otf');
     }
-@font-face {
-    font-family: 'Bondrians';
-    src: url('../assets/font/Bondrians.otf');
-    }
+
 
 .titulos{
         font-family: 'Aquatic';
-        text-shadow: white 1px 1px;
-        color:#744a99;
+        color:#be9bde;
 }
+
 .subtitulos{
-    font-family: 'Bondrians';
+    font-family: 'Aquatic';
     text-shadow: black 1px 1px;
     color:#be9bde; 
 }
@@ -34,14 +31,13 @@
     font-family: 'Aquatic';
     color:#be9bde;
     font-size: 20px;
-    text-shadow: 1px 1px 1px black;
     text-align: center;
 }
 .txt-menu:hover{
     font-family: 'Aquatic';
     color:#946fb5;
     font-size: 20px;
-    text-shadow: 1px 1px 1px white;
+    
 }
 .logo{
     width:200px;
@@ -56,7 +52,7 @@
     text-align: right;
 }
 .cabecera-bg{
-    background-image:url(../assets/img/wallpaper.webp);
+    background-image:url(../assets/img/mancha.svg);
 }
 /* fin header */
 
@@ -71,7 +67,7 @@
 
 }
 .background{
-    background-color: #6fcbfe;
+background-color: #6fcbfe;
 }
 footer{
     background-image: url('../assets/img/wallpaper.webp');
@@ -85,16 +81,49 @@ p{
 }
 
     /* panel informaivo - HOME */
-.contenedor-info{
-    padding:10px;
-}
+
 .card{
     border-style:none!important;
 }
-.contenedor-info-grande{
-    background-image: url('../assets/img/wallpaper-bg.webp');
+
+.contenedor-info{
+    border-radius:50%;
+    border-style: solid;
+    border-color: #48b4ee;
+    padding:10px;
+    width: 360px;
+    height: 360px;
+    background-color: white;
+}
+.contenedor-info:hover{
+    border-radius:50%;
+    padding:10px;
+    width: 360px;
+    height: 360px;
+    background-color:white;
+    box-shadow: #6fcbfe inset 2px 2px 30px;
 
 }
+.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+.btn-basico{
+    padding: 5px!important;
+    background-color: #be9bde;
+    color:white;
+    text-shadow: 1px 1px black;
+    font-size:20px;
+    font-family:'Aquatic';
+}
+.btn-basico:hover{
+    padding: 5px!important;
+    background-color: #946fb5;
+    color:white;
+    text-shadow: 1px 1px black;
+    font-size:20px;
+    font-family:'Aquatic';
+}
+
     /* fin panel informaivo - HOME */
 
 /* fin body */

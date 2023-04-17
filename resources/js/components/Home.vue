@@ -28,21 +28,21 @@
         <div class="row mt-3 mb-3 contenedor-info-grande">
 
                     <div class="col centrado contenedor-info texto">
-                        <h1 class="titulos">HORARIoS</h1>
-                        <p>Consuta la disponibilidad de las instalaciones</p>
+                        <h1 class="titulos">HORARIOS</h1>
                         <a href="" class=""> <img class="iconos-info" src="../../assets/icons/horario.svg" alt="imagen publicitaria"></a>
+                        <br><button class="btn-basico">CONSULTAR</button>
                     </div>
 
                     <div class="col centrado contenedor-info texto">
                         <h1 class="titulos">EXPERIENCIA</h1>
-                        <p>Echale un ojo a las experiencias de otros antes de venir</p>
                         <a href="" class=""> <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="imagen publicitaria"></a>
+                        <br><button class="btn-basico">CONSULTAR</button>
                     </div>
 
                     <div class="col centrado contenedor-info texto">
-                        <h1 class="titulos">PRECIoS</h1>
-                        <p>Consulta aqui el precio de nuestras entradas</p>
+                        <h1 class="titulos">PRECIOS</h1>
                         <a href="" class=""> <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="imagen publicitaria"></a>
+                        <br><button class="btn-basico">CONSULTAR</button>
                     </div>
 
             </div>

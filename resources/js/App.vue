@@ -1,29 +1,40 @@
 <template>
     <!-- header -->
-    <div class="container-fluid background" >
-        <nav class="navbar navbar-expand-sm mb-4 cabecera-bg">
-            <router-link to="/" class="logo"><img src="../assets/icons/logoBB.svg" class="logo" alt="logo bikini bottom aquarium"></router-link>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                    aria-expanded="false" aria-label="Toggle navigation"></button>
-            <div class="navbar-nav" v-if="isLoggedin">
-                <router-link to="/dashboard" class="nav-item nav-link txt-menu">Dashboard</router-link>
-                <router-link to="/posts" class="nav-item nav-link txt-menu">xxxx</router-link>
-                <router-link to="/purchase" class="nav-item nav-link txt-menu">xxxx</router-link>
-                <a class="nav-item nav-link txt-menu" style="cursor: pointer;" @click="logout">salir</a>
-            </div>
-            <div class="navbar-nav" v-else>
-                <router-link to="/" class="nav-item nav-link txt-menu">Home</router-link>
-                <router-link to="/tickets" class="nav-item nav-link txt-menu">Servicios y tarifas</router-link>
-                <div class="iconografia-menu">
-                    <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/fb.svg" class="iconos" alt="logo bikini bottom aquarium"></router-link>
-                </div>
-                
-            </div>
-        </nav>
+    <div class="container-fluid" >
+        <div class="container background">
+        <nav class="navbar navbar-expand-lg cabecera-bg">
+  <div class="container-fluid">
+    <router-link to="/" class="logo"><img src="../assets/icons/logoBB.svg" class="logo" alt="logo bikini bottom aquarium"></router-link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 txt-menu">
+        <li class="nav-item dropdown">
+          <router-link class="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            INSTALACIONES
+          </router-link>
+          <ul class="dropdown-menu">
+            <li><router-link class="dropdown-item" to="/">EL PARQUE</router-link></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><router-link class="dropdown-item" to="/">DONDE COMER</router-link></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <router-link  to="/" class="nav-link">ENTRADAS</router-link>
+        </li>
+      </ul>
+        <div class="d-flex iconografia-menu">
+            <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/fb.svg" class="iconos" alt="logo bikini bottom aquarium"></router-link>
+        </div>
+    </div>
+  </div>
+</nav>
 <!-- contenido componentes -->
         <router-view></router-view>
 <!-- footer -->
-        <footer class="text-lg-start mt-2">
+        <footer class=" text-lg-start mt-2">
 
             <!-- Section: Links  -->
             <section>
@@ -95,7 +106,7 @@
             </section>
             <!-- Section: Links  -->
         </footer>
-
+    </div>
     </div>
 
  </template>
