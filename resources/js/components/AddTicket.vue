@@ -6,60 +6,60 @@
             <div class="d-flex justify-content-between pb-2 mb-2">
                 <h5 class="card-title">Add New Post Data</h5>
                 <div>
-                    <router-link :to="{name: 'posts'}" class="btn btn-success">Go Back</router-link>
+                    <router-link :to="{name: 'tickets'}" class="btn btn-success">Go Back</router-link>
                 </div>
             </div>
- 
- 
+
+
             <div v-if="strSuccess" class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 <strong>{{strSuccess}}</strong>
             </div>
- 
- 
+
+
             <div v-if="strError" class="alert alert-danger alert-dismissible fade show" role="alert">
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 <strong>{{strError}}</strong>
             </div>
- 
- 
- 
- 
-            <form @submit.prevent="addPost" enctype="multipart/form-data">
+
+
+
+
+            <form @submit.prevent="addTicket" enctype="multipart/form-data">
                 <div class="form-group mb-2">
                     <label>Name</label><span class="text-danger"> *</span>
                     <input type="text" class="form-control" v-model="name" placeholder="Enter post name">
                 </div>
- 
- 
+
+
                 <div class="form-group mb-2">
                     <label>Name</label><span class="text-danger"> *</span>
                     <textarea class="form-control" rows="3" v-model="description" placeholder="Enter post description"></textarea>
                 </div>
- 
- 
+
+
                 <div class="form-gorup mb-2">
                     <label>Image</label><span class="text-danger"> *</span>
                     <input type="file" class="form-control mb-2" v-on:change="onChangeImg">
- 
- 
+
+
                     <div v-if="img">
                         <img v-bind:src="imgPreview" width="100" height="100"/>
                     </div>
                 </div>
- 
- 
+
+
                 <button type="submit" class="btn btn-primary mt-4 mb-4"> Add Post</button>
- 
- 
+
+
             </form>
- 
- 
+
+
         </div>
     </div>
  </template>
- 
- 
+
+
  <script>
 
  export default {
@@ -71,11 +71,11 @@
             strSuccess: '',
             strError: '',
             imgPreview: null
- 
+
         }
     },
     methods: {
-        
+
         onChangeImg(e) {
             this.img = e.target.files[0];
             let reader = new FileReader();
@@ -95,7 +95,7 @@
     },
 
     /* INICIO */
-    addPost(e){
+    addTicket(e){
         this.$axios.get('/sanctum/csrf-cookie').then(response => {
             let existObj = this;
             const config = {
@@ -109,7 +109,7 @@
             formData.append('description', this.description);
             formData.append('file', this.img);
 
-            this.$axios.post('/api/posts/add', formData, config)
+            this.$axios.post('/api/tickets/add', formData, config)
                 .then(response => {
                     existObj.strError = "";
                     existObj.strSuccess = response.data.success;
@@ -120,14 +120,13 @@
                     existObj.strSuccess = response.data.success;
                 }
                 );
-           
+
         });
     }
 
     /* FIN */
 
  }
- 
- 
+
+
  </script>
- 

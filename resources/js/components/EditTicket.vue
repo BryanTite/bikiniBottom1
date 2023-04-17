@@ -4,7 +4,7 @@
 
 <script>
 export default{
-    name: "EditPost"
+    name: "EditTicket"
 }
 </script>
 

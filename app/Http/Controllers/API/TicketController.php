@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Models\Posts;
+use App\Models\Tickets;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class TicketController extends Controller
 {
     public function index(){
-        $posts = Posts::all()->toArray();
-        return $posts;
+        $tickets = Tickets::all()->toArray();
+        return $tickets;
     }
 
     public function add(Request $request){
@@ -30,12 +30,12 @@ class PostController extends Controller
             $destinationPath = 'img/';
             $imageName = date('YmdHis'). "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $imageName);
-            
+
             //Nombre de la base de datos "image"
             $input['image'] = $imageName;
         }
 
-        Posts::create($input);
+        Tickets::create($input);
 
         return response()->json(['success'=>'Post creado correctamente!']);
 

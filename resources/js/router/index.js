@@ -4,11 +4,11 @@ import Home from '../components/Home.vue';
 import Register from '../components/Register.vue';
 import Login from '../components/Login.vue';
 import Dashboard from '../components/Dashboard.vue';
-import Posts from '../components/Posts.vue';
-import AddPost from '../components/AddPost.vue';
-import EditPost from '../components/EditPost.vue';
-import Purchase from '../components/Purchase.vue';
 import Tickets from '../components/Tickets.vue';
+import AddTicket from '../components/AddTicket.vue';
+import EditTicket from '../components/EditTicket.vue';
+import Purchase from '../components/Purchase.vue';
+import zTickets from '../components/zzzzzzzzzTickes.vue';
 import Politics from '../components/Politics.vue';
 import Cookies from '../components/Cookies.vue';
 import Warning from '../components/Warning.vue';
@@ -35,19 +35,19 @@ export const routes = [
        component: Dashboard
    },
    {
-    name: 'posts',
-    path: '/posts',
-    component: Posts
+    name: 'tickets',
+    path: '/tickets',
+    component: Tickets
    },
    {
-    name: 'addpost',
-    path: '/posts/add',
-    component: AddPost
+    name: 'addticket',
+    path: '/tickets/add',
+    component: AddTicket
    },
    {
-    name: 'editpost',
-    path: '/posts/edit',
-    component: EditPost
+    name: 'editticket',
+    path: '/tickets/edit',
+    component: EditTicket
    },
    {
     name: 'purchase',
@@ -55,9 +55,9 @@ export const routes = [
     component: Purchase
     },
     {
-    name: 'tickets',
-    path: '/tickets',
-    component: Tickets
+    name: 'ztickets',
+    path: '/ztickets',
+    component: zTickets
     },
     {
         name: 'politics',
