@@ -29,40 +29,53 @@
 
                     <div class="col centrado contenedor-info texto">
                         <h1 class="titulos">HORARIOS</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/horario.svg" alt="imagen publicitaria"></a>
-                        <br><button class="btn-basico">CONSULTAR</button>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/horario.svg" alt="icono horarios"></a>
+                        <br><a href="" class="btn-basico">CONSULTAR</a>
                     </div>
 
                     <div class="col centrado contenedor-info texto">
                         <h1 class="titulos">EXPERIENCIA</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="imagen publicitaria"></a>
-                        <br><button class="btn-basico">CONSULTAR</button>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="icono valoraciones"></a>
+                        <br><a href="" class="btn-basico">CONSULTAR</a>
                     </div>
 
                     <div class="col centrado contenedor-info texto">
                         <h1 class="titulos">PRECIOS</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="imagen publicitaria"></a>
-                        <br><button class="btn-basico">CONSULTAR</button>
+                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="icono entradas"></a>
+                        <br><a href="" class="btn-basico">CONSULTAR</a>
                     </div>
 
             </div>
 
         <!-- fin consultar, informaion, calendario -->
-        <!-- banner publi -->
-        <router-link to="/"><img src="../../assets/img/banner.webp" class="w-100 mt-2 mb-2"></router-link>
-
-        <!-- fin banner publi -->
         <!-- noticias -->
+        <h2 id="noticias" class="titulos">NOTICIAS DE COLABORADORES</h2>
         <div class="row">
             <div class="col-sm-12 mb-3 mb-sm-0">
                 <div class="card" style="width: 18rem; float:left;">
                         <div class="card-body">
-                            <img src="../../assets/img/banner.webp" class="card-img-top" alt="...">
-                            <a class="" href="https://noticiasmarinas.com/2022/12/11/como-se-clasifican-las-mercancias-peligrosas-en-el-transporte-maritimo/"><p class="card-text">¿Cómo se clasifican las mercancías peligrosas en el transporte marítimo?</p>
+                            <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
+                                <img src="../../assets/img/GZC3ZI5ZQ5HHRIJRRF6ZVSEC7M.avif" class="card-img-top" alt="...">
+                            <p>Los pinguinos son los primeros en sufrir las consecuencias</p>    
                             </a>
                         </div>
                 </div>
-                
+                 <div class="card" style="width: 18rem; float:left;">
+                        <div class="card-body">
+                            <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
+                                <img src="../../assets/img/Panama-flag-on-ship.png" class="card-img-top" alt="...">
+                            <p>¿Que son las banderas de convivencia?</p>    
+                            </a>
+                        </div>
+                </div>
+                <div class="card" style="width: 18rem; float:left;">
+                        <div class="card-body">
+                            <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
+                                <img src="../../assets/img/descarga.jpg" class="card-img-top" alt="...">
+                            <p>Beneficios del GNL un nuevo combustible para buques marinos</p>    
+                            </a>
+                        </div>
+                </div>
             </div>
         </div>
         <!-- fin noticias -->

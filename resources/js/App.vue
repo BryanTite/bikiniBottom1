@@ -22,6 +22,9 @@
           </ul>
         </li>
         <li class="nav-item">
+          <a  href="#noticias" class="nav-link">NOTICIAS</a>
+        </li>
+        <li class="nav-item">
           <router-link  to="/" class="nav-link">ENTRADAS</router-link>
         </li>
         <li class="nav-item" v-if="isLoggedin">
@@ -149,13 +152,6 @@
  }
  </script>
      <style scoped>
-.redes{
-    text-decoration: none;
-    color:black;
-}
-.redes:hover{
-    color:#744a99;
-}
 
     </style>
 

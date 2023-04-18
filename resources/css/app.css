@@ -146,4 +146,11 @@ p{
     width:25px;
     height:25px;
 }
+.redes{
+    text-decoration: none;
+    color:black;
+}
+.redes:hover{
+    color:#744a99;
+}
 /* fin footer */
