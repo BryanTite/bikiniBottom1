@@ -13,6 +13,7 @@ class TicketsSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         $tickets = [
             [
                 'id_ticket' => 9,
@@ -25,5 +26,6 @@ class TicketsSeeder extends Seeder
         ];
 
         Tickets::insert($tickets);
+        */
     }
 }

@@ -9,10 +9,11 @@
     */
     public function up(): void
     {
-        Schema::create('rol_user', function (Blueprint $table) {
-        $table->foreignId('id_rol')->references('id_rol')->on('roles')->onDelete('cascade');;
+        Schema::create('roles_users', function (Blueprint $table) {
+        $table->foreignId('id_rol')->references('id_rol')->on('roles')->onDelete('cascade');
 
-        $table->foreignId('id_user')->references('id_user')->on('users')->onDelete('cascade');;
+        $table->foreignId('id_user')->references('id_user')->on('users')->onDelete('cascade');
+        $table->timestamps();
         });
     }
 
@@ -21,7 +22,7 @@
     */
     public function down(): void
     {
-        Schema::table('rol_user', function (Blueprint $table) {
+        Schema::table('roles_user', function (Blueprint $table) {
         $table->dropForeign('rol_user_id_rol_foreign');
         $table->dropForeign('rol_user_id_user_foreign');
         });

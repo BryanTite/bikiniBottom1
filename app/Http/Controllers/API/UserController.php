@@ -29,7 +29,8 @@ class UserController extends Controller{
 
         $response = [
             'success' => $success,
-            'message' => $message
+            'message' => $message,
+            'user'=> Auth::user()->role()
         ];
 
         return response()->json($response);

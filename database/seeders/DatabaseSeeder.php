@@ -26,7 +26,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             CategorieSeeder::class,
             RolesSeeder::class,
-            TicketsSeeder::class
+            TicketsSeeder::class,
+            RolesUserSeeder::class
         ]);
     }
 }

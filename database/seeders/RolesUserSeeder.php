@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Roles;
+use App\Models\RolesUser;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class RolesSeeder extends Seeder
+class RolesUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,15 +14,16 @@ class RolesSeeder extends Seeder
     public function run(): void
     {
 /*
-        $roles = [
+        $rolUser = [
             [
+
                 'id_rol' => 3,
-                'name' => 'User'
+                'id_user' => 3
 
             ],
         ];
 
-        Roles::insert($roles);
+        RolesUser::insert($rolUser);
 */
     }
 }
