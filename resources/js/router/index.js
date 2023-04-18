@@ -8,7 +8,7 @@ import Tickets from '../components/Tickets.vue';
 import AddTicket from '../components/AddTicket.vue';
 import EditTicket from '../components/EditTicket.vue';
 import Purchase from '../components/Purchase.vue';
-import zTickets from '../components/zzzzzzzzzTickes.vue';
+import Entradas from '../components/Entradas.vue';
 import Politics from '../components/Politics.vue';
 import Cookies from '../components/Cookies.vue';
 import Warning from '../components/Warning.vue';
@@ -55,9 +55,9 @@ export const routes = [
     component: Purchase
     },
     {
-    name: 'ztickets',
-    path: '/ztickets',
-    component: zTickets
+    name: 'entradas',
+    path: '/entradas',
+    component: Entradas
     },
     {
         name: 'politics',

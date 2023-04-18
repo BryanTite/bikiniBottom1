@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('purchase_services', function (Blueprint $table) {
             $table->foreignId('id_purchase')->references('id_purchase')->on('purchase')->onDelete('cascade');;
-            $table->foreignId('id_service')->references('id_service')->on('services')->onDelete('cascade');;
+            $table->foreignId('id_ticket')->references('id_ticket')->on('tickets')->onDelete('cascade');;
 
             $table->integer('quantity');
             $table->integer('price');

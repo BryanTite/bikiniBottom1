@@ -13,8 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-        /*
+/*
         $users = [
             [
 
@@ -29,6 +28,6 @@ class UserSeeder extends Seeder
         ];
 
         User::insert($users);
-        */
+*/
     }
 }

@@ -2,27 +2,28 @@
 
 namespace Database\Seeders;
 
-use App\Models\Categorie;
+use App\Models\Tickets;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CategorieSeeder extends Seeder
+class TicketsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        /*
-        $categories = [
+        $tickets = [
             [
+                'id_ticket' => 9,
                 'id_categorie' => 3,
-                'name' => 'Actividades'
+                'name' => 'actPinguinos',
+                'price' => 3,
+                'image' => 'null'
 
             ],
         ];
 
-        Categorie::insert($categories);
-        */
+        Tickets::insert($tickets);
     }
 }

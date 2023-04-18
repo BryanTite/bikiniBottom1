@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->id('id_service');
+        Schema::create('tickets', function (Blueprint $table) {
+            $table->id('id_ticket');
             $table->foreignId('id_categorie')->references('id_categorie')->on('categories')->onDelete('cascade');;
             $table->string('name');
             $table->integer('price');
