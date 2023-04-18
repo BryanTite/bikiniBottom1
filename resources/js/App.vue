@@ -22,11 +22,14 @@
           </ul>
         </li>
         <li class="nav-item">
-          <router-link  to="/tickets" class="nav-link">ENTRADAS</router-link>
+          <router-link  to="/" class="nav-link">ENTRADAS</router-link>
+        </li>
+        <li class="nav-item" v-if="isLoggedin">
+            <router-link  to="/tickets" class="nav-link">PANEL CONFIGURACION</router-link>
         </li>
       </ul>
-        <div class="d-flex iconografia-menu">
-            <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/fb.svg" class="iconos" alt="logo bikini bottom aquarium"></router-link>
+        <div class="d-flex">
+            <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/user.svg" class="iconos-header" alt="logo bikini bottom aquarium"></router-link>
         </div>
     </div>
   </div>

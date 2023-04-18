@@ -48,6 +48,10 @@
     width: 210px;
     height: auto;
 }
+.iconos-header{
+    width: 25px;
+    height: 25px;
+}
 .iconografia-menu{
     text-align: right;
 }
@@ -107,6 +111,11 @@ p{
 .dropdown:hover .dropdown-menu {
     display: block !important;
 }
+.card-body{
+    background-color: white;
+    
+}
+
 .btn-basico{
     padding: 5px!important;
     background-color: #be9bde;
