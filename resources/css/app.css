@@ -1,22 +1,22 @@
 @font-face {
     font-family: 'Aquatic';
     src: url('../assets/font/Bondrians.otf');
-    }
+}
 @font-face {
     font-family: 'Cafe';
     src: url('../assets/font/Louis-George-Cafe.otf');
-    }
+}
 
 
 .titulos{
-        font-family: 'Aquatic';
-        color:#be9bde;
+    font-family: 'Aquatic';
+    color:#be9bde;
 }
 
 .subtitulos{
     font-family: 'Aquatic';
     text-shadow: black 1px 1px;
-    color:#be9bde; 
+    color:#be9bde;
 }
 .texto{
     font-family:'Cafe';
@@ -37,7 +37,7 @@
     font-family: 'Aquatic';
     color:#946fb5;
     font-size: 20px;
-    
+
 }
 .logo{
     width:200px;
@@ -71,7 +71,7 @@
 
 }
 .background{
-background-color: #6fcbfe;
+    background-color: #6fcbfe;
 }
 footer{
     background-image: url('../assets/img/wallpaper.webp');
@@ -84,7 +84,7 @@ p{
     color:black;
 }
 
-    /* panel informaivo - HOME */
+/* panel informaivo - HOME */
 
 .card{
     border-style:none!important;
@@ -95,15 +95,16 @@ p{
     border-style: solid;
     border-color: #48b4ee;
     padding:10px;
-    width: 360px;
-    height: 360px;
+    width: 240px;
+    height: 240px;
     background-color: white;
+
 }
 .contenedor-info:hover{
     border-radius:50%;
     padding:10px;
-    width: 360px;
-    height: 360px;
+    width: 240px;
+    height: 240px;
     background-color:white;
     box-shadow: #6fcbfe inset 2px 2px 30px;
 
@@ -113,7 +114,7 @@ p{
 }
 .card-body{
     background-color: white;
-    
+
 }
 
 .btn-basico{
@@ -123,7 +124,6 @@ p{
     text-shadow: 1px 1px black;
     font-size:20px;
     font-family:'Aquatic';
-    padding-bottom:10px;
 }
 .btn-basico:hover{
     padding: 5px!important;
@@ -134,7 +134,7 @@ p{
     font-family:'Aquatic';
 }
 
-    /* fin panel informaivo - HOME */
+/* fin panel informaivo - HOME */
 
 /* fin body */
 
