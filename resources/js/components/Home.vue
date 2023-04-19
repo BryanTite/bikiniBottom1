@@ -56,7 +56,7 @@
                         <div class="card-body">
                             <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
                                 <img src="../../assets/img/GZC3ZI5ZQ5HHRIJRRF6ZVSEC7M.avif" class="card-img-top" alt="...">
-                            <p>Los pinguinos son los primeros en sufrir las consecuencias</p>    
+                            <p>Los pinguinos son los primeros en sufrir las consecuencias</p>
                             </a>
                         </div>
                 </div>
@@ -64,7 +64,7 @@
                         <div class="card-body">
                             <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
                                 <img src="../../assets/img/Panama-flag-on-ship.png" class="card-img-top" alt="...">
-                            <p>¿Que son las banderas de convivencia?</p>    
+                            <p>¿Que son las banderas de convivencia?</p>
                             </a>
                         </div>
                 </div>
@@ -72,7 +72,7 @@
                         <div class="card-body">
                             <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
                                 <img src="../../assets/img/descarga.jpg" class="card-img-top" alt="...">
-                            <p>Beneficios del GNL un nuevo combustible para buques marinos</p>    
+                            <p>Beneficios del GNL un nuevo combustible para buques marinos</p>
                             </a>
                         </div>
                 </div>
@@ -91,5 +91,9 @@
     <style scoped>
 .card-img-top{
     border-radius: 0px!important;
+}
+
+.contenedor-info-grande{
+    display: inline-flex;
 }
     </style>
