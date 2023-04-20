@@ -13,7 +13,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 txt-menu">
         <li class="nav-item dropdown">
           <router-link class="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            INSTALACIONES
+            INSTALACIONESs
           </router-link>
           <ul class="dropdown-menu">
             <li><router-link class="dropdown-item" to="/">EL PARQUE</router-link></li>
