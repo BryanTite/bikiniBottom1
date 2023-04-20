@@ -1,80 +1,63 @@
 <template>
-    <div class="container ">
-        <div class="row jutify-content-center">
-            <div class="col-lg-12">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
                 <div v-if="error !== null" class="alert alert-danger alert-dismissible fade show" role="alert">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
-
                     <strong>{{error}}</strong>
                 </div>
-                <!-- <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Formulario centrado</title>
 
-</head>
-<body>
-
-  <form class="container mt-3 mb-2 texto" action="#">
-    <h2 class="subtitulos">INICIAR SESION</h2>
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
-
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required>
-
-    <button type="submit" class="btn-basico">Enviar</button>
-  </form>
-
-</body>
-</html> -->
-
-                    <h1 class="titulos centrado">INICIAR SESION</h1>
-                      <div class="contenedor">
-                        <form class="">
+                <div class="card card-default">
+                    <div class="card-header"><h5>Login</h5></div>
+                    <div class="card-body">
+                        <form>
                             <div class="form-group row">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right texto">Correo Electronico:</label>
-                                <input id="email" type="email" class="form-control texto" v-model="email" required
-                                           autofocus autocomplete="off" placeholder="Inserta correo electronico">
-                                
+                                <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
+                                <div class="col-md-8">
+                                    <input id="email" type="email" class="form-control" v-model="email" required
+                                           autofocus autocomplete="off" placeholder="Enter your email">
+                                </div>
                             </div>
 
 
                             <div class="form-group row mt-1">
-                                <label for="password" class="col-md-4 col-form-label texto text-md-right">Contraseña:</label>
-                                    <input id="password" type="password" class="form-control texto" v-model="password"
-                                           required autocomplete="off" placeholder="Inserta contraseña">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-8">
+                                    <input id="password" type="password" class="form-control" v-model="password"
+                                           required autocomplete="off" placeholder="Enter your password">
+                                </div>
                             </div>
 
-
-                            <div class="form-group row mt-1 mb-0 ">
-                                
-                                    <button type="submit" class="btn-basico" @click="doLogin">
-                                        INICIAR SESION
+                            <div class="form-group row mt-1 mb-0">
+                                <div class="col-md-8 offset-md-4">
+                                    <button type="submit" class="btn btn-success" @click="doLogin">
+                                        Login
                                     </button>
-                                    <p class="texto">
-                                        No tienes una cuenta aún?
-                                        <router-link to="/register" class="texto redes" style="color:blueviolet">Registrate</router-link>
-                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-md-8 offset-md-4">
+                                    <small class="text-muted">
+                                        Don't have any account yet? Please
+                                        <router-link to="/register" >Register</router-link>
+                                    </small>
+                                </div>
                             </div>
 
 
-                            
-                                    
-
-                            
                         </form>
                     </div>
+                </div>
+
             </div>
         </div>
     </div>
- </template>
+</template>
 
-
- <script>
- export default {
+<script>
+export default {
     data() {
         return {
             email: "",
@@ -94,7 +77,7 @@
                         .then(response => {
                             if (response.data.success) {
                                 console.error('OK');
-                                this.$router.go('/login')
+                                window.location.href = "/login"
                             } else {
                                 console.error('No loggin');
                                 this.error = response.data.message
@@ -113,42 +96,6 @@
         }
         next();
     }
- }
- </script>
-  <!-- <style scoped>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+}
+</script>
 
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    background-color: white;
-    padding: 20px;
-  }
-
-  input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #6fcbfe;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    color:black;
-  }
-  ::placeholder{
-    color:black;
-  }
-
-  textarea {
-    height: 100px;
-  }
-
-</style> -->

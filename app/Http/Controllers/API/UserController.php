@@ -30,7 +30,8 @@ class UserController extends Controller{
         $response = [
             'success' => $success,
             'message' => $message,
-            'user'=> Auth::user()->role()
+            'login' => Auth::check(),
+            'user' => Auth::user()
         ];
 
         return response()->json($response);

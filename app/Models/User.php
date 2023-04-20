@@ -23,6 +23,9 @@ class User extends Authenticatable
         'password',
     ];
 
+    /*protected $appends = [ 'roles' ];*/
+
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -42,9 +45,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function role(){
-        return $this->belongsToMany(Roles::class);
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class,'user_roles');
     }
 
-
+    /*
+    public function getRolesAttribute()
+    {
+        return $this->roles;
+    }*/
+    /*
+    public function hasRole(... $roles )
+    {
+        foreach ($roles as $role) {
+            if ($this->roles->contains('slug', $role)) {
+                return true;
+            }
+        }
+        return false;
+    }*/
 }

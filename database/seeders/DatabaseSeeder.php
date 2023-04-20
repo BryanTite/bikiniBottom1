@@ -9,25 +9,16 @@ class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
+     *
+     * @return void
      */
-    public function run(): void
+    public function run()
     {
-
-        //Te crea 10 usuarios aleatorios
-        // \App\Models\User::factory(10)->create();
-
-        //Te crea un usuario aleatorio
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
         $this->call([
             UserSeeder::class,
-            CategorieSeeder::class,
-            RolesSeeder::class,
+            RoleSeeder::class,
             TicketsSeeder::class,
-            RolesUserSeeder::class
+            CategorieSeeder::class
         ]);
     }
 }

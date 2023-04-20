@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -10,36 +11,35 @@ class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     *
+     * @return void
      */
-    public function run(): void
+    public function run()
     {
 
         $users = [
             [
-
-                'id_user' => 3,
-                'email' => 'user@gmail.com',
-                'name' => 'User',
-                'surname' => 'User',
-                'password' => bcrypt('User-1234'),
-                'phone' => '666666666'
-
+                'id'             => 1,
+                'email'          => 'admin@admin.com',
+                'name'           => 'Admin',
+                'surname'           => 'Admin',
+                'password'       => bcrypt('1234'),
+                'phone'       => '652145874'
             ],
             [
-
-                'id_user' => 1,
-                'email' => 'admin@gmail.com',
-                'name' => 'admin',
-                'surname' => 'admin',
-                'password' => bcrypt('admin-1234'),
-                'phone' => '666666666'
-
+                'id'             => 3,
+                'email'          => 'admin2@admin.com',
+                'name'           => 'Admin',
+                'surname'           => 'Admin',
+                'password'       => bcrypt('1234'),
+                'phone'       => '652145874'
             ],
         ];
 
-
-
         User::insert($users);
+
+
+
 
     }
 }
