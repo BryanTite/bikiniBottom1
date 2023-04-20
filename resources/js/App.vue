@@ -30,6 +30,10 @@
         <li class="nav-item" v-if="isLoggedin">
             <router-link  to="/tickets" class="nav-link">PANEL CONFIGURACION</router-link>
         </li>
+        
+        <li>
+            <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">Logout</a>
+        </li>
       </ul>
         <div class="d-flex">
             <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/user.svg" class="iconos-header" alt="logo bikini bottom aquarium"></router-link>
