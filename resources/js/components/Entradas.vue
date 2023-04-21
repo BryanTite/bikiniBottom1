@@ -11,7 +11,7 @@
     <div class="card bg-info mt-3">
       <img src="../../assets/icons/logoBB.svg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title titulos">ENTRADA INDIVIDUAL<p>12€</p></h5>
+        <h5 class="card-title titulos">ENTRADA INDIVIDUALl<p>12€</p></h5>
         <p class="card-text texto">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
