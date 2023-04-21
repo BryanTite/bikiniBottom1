@@ -17,28 +17,32 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $roles = [
+            /*
             [
                 'id'             => 1,
                 'name'           => 'Admin',
 
             ],
+
             [
                 'id'             => 2,
                 'name'           => 'Moderator',
 
             ],
+                */
             [
                 'id'             => 3,
                 'name'           => 'User',
 
             ],
+
         ];
 
         Role::insert($roles);
 
         User::all()
             ->each(function($user){
-                $user->roles()->sync([1,2,3]);
+                $user->roles()->sync([3]);
             });
     }
 }

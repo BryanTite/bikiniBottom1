@@ -26,7 +26,7 @@ class UserController extends Controller{
             $success = false;
             $message = "Usuario no autorizado";
         }
-
+        Auth::user()->roles;
         $response = [
             'success' => $success,
             'message' => $message,
