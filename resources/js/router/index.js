@@ -12,7 +12,7 @@ import Entradas from '../components/Entradas.vue';
 import Politics from '../components/Politics.vue';
 import Cookies from '../components/Cookies.vue';
 import Warning from '../components/Warning.vue';
-//import Park from '../components/Park.vue';
+import Park from '../components/Park.vue';
 
 export const routes = [
    {
@@ -75,13 +75,13 @@ export const routes = [
         path: '/warning',
         component: Warning
     },
-    /*
+    
     {
         name: 'park',
         path: '/park',
-        component: Warning
+        component: Park
     },
-     */
+     
 ];
 
 const router = createRouter({

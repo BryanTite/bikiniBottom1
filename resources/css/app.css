@@ -82,9 +82,9 @@ p{
     font-family:'Cafe';
     font-size: 16px;
     color:black;
+    text-align: justify;
 }
 
-/* panel informaivo - HOME */
 
 .card{
     border-style:none!important;
@@ -133,8 +133,16 @@ p{
     font-size:20px;
     font-family:'Aquatic';
 }
-
-/* fin panel informaivo - HOME */
+.imagen-mapa{
+    width: 400px;
+    
+}
+.morado{
+        font-family:'Cafe';
+        font-size: 16px;
+        color:#946fb5;
+        text-align: justify;
+}
 
 /* fin body */
 

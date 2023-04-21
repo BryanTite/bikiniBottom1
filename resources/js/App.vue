@@ -13,16 +13,13 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 txt-menu">
         <li class="nav-item dropdown">
           <router-link class="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            INSTALACIONESs
+            INSTALACIONES
           </router-link>
           <ul class="dropdown-menu">
-            <li><router-link class="dropdown-item" to="/">EL PARQUE</router-link></li>
+            <li><router-link class="dropdown-item" to="/park">EL PARQUE</router-link></li>
             <li><hr class="dropdown-divider"></li>
-            <li><router-link class="dropdown-item" to="/">DONDE COMER</router-link></li>
+            <li><router-link class="dropdown-item" to="/park">DONDE COMER</router-link></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a  href="#noticias" class="nav-link">NOTICIAS</a>
         </li>
         <li class="nav-item">
           <router-link  to="/" class="nav-link">ENTRADAS</router-link>
@@ -36,7 +33,7 @@
         </li>
       </ul>
         <div class="d-flex">
-            <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/user.svg" class="iconos-header" alt="logo bikini bottom aquarium"></router-link>
+            <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
         </div>
     </div>
   </div>
