@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('purchase_services', function (Blueprint $table) {
-            $table->foreignId('id_purchase')->references('id_purchase')->on('purchase')->onDelete('cascade');;
-            $table->foreignId('id_ticket')->references('id_ticket')->on('tickets')->onDelete('cascade');;
+            $table->foreignId('id_purchase')->references('id')->on('purchase')->onDelete('cascade');;
+            $table->foreignId('id_ticket')->references('id')->on('tickets')->onDelete('cascade');;
 
             $table->integer('quantity');
             $table->integer('price');

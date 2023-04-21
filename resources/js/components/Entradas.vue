@@ -16,6 +16,7 @@
       </div>
     </div>
   </div>
+
   <div class="col">
     <div class="card">
       <img src="..." class="card-img-top" alt="...">
@@ -49,7 +50,7 @@
 
 <script>
 export default{
-    name: "Tickets"
+    name: "Entradas"
 }
 </script>
 

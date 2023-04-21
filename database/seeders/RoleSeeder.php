@@ -19,13 +19,18 @@ class RoleSeeder extends Seeder
         $roles = [
             [
                 'id'             => 1,
-                'name'           => 'CreateUser',
-                'slug'          => 'create_user',
+                'name'           => 'Admin',
+
+            ],
+            [
+                'id'             => 2,
+                'name'           => 'Moderator',
+
             ],
             [
                 'id'             => 3,
-                'name'           => 'UpdateUser',
-                'slug'          => 'update_user',
+                'name'           => 'User',
+
             ],
         ];
 
@@ -33,7 +38,7 @@ class RoleSeeder extends Seeder
 
         User::all()
             ->each(function($user){
-                $user->roles()->sync([1,3]);
+                $user->roles()->sync([1,2,3]);
             });
     }
 }

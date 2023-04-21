@@ -8,10 +8,11 @@ import Tickets from '../components/Tickets.vue';
 import AddTicket from '../components/AddTicket.vue';
 import EditTicket from '../components/EditTicket.vue';
 import Purchase from '../components/Purchase.vue';
-//import Entradas from '../components/Entradas.vue';
+import Entradas from '../components/Entradas.vue';
 import Politics from '../components/Politics.vue';
 import Cookies from '../components/Cookies.vue';
 import Warning from '../components/Warning.vue';
+//import Park from '../components/Park.vue';
 
 export const routes = [
    {
@@ -54,11 +55,11 @@ export const routes = [
     path: '/purchase',
     component: Purchase
     },
-    /*{
+    {
     name: 'entradas',
     path: '/entradas',
     component: Entradas
-    },*/
+    },
     {
         name: 'politics',
         path: '/politics',
@@ -74,6 +75,13 @@ export const routes = [
         path: '/warning',
         component: Warning
     },
+    /*
+    {
+        name: 'park',
+        path: '/park',
+        component: Warning
+    },
+     */
 ];
 
 const router = createRouter({
