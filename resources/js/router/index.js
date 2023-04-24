@@ -75,13 +75,12 @@ export const routes = [
         path: '/warning',
         component: Warning
     },
-    
     {
         name: 'park',
         path: '/park',
         component: Park
     },
-     
+
 ];
 
 const router = createRouter({

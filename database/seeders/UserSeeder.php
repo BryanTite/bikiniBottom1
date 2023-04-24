@@ -16,9 +16,8 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-
-        $users = [
 /*
+        $users = [
             [
                 'id'             => 1,
                 'email'          => 'admin@admin.com',
@@ -36,7 +35,6 @@ class UserSeeder extends Seeder
                 'password'       => bcrypt('1234'),
                 'phone'          => '652145874'
             ],
-                */
             [
                 'id'             => 3,
                 'email'          => 'user@gmail.com',
@@ -49,6 +47,7 @@ class UserSeeder extends Seeder
         ];
 
         User::insert($users);
+        */
 
     }
 }

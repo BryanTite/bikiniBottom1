@@ -13,16 +13,27 @@ class CategorieSeeder extends Seeder
      */
     public function run(): void
     {
-        /*
+
         $categories = [
             [
-                'id_categorie' => 3,
-                'name' => 'Actividades'
+                'id' => 1,
+                'name' => 'Tickets'
+
+            ],
+            [
+                'id' => 2,
+                'name' => 'Packs'
+
+            ],
+            [
+                'id' => 3,
+                'name' => 'Activities'
 
             ],
         ];
 
         Categorie::insert($categories);
-        */
+
+
     }
 }

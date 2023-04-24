@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_categorie')->references('id')->on('categories')->onDelete('cascade');;
             $table->string('name');
+            $table->string('description');
             $table->integer('price');
             $table->string('image');
 
