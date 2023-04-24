@@ -6,6 +6,11 @@
     font-family: 'Cafe';
     src: url('../assets/font/Louis-George-Cafe.otf');
 }
+@font-face {
+    font-family: 'Botones';
+    src: url('../assets/font/Aquatic-PersonalUse.otf');
+}
+
 
 
 .titulos{
@@ -66,8 +71,10 @@
 }
 
 .iconos-info{
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
+    margin:auto;
+    display: block;
 
 }
 .background{
@@ -85,9 +92,9 @@ p{
     text-align: justify;
 }
 
-
-.card{
-    border-style:none!important;
+.card-image{
+    width: auto;
+    height: auto;
 }
 
 .contenedor-info{
@@ -118,23 +125,28 @@ p{
 }
 
 .btn-basico{
-    padding: 5px!important;
+    border-radius: 0%!important;
+    border-color:white;
+    border-width: 2px ;
     background-color: #be9bde;
     color:white;
     text-shadow: 1px 1px black;
     font-size:20px;
-    font-family:'Aquatic';
+    font-family:'Botones';
+    padding: 5px !important;
+
 }
 .btn-basico:hover{
-    padding: 5px!important;
     background-color: #946fb5;
     color:white;
     text-shadow: 1px 1px black;
     font-size:20px;
-    font-family:'Aquatic';
+    font-family:'Botones';
+    padding: 5px !important;
+
 }
 .imagen-mapa{
-    width: 400px;
+    width: 500px;
     
 }
 .morado{

@@ -24,60 +24,84 @@
         </div>
         <!-- fin carrusel con imagenes -->
         <!-- consultar, informaion, calendario -->
-
-        <div class="row mt-3 mb-3 contenedor-info-grande">
-
-                    <div class="col centrado contenedor-info texto">
-                        <h1 class="titulos">HORARIOS</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/horario.svg" alt="icono horarios"></a>
-                        <br><a href="" class="btn-basico">CONSULTAR</a>
-                    </div>
-
-                    <div class="col centrado contenedor-info texto">
-                        <h1 class="titulos">EXPERIENCIA</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="icono valoraciones"></a>
-                        <br><a href="" class="btn-basico">CONSULTAR</a>
-                    </div>
-
-                    <div class="col centrado contenedor-info texto">
-                        <h1 class="titulos">PRECIOS</h1>
-                        <a href="" class=""> <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="icono entradas"></a>
-                        <br><a href="" class="btn-basico">CONSULTAR</a>
-                    </div>
-
-            </div>
-
+            <div class="row centrado mt-3">
+  <div class="col-sm-4">
+    <div class="card" style="border-radius: 0%;">
+      <div class="card">
+        <h2 class="card-title titulos ">HORARIOS</h2>
+        <img class="iconos-info" src="../../assets/icons/horario.svg" alt="Ver horario disponible"><br>
+        
+      </div>
+      <a href="#" class="btn btn-basico">consultar</a>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card" style="border-radius: 0%;">
+      <div class="card">
+        <h2 class="card-title titulos ">EXPERIENCIA</h2>
+        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios"><br>
+       
+      </div>
+      <a href="#" class="btn btn-basico">consultar</a>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card" style="border-radius: 0%;">
+      <div class="card">
+        <h2 class="card-title titulos ">ENTRADAS</h2>
+        <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="ver disponibilidad entradas"><br>
+        
+      </div>
+      <a href="#" class="btn btn-basico">consultar</a> 
+    </div>
+  </div>
+</div>
         <!-- fin consultar, informaion, calendario -->
         <!-- noticias -->
         <h2 id="noticias" class="titulos">NOTICIAS DE COLABORADORES</h2>
-        <div class="row">
-            <div class="col-sm-12 mb-3 mb-sm-0">
-                <div class="card" style="width: 18rem; float:left;">
-                        <div class="card-body">
-                            <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
-                                <img src="../../assets/img/GZC3ZI5ZQ5HHRIJRRF6ZVSEC7M.avif" class="card-img-top" alt="...">
-                            <p>Los pinguinos son los primeros en sufrir las consecuencias</p>
-                            </a>
-                        </div>
-                </div>
-                 <div class="card" style="width: 18rem; float:left;">
-                        <div class="card-body">
-                            <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
-                                <img src="../../assets/img/Panama-flag-on-ship.png" class="card-img-top" alt="...">
-                            <p>¿Que son las banderas de convivencia?</p>
-                            </a>
-                        </div>
-                </div>
-                <div class="card" style="width: 18rem; float:left;">
-                        <div class="card-body">
-                            <a class="redes" href="https://noticiasmarinas.com/2022/12/07/beneficios-del-gnl-un-nuevo-combustible-para-buques/">
-                                <img src="../../assets/img/descarga.jpg" class="card-img-top" alt="...">
-                            <p>Beneficios del GNL un nuevo combustible para buques marinos</p>
-                            </a>
-                        </div>
-                </div>
-            </div>
-        </div>
+        <div class="row centrado mt-3">
+  <div class="col-sm-3">
+    <div class="card" style="border-radius: 0%;">
+      <div class="card">
+        <h5 class="card-txt titulos ">LOS PINGUINOS SUFREN Y NO LO SABES</h5>
+        <img class="" src="../../assets/img/acuario2.jpg" alt="Ver horario disponible"><br>
+        
+      </div>
+      <a href="#" class="btn btn-basico">SABER MÁS</a>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card" style="border-radius: 0%;">
+      <div class="card">
+        <h5 class="card-title titulos ">EL COMBUSTIBLE DE LOS BUQUES</h5>
+        <img class="card-image" src="../../assets/img/descarga.jpg" alt="ver los testimonios"><br>
+       
+      </div>
+      <a href="#" class="btn btn-basico">SABER MÁS</a>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card" style="border-radius: 0%;">
+      <div class="card">
+        <h5 class="card-title titulos ">PANAMA EN ESTADO CRITICO</h5>
+        <img class="" src="../../assets/img/Panama-flag-on-ship.png" alt="ver disponibilidad entradas"><br>
+        
+      </div>
+      <a href="#" class="btn btn-basico">SABER MÁS</a> 
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card" style="border-radius: 0%; background-image: url('../../assets/img/GZC3ZI5ZQ5HHRIJRRF6ZVSEC7M.avif');">
+      <div class="card">
+        <h5 class="card-title titulos ">SE DESCUBRE UNA NUEVA ESPECIE</h5>
+        <img class="" src="../../assets/img/.avif" alt="ver disponibilidad entradas"><br>
+        
+      </div>
+      <a href="#" class="btn btn-basico">SABER MÁS</a> 
+    </div>
+  </div>
+</div>
+      
         <!-- fin noticias -->
     </div>
     </template>
@@ -95,5 +119,23 @@
 
 .contenedor-info-grande{
     display: inline-flex;
+    
+}
+.card{
+    border-radius: 0!important;
+    border-style:solid;
+    border-color:white;
+}
+
+.card:hover{
+    background-color:#8ed7fe;
+
+ 
+
+}
+.card:hover > .titulos{
+
+    color:white;
+
 }
     </style>
