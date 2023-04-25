@@ -8,39 +8,11 @@
    <!-- packs y tarifas -->
    <div class="row row-cols-1 row-cols-md-2 g-4">
   <div class="col">
-    <div class="card bg-info mt-3">
-      <img src="../../assets/icons/logoBB.svg" class="card-img-top" alt="...">
+    <div class="card bg-info mt-3" v-for="(ticket, index) in tickets" :key="ticket.id">
+      <img v-if="ticket.image" v-bind:src="'/img/' + ticket.image" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title titulos">ENTRADA INDIVIDUA<p>12€</p></h5>
-        <p class="card-text texto">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title titulos">{{ticket.name}}<p>{{ticket.price}}€</p></h5>
+        <p class="card-text texto">{{ticket.description}}</p>
       </div>
     </div>
   </div>
@@ -49,11 +21,34 @@
 </template>
 
 <script>
-export default{
-    name: "Entradas"
+export default {
+    data() {
+        return {
+
+            tickets: [],
+            strSuccess: '',
+            strError: ''
+
+        }
+    },
+    created() {
+
+        this.$axios.get('/sanctum/csrf-cookie').then(response => {
+            this.$axios.get('api/tickets')
+                .then(response => {
+                    this.tickets = response.data;
+
+                })
+                .catch(function (error){
+                    console.log(error);
+                });
+
+        });
+
+    },
+    methods: {
+
+
+    }
 }
 </script>
-
-<style scoped>
-
-</style>

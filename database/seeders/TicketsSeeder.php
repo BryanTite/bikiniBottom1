@@ -20,7 +20,7 @@ class TicketsSeeder extends Seeder
                 'name' => 'Entrada Infantil',
                 'description' => 'Entrada para los más pequeños, a partir de 3 a 12 años.',
                 'price' => 5,
-                'image' => 'null'
+                'image' => '1.webp'
 
             ],
             [
@@ -29,16 +29,16 @@ class TicketsSeeder extends Seeder
                 'name' => 'Entrada Adulto',
                 'description' => 'Entrada individual para adultos.',
                 'price' => 7,
-                'image' => 'null'
+                'image' => '2.webp'
 
             ],
             [
                 'id' => 3,
                 'id_categorie' => 1,
-                'name' => 'Pack Familiar',
+                'name' => 'Entrada +65 años',
                 'description' => 'Entrada para los más adultos, mayor de 65 años.',
                 'price' => 6,
-                'image' => 'null'
+                'image' => '3.webp'
 
             ],
             [
@@ -47,7 +47,7 @@ class TicketsSeeder extends Seeder
                 'name' => 'Pack Familiar',
                 'description' => 'Entradas para tu familia. 2 adultos y 2 niños.',
                 'price' => 20,
-                'image' => 'null'
+                'image' => '4.webp'
 
             ],
             [
@@ -56,7 +56,7 @@ class TicketsSeeder extends Seeder
                 'name' => 'Pack Grupo',
                 'description' => 'Entradas para 8 personas. 4 adultos y 4 niños.',
                 'price' => 37,
-                'image' => 'null'
+                'image' => '5.webp'
 
             ],
             [
@@ -65,7 +65,7 @@ class TicketsSeeder extends Seeder
                 'name' => 'Pack Completo',
                 'description' => 'Entrada individual e incluye las actividades.',
                 'price' => 12,
-                'image' => 'null'
+                'image' => '6.webp'
 
             ],
             [
@@ -74,7 +74,7 @@ class TicketsSeeder extends Seeder
                 'name' => 'Bucear con tiburones',
                 'description' => 'Bucea con tiburones durante 10 min y disfruta!',
                 'price' => 3,
-                'image' => 'null'
+                'image' => '7.webp'
 
             ],
             [
@@ -83,7 +83,7 @@ class TicketsSeeder extends Seeder
                 'name' => 'Actividad con pingüinos',
                 'description' => 'Da de comer a los pingüinos y poder estar cerca de ellos!',
                 'price' => 3,
-                'image' => 'null'
+                'image' => '8.webp'
 
             ],
             [
@@ -92,7 +92,7 @@ class TicketsSeeder extends Seeder
                 'name' => 'Bucear con medusas.',
                 'description' => 'Bucea con medusas durante 10 min y disfruta!',
                 'price' => 3,
-                'image' => 'null'
+                'image' => '9.webp'
 
             ],
         ];

@@ -16,7 +16,6 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        /*
         $roles = [
 
             [
@@ -39,12 +38,12 @@ class RoleSeeder extends Seeder
         ];
 
         Role::insert($roles);
-        */
 
-        /*User::all()
+
+        User::all()
             ->each(function($user){
                 $user->roles()->sync([3]);
             });
-        */
+
     }
 }
