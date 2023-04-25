@@ -80,6 +80,9 @@
 .background{
     background-color: #6fcbfe;
 }
+.fondo{
+    background-image: url(../assets/img/wall.webp);
+}
 footer{
     background-image: url('../assets/img/wallpaper.webp');
     width:100%;

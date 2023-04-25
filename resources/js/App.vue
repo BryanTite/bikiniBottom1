@@ -1,6 +1,6 @@
 <template>
     <!-- header -->
-    <div class="container-fluid" >
+    <div class="container-fluid fondo" >
         <div class="container background">
         <nav class="navbar navbar-expand-lg cabecera-bg">
   <div class="container-fluid">
@@ -12,14 +12,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 txt-menu">
         <li class="nav-item dropdown">
-          <router-link class="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <router-link class="nav-link" to="/park" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             INSTALACIONES
           </router-link>
-          <ul class="dropdown-menu">
-            <li><router-link class="dropdown-item" to="/park">EL PARQUE</router-link></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><router-link class="dropdown-item" to="/park">DONDE COMER</router-link></li>
-          </ul>
         </li>
         <li class="nav-item">
           <router-link  to="/" class="nav-link">ENTRADAS</router-link>
@@ -27,13 +22,17 @@
         <li class="nav-item" v-if="isLoggedin">
             <router-link  to="/tickets" class="nav-link">PANEL CONFIGURACION</router-link>
         </li>
-        
         <li>
-            <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">Logout</a>
+            <!-- <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">logout</a> -->
+
         </li>
+     
       </ul>
         <div class="d-flex">
-            <router-link to="/login" class="nav-item nav-link txt-menu"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+            <router-link v-if="isLoggedin" to="/login" class="nav-item nav-link txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+
+            <router-link to="/login" class="nav-item nav-link txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+        
         </div>
     </div>
   </div>

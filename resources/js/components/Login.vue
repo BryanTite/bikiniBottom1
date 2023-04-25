@@ -8,47 +8,41 @@
                     <strong>{{error}}</strong>
                 </div>
 
-                <div class="card card-default">
-                    <div class="card-header"><h5>Login</h5></div>
-                    <div class="card-body">
-                        <form>
+                <h1 class="titulos centrado">INICIAR SESION</h1>
+                      <div class="contenedor">
+                        <form class="">
+                            <label for="email" class="col-sm-4 col-form-label text-md-right texto">Correo:</label>
+
                             <div class="form-group row">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
-                                <div class="col-md-8">
-                                    <input id="email" type="email" class="form-control" v-model="email" required
-                                           autofocus autocomplete="off" placeholder="Enter your email">
-                                </div>
+                                <input id="email" type="email" class="form-control texto" v-model="email" required
+                                           autofocus autocomplete="off" placeholder="Inserta correo">
+
+                            </div>
+
+                            <label for="password" class="col-sm-4 col-form-label texto text-md-right">Contraseña:</label>
+
+                            <div class="form-group row ">
+                                    <input id="password" type="password" class="form-control texto" v-model="password"
+                                           required autocomplete="off" placeholder="Inserta contraseña">
                             </div>
 
 
-                            <div class="form-group row mt-1">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-                                <div class="col-md-8">
-                                    <input id="password" type="password" class="form-control" v-model="password"
-                                           required autocomplete="off" placeholder="Enter your password">
-                                </div>
-                            </div>
-
-                            <div class="form-group row mt-1 mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-success" @click="doLogin">
-                                        Login
+                            <div class="form-group">
+                                    <button type="submit" class=" mt-3 btn btn-basico" @click="doLogin">
+                                        INICIAR SESION
                                     </button>
-                                </div>
+                                    <p class="texto">
+                                        No tienes una cuenta aún?
+                                        <router-link to="/register" class="texto redes" style="color:blueviolet">Registrate</router-link>
+                                    </p>
                             </div>
 
-                            <div class="row mt-1">
-                                <div class="col-md-8 offset-md-4">
-                                    <small class="text-muted">
-                                        Don't have any account yet? Please
-                                        <router-link to="/register" >Register</router-link>
-                                    </small>
-                                </div>
-                            </div>
+
+
+
 
 
                         </form>
-                    </div>
                 </div>
 
             </div>
@@ -98,4 +92,17 @@ export default {
     }
 }
 </script>
+<style scoped>
+input{
+    border-color:#946fb5;
+    border-radius: 0!important;;
+    border-width: 2px;
+    width: 400px;
+}
+input:hover{
+    border-color:white;
+
+}
+
+</style>
 

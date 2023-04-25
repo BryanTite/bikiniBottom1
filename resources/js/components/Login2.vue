@@ -8,28 +8,6 @@
 
                     <strong>{{error}}</strong>
                 </div>
-                <!-- <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Formulario centrado</title>
-
-</head>
-<body>
-
-  <form class="container mt-3 mb-2 texto" action="#">
-    <h2 class="subtitulos">INICIAR SESION</h2>
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
-
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required>
-
-    <button type="submit" class="btn-basico">Enviar</button>
-  </form>
-
-</body>
-</html> -->
 
                     <h1 class="titulos centrado">INICIAR SESION</h1>
                       <div class="contenedor">
