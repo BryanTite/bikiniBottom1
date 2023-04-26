@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\TicketController;
+use App\Http\Controllers\API\PurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::group(['prefix' => 'tickets', 'middleware' => 'auth:sanctum'], function()
     Route::post('add', [TicketController::class, 'add']);
 
 });
+
+Route::post('cart/add/{product_id}', [PurchaseController::class,'addProduct']);
+Route::get('cart', [PurchaseController::class,'showCart']);
 
 /*
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

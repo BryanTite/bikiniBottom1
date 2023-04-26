@@ -13,6 +13,7 @@
       <div class="card-body">
         <h5 class="card-title titulos">{{ticket.name}}<p>{{ticket.price}}€</p></h5>
         <p class="card-text texto">{{ticket.description}}</p>
+          <button @click="addToCart(ticket.id)">COMPRAR</button>
       </div>
     </div>
   </div>
@@ -46,9 +47,17 @@ export default {
         });
 
     },
+    //editar
     methods: {
-
-
+        addToCart(productId) {
+            axios.post('/api/cart/add/' + productId)
+                .then(response => {
+                    console.log(response.data.message);
+                })
+                .catch(error => {
+                    console.log(error.response.data);
+                });
+        }
     }
 }
 </script>
