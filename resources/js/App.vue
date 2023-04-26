@@ -26,13 +26,14 @@
             <!-- <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">logout</a> -->
 
         </li>
-     
+
       </ul>
         <div class="d-flex">
             <router-link v-if="isLoggedin" to="/login" class="nav-item nav-link txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+            <p>{{user.name}}</p>
 
             <router-link to="/login" class="nav-item nav-link txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
-        
+
         </div>
     </div>
   </div>
@@ -122,11 +123,14 @@
     data() {
         return {
             isLoggedin: false,
+            user: null,
         }
     },
     created() {
+        this.$axios.get('api/user')
         if(window.Laravel.isLoggedin){
             this.isLoggedin =true;
+            this.user = window.Laravel.user;
         }
     },
     methods: {
