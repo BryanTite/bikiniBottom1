@@ -29,8 +29,6 @@
     color:black;
 }
 
-
-
 /* header */
 .txt-menu{
     font-family: 'Aquatic';
@@ -61,7 +59,7 @@
     text-align: right;
 }
 .cabecera-bg{
-    background-image:url(../assets/img/mancha.svg);
+    background-image:url(../assets/img/menu.svg);
 }
 /* fin header */
 
@@ -69,12 +67,24 @@
 .centrado{
     text-align: center;
 }
+.boton-carusel{
+    background-color: #946fb5!important;
+    }
 
 .iconos-info{
     width: 90px;
     height: 90px;
     margin:auto;
     display: block;
+
+}
+.jellyfish{
+    width:40px;
+    transform: rotate(45deg);
+}
+.jellyfish2{
+    width:40px;
+    transform: rotate(-45deg);
 
 }
 .background{
@@ -94,7 +104,12 @@ p{
     color:black;
     text-align: justify;
 }
-
+.box-form{
+    border-color: white #be9bde;
+    border-width: 3px;
+    border-style: dotted;
+    padding: auto;
+}
 .card-image{
     width: auto;
     height: auto;
@@ -117,6 +132,7 @@ p{
     height: 240px;
     background-color:white;
     box-shadow: #6fcbfe inset 2px 2px 30px;
+    
 
 }
 .dropdown:hover .dropdown-menu {

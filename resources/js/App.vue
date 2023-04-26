@@ -11,28 +11,26 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 txt-menu">
-        <li class="nav-item dropdown">
-          <router-link class="nav-link" to="/park" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            INSTALACIONES
-          </router-link>
+        <li class="nav-item">
+          <router-link  to="/" class="nav-link">INICIO</router-link>
         </li>
         <li class="nav-item">
-          <router-link  to="/" class="nav-link">ENTRADAS</router-link>
+          <router-link class="nav-link" to="/park">INSTALACIONES</router-link>
+        </li>
+
+        <li class="nav-item">
+          <router-link  to="/entradas" class="nav-link">ENTRADAS</router-link>
         </li>
         <li class="nav-item" v-if="isLoggedin">
             <router-link  to="/tickets" class="nav-link">PANEL CONFIGURACION</router-link>
         </li>
-        <li>
-            <!-- <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">logout</a> -->
-
-        </li>
 
       </ul>
         <div class="d-flex">
-            <router-link v-if="isLoggedin" to="/login" class="nav-item nav-link txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
-            <p>{{user.name}}</p>
+            <router-link v-if="isLoggedin" to="/login" class="nav-item txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+            <p v-if="isLoggedin" class="txt-menu">{{user.name}}</p>
 
-            <router-link to="/login" class="nav-item nav-link txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+            <router-link to="/login" class="nav-item txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
 
         </div>
     </div>
@@ -156,6 +154,25 @@
  }
  </script>
      <style scoped>
+     .nav-link{
+        color:#946fb5!important;
+     }
+.nav-link::after{
+    display:block;
+    content:"";
+    width: 0;
+    height: 3px;
+    background-color: #946fb5;
+    transition: 0.3s;
+    margin:auto;
+}
+.nav-link:hover::after{
+    color:white!important;
+    width: 100%;
+}
+.nav-link:active{
+    color:#be9bde;
+}
 
     </style>
 

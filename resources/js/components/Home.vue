@@ -2,6 +2,11 @@
     <div class="container-xl-fluid">
             <!-- carrusel con imagenes -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" class="active boton-carusel" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" class="boton-carusel" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" class="boton-carusel" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+         </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <router-link to="/"><img src="../../assets/img/oferta1.svg" class="d-block w-100" alt="imagen publicitaria"></router-link>
@@ -14,11 +19,11 @@
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
@@ -58,7 +63,7 @@
 </div>
         <!-- fin consultar, informaion, calendario -->
         <!-- noticias -->
-        <h2 id="noticias" class="titulos">NOTICIAS DE COLABORADORES</h2>
+        <h1 id="noticias" class=" mt-2 centrado titulos"><img class="jellyfish2"  src="../../assets/icons/jellyfish.svg" alt="medusa bikini bottom"> NOTICIAS DE COLABORADRES <img class="jellyfish" src="../../assets/icons/jellyfish.svg" alt="medusa bikini bottom"></h1>
         <div class="row centrado mt-3">
   <div class="col-sm-3">
     <div class="card" style="border-radius: 0%;">
@@ -138,4 +143,5 @@
     color:white;
 
 }
+
     </style>

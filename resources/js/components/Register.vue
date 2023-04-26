@@ -10,10 +10,10 @@
 
                 <h1 class="titulos centrado">REGISTRO</h1>
                       <div class="container">
-                        <form class="texto">
+                        <form class="texto centrado">
                             <div class="form-group row mt-1">
                                 <div class="col-md-8">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right">Correo electrónico:</label>
+                                <label for="email" class="mx-auto col-sm-4 col-form-label text-md-right">Correo electrónico:</label>
 
                                     <input id="email" type="email" class="form-control" v-model="email" required
                                            autofocus autocomplete="off" placeholder="Introduce tu email">

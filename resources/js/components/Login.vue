@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" style="    background-image:url(../assets/img/menu.svg);">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div v-if="error !== null" class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -7,31 +7,31 @@
 
                     <strong>{{error}}</strong>
                 </div>
-
+                <div class="box-form mt-5">
                 <h1 class="titulos centrado">INICIAR SESION</h1>
-                      <div class="contenedor">
-                        <form class="">
+                     
+                        <form class="centrado">
                             <label for="email" class="col-sm-4 col-form-label text-md-right texto">Correo:</label>
 
-                            <div class="form-group row">
-                                <input id="email" type="email" class="form-control texto" v-model="email" required
+                            <div class="form-group">
+                                <input id="email" type="email" class="form-control texto mx-auto" v-model="email" required
                                            autofocus autocomplete="off" placeholder="Inserta correo">
 
                             </div>
 
                             <label for="password" class="col-sm-4 col-form-label texto text-md-right">Contraseña:</label>
 
-                            <div class="form-group row ">
-                                    <input id="password" type="password" class="form-control texto" v-model="password"
+                            <div class="form-group  ">
+                                    <input id="password" type="password" class="form-control texto mx-auto" v-model="password"
                                            required autocomplete="off" placeholder="Inserta contraseña">
                             </div>
 
 
-                            <div class="form-group">
+                            <div class="form-group centrado">
                                     <button type="submit" class=" mt-3 btn btn-basico" @click="doLogin">
                                         INICIAR SESION
                                     </button>
-                                    <p class="texto">
+                                    <p class="texto centrado mt-2">
                                         No tienes una cuenta aún?
                                         <router-link to="/register" class="texto redes" style="color:blueviolet">Registrate</router-link>
                                     </p>
