@@ -13,7 +13,7 @@
       <div class="card-body">
         <h5 class="card-title titulos">{{ticket.name}}<p>{{ticket.price}}€</p></h5>
         <p class="card-text texto">{{ticket.description}}</p>
-          <button @click="addToCart(ticket.id)">COMPRAR</button>
+          <button @click="insertarEntrada(ticket)">COMPRAR</button>
       </div>
     </div>
   </div>
@@ -47,15 +47,15 @@ export default {
         });
 
     },
-    //editar
     methods: {
-        addToCart(productId) {
-            axios.post('/api/cart/add/' + productId)
+        insertarEntrada(ticket) {
+            const price = ticket.price;
+            this.$axios.post('api/insTickets', { price })
                 .then(response => {
-                    console.log(response.data.message);
+                    this.strSuccess = response.data.message;
                 })
                 .catch(error => {
-                    console.log(error.response.data);
+                    this.strError = error.response.data.message;
                 });
         }
     }

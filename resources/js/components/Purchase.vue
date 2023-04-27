@@ -17,7 +17,7 @@
 
 
         <!--editar -->
-        <div class="row tableCarrito" v-for="(tickets, index) in cart" :key="index">
+        <div class="row tableCarrito" >
 
             <div class="col-12 col-md-4 nomProducto">
 
@@ -61,10 +61,12 @@
 </template>
 
 <script>
-export default{
-    name: "Purchase"
+export default {
+    name: 'Purchase'
 }
+
 </script>
+
 
 <style scoped>
 

@@ -28,8 +28,8 @@ Route::group(['prefix' => 'tickets', 'middleware' => 'auth:sanctum'], function()
 
 });
 
-Route::post('cart/add/{product_id}', [PurchaseController::class,'addProduct']);
-Route::get('cart', [PurchaseController::class,'showCart']);
+Route::post('insTickets', [PurchaseController::class,'insertarEntrada']);
+Route::get('mosTickets', [PurchaseController::class,'mostrarEntrada']);
 
 /*
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
