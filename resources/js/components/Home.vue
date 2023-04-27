@@ -37,7 +37,7 @@
         <img class="iconos-info" src="../../assets/icons/horario.svg" alt="Ver horario disponible"><br>
         
       </div>
-      <a href="#" class="btn btn-basico">consultar</a>
+      <button type="button" class="btn btn-basico" data-bs-toggle="modal" data-bs-target="#staticBackdrop">consultar</button>
     </div>
   </div>
   <div class="col-sm-4">
@@ -47,7 +47,7 @@
         <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios"><br>
        
       </div>
-      <a href="#" class="btn btn-basico">consultar</a>
+      <buttonutton type="button" class="btn btn-basico" data-bs-toggle="modal" data-bs-target="#staticBackdrop">consultar</buttonutton>
     </div>
   </div>
   <div class="col-sm-4">
@@ -57,7 +57,7 @@
         <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="ver disponibilidad entradas"><br>
         
       </div>
-      <a href="#" class="btn btn-basico">consultar</a> 
+      <buttonutton type="button" class="btn btn-basico" data-bs-toggle="modal" data-bs-target="#staticBackdrop">consultar</buttonutton> 
     </div>
   </div>
 </div>
@@ -109,15 +109,145 @@
       
         <!-- fin noticias -->
     </div>
+    <div class="modal fade fondo" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title titulos" id="staticBackdropLabel">DISPONIBILIDAD DE HORARIOS</h1>
+      </div>
+      <div class="modal-body">
+        <table id="calendario">
+    <thead>
+      <tr>
+        <th colspan="7">{{ mesActual }} {{ añoActual }}</th>
+      </tr>
+      <tr>
+        <th>L</th>
+        <th>M</th>
+        <th>X</th>
+        <th>J</th>
+        <th>V</th>
+        <th>S</th>
+        <th>D</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="i in 6" :key="i">
+        <td v-for="j in 7" :key="j"></td>
+      </tr>
+    </tbody>
+  </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-basico">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
     </template>
 
-  <script>
-  export default{
-      name: "Home"
-  }
-  </script>
+<script>
+export default {
+  name: "Calendario",
+  data() {
+    return {
+      fechaActual: new Date(),
+      mesActual: "",
+      añoActual: "",
+    };
+  },
+  methods: {
+    generarCalendario() {
+      // Generamos las filas y columnas del calendario
+      let filas = "";
+      for (let i = 0; i < 6; i++) {
+        let columnas = "";
+        for (let j = 0; j < 7; j++) {
+          columnas += `<td></td>`;
+        }
+        filas += `<tr>${columnas}</tr>`;
+      }
+      document.querySelector("#calendario tbody").innerHTML = filas;
+
+      // Obtenemos el primer y último día del mes actual
+      const primerDiaMes = new Date(
+        this.añoActual,
+        this.mesActual,
+        1
+      ).getDay();
+      const ultimoDiaMes = new Date(
+        this.añoActual,
+        this.mesActual + 1,
+        0
+      ).getDate();
+
+      // Rellenamos el calendario con los días del mes actual
+      let dia = 1;
+      for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 7; j++) {
+          const celda = document.querySelector(
+            `#calendario tbody tr:nth-child(${i + 1}) td:nth-child(${
+              j + 1
+            })`
+          );
+          if (i === 0 && j < primerDiaMes) {
+            // Celdas vacías antes del primer día del mes
+            celda.textContent = "";
+          } else if (dia > ultimoDiaMes) {
+            // Celdas vacías después del último día del mes
+            celda.textContent = "";
+          } else {
+            // Días del mes actual
+            celda.textContent = dia;
+            celda.addEventListener("click", () => {
+              alert(
+                `Has seleccionado el día ${dia}/${
+                  this.mesActual + 1
+                }/${this.añoActual}`
+              );
+            });
+            dia++;
+          }
+        }
+      }
+    },
+  },
+  mounted() {
+    this.mesActual = this.fechaActual.getMonth();
+    this.añoActual = this.fechaActual.getFullYear();
+    this.generarCalendario();
+  },
+};
+</script>
 
     <style scoped>
+/* calendario */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+thead {
+  background-color: blueviolet;
+  color: #fff;
+  font-weight: bold;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+td:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+/* fin */
+
 .card-img-top{
     border-radius: 0px!important;
 }
@@ -143,5 +273,6 @@
     color:white;
 
 }
+
 
     </style>

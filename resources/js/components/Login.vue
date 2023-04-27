@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="    background-image:url(../assets/img/menu.svg);">
+    <div class="container cabecera-bg">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div v-if="error !== null" class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -11,7 +11,7 @@
                 <h1 class="titulos centrado">INICIAR SESION</h1>
                      
                         <form class="centrado">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right texto">Correo:</label>
+                            <label for="email" class="col-sm-4 col-form-label text-md-right texto">Correo electronico:</label>
 
                             <div class="form-group">
                                 <input id="email" type="email" class="form-control texto mx-auto" v-model="email" required

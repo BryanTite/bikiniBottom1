@@ -1,77 +1,70 @@
 <template>
-    <div class="container">
-        <div class="row jutify-content-center">
-            <div class="col-md-8 container">
+     <div class="container cabecera-bg">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
                 <div v-if="error !== null" class="alert alert-danger alert-dismissible fade show" role="alert">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
                     <strong>{{error}}</strong>
                 </div>
+                <div class="box-form mt-5">
+                <h1 class="titulos centrado">REGISTRATE</h1>
+                     
+                        <form class="centrado">
+                            <label for="name" class="col-sm-4 col-form-label texto text-md-right">Nombre:</label>
 
-
-                <h1 class="titulos centrado">REGISTRO</h1>
-                      <div class="container">
-                        <form class="texto centrado">
-                            <div class="form-group row mt-1">
-                                <div class="col-md-8">
-                                <label for="email" class="mx-auto col-sm-4 col-form-label text-md-right">Correo electrónico:</label>
-
-                                    <input id="email" type="email" class="form-control" v-model="email" required
-                                           autofocus autocomplete="off" placeholder="Introduce tu email">
-                                </div>
+                            <div class="form-group  ">
+                                    <input id="name" type="text" class="form-control texto mx-auto" v-model="name"
+                                        required autocomplete="off" placeholder="Inserta nombre">
                             </div>
 
-                            <div class="form-group row">
-                                <div class="col-md-8">
-                                <label for="name" class="col-sm-4 col-form-label text-md-right">Nombre</label>
+                            <label for="surname" class="col-sm-4 col-form-label texto text-md-right">Apellidos:</label>
 
-                                    <input id="name" type="text" class="form-control" v-model="name" required
-                                           autocomplete="off"  placeholder="Introduce tu nombre">
-                                </div>
+                            <div class="form-group  ">
+                                    <input id="surname" type="text" class="form-control texto mx-auto" v-model="surname"
+                                        required autocomplete="off" placeholder="Inserta apellidos">
+                            </div>
+                            <label for="phone" class="col-sm-4 col-form-label texto text-md-right">Telefono:</label>
+
+                            <div class="form-group  ">
+                                    <input id="phone" type="number" class="form-control texto mx-auto" v-model="phone"
+                                        required autocomplete="off" placeholder="Inserta contraseña">
+                            </div>
+                            <label for="email" class="col-sm-4 col-form-label text-md-right texto">Correo electronico:</label>
+
+                            <div class="form-group">
+                                <input id="email" type="email" class="form-control texto mx-auto" v-model="email" required
+                                           autofocus autocomplete="off" placeholder="Inserta correo">
+
                             </div>
 
-                            <div class="form-group row">
-                                <div class="col-md-8">
-                                <label for="surname" class="col-sm-4 col-form-label text-md-right">Apellido</label>
+                            <label for="password" class="col-sm-4 col-form-label texto text-md-right">Contraseña:</label>
 
-                                    <input id="surname" type="text" class="form-control" v-model="surname" required
-                                           autocomplete="off"  placeholder="Introduce tus apellidos">
-                                </div>
-                            </div>
-
-
-
-                            <div class="form-group row mt-1">
-                                <div class="col-md-8">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
-
-                                    <input id="password" type="password" class="form-control" v-model="password" minlength="4" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Mínimo de 5 carácteres y 1 número." required
-                                           autocomplete="off" placeholder="Introduce contraseña">
-                                </div>
+                            <div class="form-group  ">
+                                    <input id="password" type="password" class="form-control texto mx-auto" v-model="password"
+                                           required autocomplete="off" placeholder="Inserta contraseña">
                             </div>
 
 
-                            <div class="form-group row">
-                                <div class="col-md-8">
-                                <label for="phone" class="col-sm-4 col-form-label text-md-right">Teléfono</label>
-
-                                    <input id="phone" type="number" class="form-control" v-model="phone" required
-                                           autocomplete="off"  placeholder="Introduce tu número">
-                                </div>
-                            </div>
-
-                            <div class="form-group row mt-1 mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-basico" @click="register">
-                                        REGISTRAR-SE
+                            <div class="form-group centrado">
+                                    <button type="submit" class=" mt-3 btn btn-basico" @click="register">
+                                        REGISTRAR
                                     </button>
-                                    <p class="texto">
-                                        Ya tengo una cuenta.
+
+                                    <p class="texto centrado mt-2">
+                                        Ya tienes una cuenta?
                                         <router-link to="/login" class="texto redes" style="color:blueviolet">Iniciar sesion</router-link>
                                     </p>
-                                </div>
                             </div>
+
+
+
+
+
+
                         </form>
                 </div>
+
             </div>
         </div>
     </div>

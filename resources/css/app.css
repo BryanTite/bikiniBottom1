@@ -109,6 +109,8 @@ p{
     border-width: 3px;
     border-style: dotted;
     padding: auto;
+    background-color: #6fcbfe;
+    margin-bottom: 50px;
 }
 .card-image{
     width: auto;
