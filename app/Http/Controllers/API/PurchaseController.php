@@ -10,20 +10,26 @@ class PurchaseController extends Controller
 {
     public function insertarEntrada(Request $request)
     {
-        $user = $request->user();
+        //EDITAR
+        $tickets = Tickets::all()->toArray();
+        session();
 
-        $purchase = new Tickets;
-        $purchase->user_id = $user->id;
-        $purchase->total_price = $request->input('total_price');
-        $purchase->date = now();
-        $purchase->save();
+        $response=[
+            'success' => $request->id
+        ];
+        //return $tickets;
+        return response()->json($response);
 
-        return response()->json(['message' => 'Compra realizada con éxito']);
+    }
+
+    public function guardarEntrada(Request $request)
+    {
+
     }
 
     public function mostrarEntrada()
     {
-
+//
     }
 
 }

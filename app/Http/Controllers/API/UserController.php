@@ -64,7 +64,7 @@ class UserController extends Controller{
         ];
 
 
-        return response()->json($response);
+            return response()->json($response);
     }
 
     public function logout(){
