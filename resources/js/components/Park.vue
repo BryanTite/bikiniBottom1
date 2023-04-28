@@ -1,8 +1,8 @@
 <template>
 <div class="mapa-container container">
-    
+    <canvas id="gameCanvas" height="300" width="300">
     <img class="mapa" style="float:left; margin-right:20px;" src="../../assets/img/plano.png" alt="plano de las instalaciones del acuario">
-    <h2 class="subtitulos">EL PARQUE</h2>
+</canvas>  <h2 class="subtitulos">EL PARQUE</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consequuntur nesciunt autem, odit cumque commodi saepe similique deserunt. Sed corporis deleniti quas obcaecati quisquam laborum ad? Ex molestiae cum explicabo?</p>
   
     <h2 class="subtitulos" >INSTALACIONES DE BINIKI BOTTOM </h2>
