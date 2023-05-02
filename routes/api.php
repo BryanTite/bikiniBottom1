@@ -29,8 +29,7 @@ Route::group(['prefix' => 'tickets', 'middleware' => 'auth:sanctum'], function()
 });
 
 Route::post('insTickets', [PurchaseController::class,'insertarEntrada']);
-Route::post('guaTickets', [PurchaseController::class,'guardarEntrada']);
-//Route::get('mosTickets', [PurchaseController::class,'mostrarEntrada']);
+Route::get('mosTickets', [PurchaseController::class,'mostrarEntrada']);
 
 /*
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

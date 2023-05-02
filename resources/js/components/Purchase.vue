@@ -17,10 +17,10 @@
 
 
         <!--editar -->
-        <div class="row tableCarrito" >
+        <div class="row tableCarrito" v-for="(entrada, index) in entradas" :key="entrada.id">
 
             <div class="col-12 col-md-4 nomProducto">
-
+                {{ entrada.name }}
             </div>
 
             <div class="col-12 col-md-4 cantidadBotones">
@@ -62,7 +62,27 @@
 
 <script>
 export default {
-    name: 'Purchase'
+    data() {
+        return {
+        entradas: []
+        }
+    },
+    created() {
+        this.getEntradas();
+    },
+    methods: {
+        getEntradas() {
+            this.$axios.get('/api/mosTickets')
+                .then(response => {
+                    this.entradas = response.data;
+
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        },
+    }
+
 }
 
 </script>
