@@ -30,7 +30,7 @@
             <router-link v-if="isLoggedin" to="/login" class="nav-item txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
             
 
-            <router-link to="/login" class="nav-item txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"><p v-if="isLoggedin" class="txt-menu">{{user.name}}</p></router-link>
+            <router-link v-if="isLoggedin" to="/login" class="nav-item txt-menu ms-2"><img src="../assets/icons/jellyfish.svg" class="iconos-header" alt="iniciar sesion"><p>{{user.name}}</p></router-link>
 
         </div>
     </div>

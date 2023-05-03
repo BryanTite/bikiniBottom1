@@ -7,7 +7,7 @@
 El parque acuático es un lugar fascinante que ofrece una experiencia única para los amantes de la vida marina. Con sus cuatro acuarios tropicales.
 
 El primer acuario se centra en los arrecifes de coral, donde los visitantes pueden ver una gran variedad de especies marinas coloridas y exóticas, incluyendo peces payaso, estrellas de mar y pulpos. El segundo acuario se enfoca en las zonas rocosas de la costa, con exhibiciones de animales como erizos de mar, cangrejos y langostas. El tercer acuario muestra las criaturas de las aguas tropicales profundas, donde se encuentran especies como el tiburón martillo, el pez espada y el calamar gigante. Y el cuarto y último acuario exhibe las especies que habitan en los ríos tropicales, como los peces de colores brillantes, las tortugas y las serpientes de agua.
-</p>
+</p><br>
     <h2 class="subtitulos" >INSTALACIONES DE BINIKI BOTTOM </h2>
     <p>Un lugar privilegiado para conocer la <b class="morado">biodiversidad de los ecosistemas marinos</b>, en especial de las especies del Mediterráneo, y lanzar un mensaje sobre la necesidad e importancia de su conservación.   
     

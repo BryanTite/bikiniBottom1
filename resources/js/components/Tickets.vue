@@ -2,26 +2,26 @@
 
 
     <div class="card">
-        <div class="card-body">
+        <div class="card-body cabecera-bg">
             <div class="d-flex justify-content-between pb-2 mb-2">
-                <h5 class="card-title">All Posts Data</h5>
+                <h2 class="card-title titulos">BASE DE DATOS  ·  ENTRADAS  ·  ACTIVIDADES</h2>
                 <div>
-                    <button class="btn btn-success" type="button" @click="this.$router.push('/tickets/add')">New Post</button>
+                    <button class="btn btn-basico" type="button" @click="this.$router.push('/tickets/add')">añadir nueva entrada</button>
                 </div>
             </div>
 
 
-            <table class="table table-hover table-sm">
-                <thead class="bg-dark text-light">
+            <table class="table table-hover table-sm background box-form">
+                <thead class="texto bg">
                 <tr>
-                    <th width="50" class="text-center">#</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th class="text-center" width="120">Image</th>
-                    <th class="text-center" width="200">Actions</th>
+                    <th width="50" class="text-center">Identificador</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th class="text-center" width="120">Imagen</th>
+                    <th class="text-center" width="200">Acciones</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody class="texto">
                 <tr v-for="(ticket, index) in tickets" :key="ticket.id">
                     <td class="text-center">{{index}}</td>
                     <td>{{ticket.name}}</td>
@@ -29,12 +29,12 @@
                     <td class="text-center">
                         <div v-if="ticket.image">
                             <!-- se recoge la imagen de la ruta con el nombre guardado -->
-                            <img alt="post-img" width="100" v-bind:src="'/img/' + ticket.image">
+                            <img alt="post-img" class="image" width="100" v-bind:src="'/img/' + ticket.image">
                         </div>
                     </td>
                     <td class="text-center">
-                        <router-link :to="{name:'editticket'}" class="btn btn-warning">Edit</router-link>
-                        <button class="btn btn-danger">Delete</button>
+                        <router-link :to="{name:'editticket'}" class="btn btn-admin"><img src="../../assets/icons/editar.svg" alt="eliminar elemento" class="iconos-footer"></router-link>
+                        <button class="btn btn-admin"><img src="../../assets/icons/eliminar.svg" alt="eliminar elemento" class="iconos-header"></button>
                     </td>
                 </tr>
                 </tbody>
@@ -51,7 +51,28 @@
 
  </template>
 
-
+<style scoped>
+tr:hover{
+    background-color: #be9bde;
+}
+tr:hover > td{
+    color: white;
+}
+.image{
+    box-shadow: black 2px 2px 10px;
+}
+.titulos{
+    color: #946fb5 !important;
+}
+.card{
+    border-width: 0px!important;
+}.bg{
+    background-color:#be9bde;
+} 
+td > a{
+    margin-right: 20px;
+}
+</style>
  <script>
  export default {
      name: "Tickets",
