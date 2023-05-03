@@ -13,7 +13,7 @@
       <div class="card-body">
         <h5 class="card-title titulos">{{ticket.name}}<p>{{ticket.price}}€</p></h5>
         <p class="card-text texto">{{ticket.description}}</p>
-          <button @click="insertarEntrada(ticket.id)">COMPRAR</button>
+          <button @click="insertarEntrada(ticket.id, ticket.name, ticket.price)">COMPRAR</button>
       </div>
     </div>
   </div>
@@ -48,34 +48,17 @@ export default {
 
     },
     methods: {
-        insertarEntrada(id) {
-
-            console.log(id);
-            this.$axios.get('/sanctum/csrf-cookie').then(response => {
-                let existObj = this;
-
-
-                const formData = new FormData();
-                formData.append('id', id);
-                formData.append('name', this.name);
-                formData.append('description', this.description);
-
-                this.$axios.post('/api/insTickets', formData)
-                    .then(response => {
-                            existObj.strError = "";
-                            existObj.strSuccess = response.data.success;
-                            ///console.log(response.data.find(el => el.id == id));
-                            console.log(response.data);
-                        }
-                    )
-                    .catch(function (error){
-                            existObj.strError = error.response.data.message;
-                            existObj.strSuccess = response.data.success;
-                        }
-                    );
-
+        insertarEntrada(id, name, price) {
+            this.$axios.post('/api/insTickets', {
+                id: id,
+                name: name,
+                price: price
+            }).then(response => {
+                console.log('Entrada añadida al carrito');
+            }).catch(error => {
+                console.log('Error al añadir entrada al carrito', error);
             });
         }
-    }
+    },
 }
 </script>

@@ -17,10 +17,10 @@
 
 
         <!--editar -->
-        <div class="row tableCarrito" v-for="(entrada, index) in entradas" :key="entrada.id">
+        <div class="row tableCarrito" v-for="(ticket, index) in cart" :key="index">
 
             <div class="col-12 col-md-4 nomProducto">
-                {{ entrada.name }}
+                {{ ticket.name }}
             </div>
 
             <div class="col-12 col-md-4 cantidadBotones">
@@ -34,7 +34,7 @@
                 </form>
             </div>
             <div class="col-12 col-md-4 precioProducto">
-                <p>€</p>
+                <p>{{ ticket.price }}€</p>
             </div>
 
 
@@ -64,27 +64,23 @@
 export default {
     data() {
         return {
-        entradas: []
+            cart: []
+        };
+    },
+    methods: {
+        mostrarEntrada() {
+            this.$axios.get('/api/mosTickets').then(response => {
+                this.cart = response.data;
+                console.log(response.data);
+            }).catch(error => {
+                console.log('Error al cargar el carrito', error);
+            });
         }
     },
     created() {
-        this.getEntradas();
-    },
-    methods: {
-        getEntradas() {
-            this.$axios.get('/api/mosTickets')
-                .then(response => {
-                    this.entradas = response.data;
-
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        },
+        this.mostrarEntrada();
     }
-
-}
-
+};
 </script>
 
 
