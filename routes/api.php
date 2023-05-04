@@ -28,6 +28,14 @@ Route::group(['prefix' => 'tickets', 'middleware' => 'auth:sanctum'], function()
 
 });
 
+Route::group(['prefix' => 'tickets','middleware' => 'auth:sanctum'], function() {
+    Route::get('/', [TicketController::class,'index']);
+    Route::post('add', [TicketController::class,'add']);
+    Route::post('update/{id}', [TicketController::class,'update']);
+    Route::get('edit/{id}', [TicketController::class,'edit']);
+    Route::delete('delete/{id}', [TicketController::class,'delete']);
+});
+
 Route::post('insTickets', [PurchaseController::class,'insertarEntrada']);
 Route::get('mosTickets', [PurchaseController::class,'mostrarEntrada']);
 

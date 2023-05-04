@@ -25,7 +25,7 @@
 
 
 
-            <form @submit.prevent="addTicket" enctype="multipart/form-data">
+            <form enctype="multipart/form-data" @submit.prevent="addTicket">
                 <div class="form-group mb-2">
                     <label>Name</label><span class="text-danger"> *</span>
                     <input type="text" class="form-control" v-model="name" placeholder="Enter post name">
@@ -35,6 +35,11 @@
                 <div class="form-group mb-2">
                     <label>Name</label><span class="text-danger"> *</span>
                     <textarea class="form-control" rows="3" v-model="description" placeholder="Enter post description"></textarea>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label>Precio</label><span class="text-danger"> *</span>
+                    <input type="number" class="form-control" v-model="price" placeholder="Enter post name">
                 </div>
 
 
@@ -54,7 +59,6 @@
 
             </form>
 
-
         </div>
     </div>
  </template>
@@ -67,6 +71,7 @@
         return {
             name: '',
             description: '',
+            price: '',
             img: '',
             strSuccess: '',
             strError: '',
@@ -107,6 +112,7 @@
             const formData = new FormData();
             formData.append('name', this.name);
             formData.append('description', this.description);
+            formData.append('price', this.price);
             formData.append('file', this.img);
 
             this.$axios.post('/api/tickets/add', formData, config)

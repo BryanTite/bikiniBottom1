@@ -18,12 +18,13 @@
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th class="text-center" width="120">Imagen</th>
-                    <th class="text-center" width="200">Acciones</th>
+                    <th class="text-center" width="120">Precio</th>
+                    <th class="text-center" width="130">Acciones</th>
                 </tr>
                 </thead>
                 <tbody class="texto">
                 <tr v-for="(ticket, index) in tickets" :key="ticket.id">
-                    <td class="text-center">{{index}}</td>
+                    <td class="text-center">{{index + 1}}</td>
                     <td>{{ticket.name}}</td>
                     <td>{{ticket.description}}</td>
                     <td class="text-center">
@@ -32,9 +33,10 @@
                             <img alt="post-img" class="image" width="100" v-bind:src="'/img/' + ticket.image">
                         </div>
                     </td>
+                    <td class="text-center">{{ticket.price}} €</td>
                     <td class="text-center">
                         <router-link :to="{name:'editticket'}" class="btn btn-admin"><img src="../../assets/icons/editar.svg" alt="eliminar elemento" class="iconos-footer"></router-link>
-                        <button class="btn btn-admin"><img src="../../assets/icons/eliminar.svg" alt="eliminar elemento" class="iconos-header"></button>
+                        <button class="btn btn-admin" @click="deleteTicket(ticket.id)"><img src="../../assets/icons/eliminar.svg" alt="eliminar elemento" class="iconos-header"></button>
                     </td>
                 </tr>
                 </tbody>
@@ -68,11 +70,12 @@ tr:hover > td{
     border-width: 0px!important;
 }.bg{
     background-color:#be9bde;
-} 
+}
 td > a{
     margin-right: 20px;
 }
 </style>
+
  <script>
  export default {
      name: "Tickets",
@@ -102,6 +105,17 @@ td > a{
     },
     methods: {
 
+        deleteTicket(id) {
+            axios.delete(`api/tickets/delete/${id}`)
+                .then(response => {
+                    console.log(response.data);
+                    const index = this.tickets.findIndex(ticket => ticket.id === id);
+                    this.tickets.splice(index, 1);
+                })
+                .catch(error => {
+                    console.log(error.response.data);
+                });
+        }
 
     }
  }
