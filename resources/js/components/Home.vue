@@ -33,31 +33,24 @@
 
   <div class="col-sm-4">
     <div class="card" style="border-radius: 0%;">
-      <div class="card">
         <h2 class="card-title titulos ">EXPERIENCIA</h2>
         <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios"><br>
-       
-      </div>
-      <button type="button" class="btn btn-basico" data-bs-toggle="modal" data-bs-target="#staticBackdrop">consultar</button>
+      <router-link  to="/" class="btn btn-basico">consultar</router-link>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card" style="border-radius: 0%;">
         <h2 class="card-title titulos ">HORARIOS</h2>
         <img class="iconos-info " src="../../assets/icons/horario.svg" alt="Ver horario disponible"><br>
-
-        <Calendar class="calendario" v-model="date" showIcon dateFormat="dd/mm/yy" />
-
+        <router-link  to="/horarios" class="btn btn-basico">consultar</router-link> 
     </div>
   </div>
+
   <div class="col-sm-4">
     <div class="card" style="border-radius: 0%;">
-      <div class="card">
         <h2 class="card-title titulos ">ENTRADAS</h2>
         <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="ver disponibilidad entradas"><br>
-        
-      </div>
-      <button type="button" class="btn btn-basico" data-bs-toggle="modal" data-bs-target="#staticBackdrop">consultar</button> 
+        <router-link  to="/" class="btn btn-basico">consultar</router-link> 
     </div>
   </div>
 </div>
@@ -110,23 +103,7 @@
       
         <!-- fin noticias -->
     </div>
-    <div class="modal fade fondo" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title titulos" id="staticBackdropLabel">DISPONIBILIDAD DE HORARIOS</h1>
-      </div>
-      <div class="modal-body">
-
-        <Calendar v-model="date" dateFormat="dd/mm/yy" showIcon />
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-basico" data-bs-dismiss="modal">CERRAR</button>
-      </div>
-    </div>
-  </div>
-</div>
+   
     </template>
 <script setup>
 import Calendar from 'primevue/calendar';
@@ -147,6 +124,12 @@ const date = ref();
     display: inline-flex;
     
 }
+h1 {
+color: #946fb5;
+text-shadow: white 1px 1px;
+  
+}
+
 .card{
     border-radius: 0!important;
     border-style:solid;

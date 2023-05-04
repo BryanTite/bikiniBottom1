@@ -13,6 +13,8 @@ import Politics from '../components/Politics.vue';
 import Cookies from '../components/Cookies.vue';
 import Warning from '../components/Warning.vue';
 import Park from '../components/Park.vue';
+import Horarios from '../components/Horarios.vue';
+import Profile from '../components/Profile.vue';
 
 export const routes = [
    {
@@ -79,6 +81,16 @@ export const routes = [
         name: 'park',
         path: '/park',
         component: Park
+    },
+    {
+        name: 'horarios',
+        path: '/horarios',
+        component: Horarios
+        },
+    {
+        name: 'profile',
+        path: '/profile',
+        component: Profile
     },
 
 ];

@@ -28,9 +28,11 @@
       </ul>
         <div class="d-flex">
             <router-link v-if="isLoggedin" to="/login" class="nav-item txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+            <router-link v-if="isLoggedin" to="/profile" class="nav-item txt-menu"><img src="../assets/icons/jellyfish.svg" class="iconos-header" alt="Editar perfil"></router-link>
             
 
-            <router-link v-if="isLoggedin" to="/login" class="nav-item txt-menu ms-2"><img src="../assets/icons/jellyfish.svg" class="iconos-header" alt="iniciar sesion"><p>{{user.name}}</p></router-link>
+            <router-link to="/login" class="nav-item txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+            <router-link to="/purchase" class="nav-item txt-menu ms-2"><img src="../assets/icons/buy.svg" class="iconos-header" alt="ir al carro de la compra"></router-link>
 
         </div>
     </div>
@@ -39,78 +41,72 @@
 <!-- contenido componentes -->
         <router-view></router-view>
 <!-- footer -->
-        <footer class=" text-lg-start mt-2">
 
-            <!-- Section: Links  -->
-            <section>
-                <div >
-                    <!-- Grid row -->
-                    <div class="row">
-                        <!-- Grid column -->
-                        <div class= "col col-sm-2 pt-3">
-                            <a class="navbar-brand" href="#"><img src="../assets/icons/logoBB-BN.svg" class="logoBN" alt="logo bikini bottom aquarium"></a>
-                         </div>
+<footer class=" text-center text-lg-start">
+  <section>
+    <div class="container text-center text-lg-start mt-5 ">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-5">
+          <!-- Content -->
+                       <a class="navbar-brand" href="#"><img src="../assets/icons/logoBB-BN.svg" class="logoBN" alt="logo bikini bottom aquarium"></a>
+</div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+            <h6 class="txt-menu mt-4 mb-4">
+                    RESERVAS Y CONTACTO
+                </h6>
+                <p>
+                    <img class="iconos-footer" src="../assets/icons/mail.svg" alt="Icono del Mail">
+                    bikini@aqua.es
+                </p>
+                <p>
+                    <img class="iconos-footer" src="../assets/icons/whats.svg" alt="Icono del número de móvil">
+                    +34 651 35 78 74
+                </p>
+                <p>
+                    <img class="iconos-footer" src="../assets/icons/phone.svg" alt="Icono del númrero de teléfono fijo">
+                    93 648 72 58
+                </p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+             <h6 class="txt-menu mt-4 mb-4">
+                    PRIVACIDAD
+                </h6>
+                <p>
+                    <router-link class="redes" to="/politics">Política de privacidad de datos</router-link>
+                </p>
+                <p>
+                    <router-link class="redes" to="/cookies">Política de cookies</router-link>
+                </p>
+                <p>
+                    <router-link class="redes" to="/warning">Aviso legal</router-link>
+                </p>
+                <p>
+                    <router-link class="redes" to="/reviews">Reseñas</router-link>
+                </p>
+        </div>
 
-                        <div class="col col-lg-3 pt-4">
-                            <!-- Content -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+            <h6 class="txt-menu mt-4 mb-4">REDES Y LOCALIZACIÓN</h6>
+             <p class="texto text-center">
+                    Carrer Ntra. Sra. de Lourde, 34, 08750 Molins de Rei, Barcelona
+                </p>
+                <a class="redes" href="https://www.instagram.com/"><img class="iconos-footer" src="../assets/icons/ig.svg" alt="Icono de Instagram"> @aquariumBikiniBottom</a><br><br>
+                <a class="redes" href="https://www.facebook.com/"><img class="iconos-footer" src="../assets/icons/fb.svg" alt="Icono de Facebook"> Aquarium Bikini Bottom</a>
+                
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+</footer>
 
-                            <h6 class="txt-menu mb-4">REDES Y LOCALIZACIÓN</h6>
-                            <p>
-                                Carrer Ntra. Sra. de Lourde, 34, 08750 Molins de Rei, Barcelona
-                            </p>
-
-                            <a class="redes" href="https://www.instagram.com/"><img class="iconos-footer" src="../assets/icons/ig.svg" alt="Icono de Instagram"> @aquariumBikiBottom</a><p></p>
-                            <a class="redes" href="https://www.facebook.com/"><img class="iconos-footer" src="../assets/icons/fb.svg" alt="Icono de Facebook"> Aquarium Bikini Bottom</a>                            </div>
-
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col mb-4 col-sm-3 pt-4 iconosReserva">
-                            <!-- Links -->
-                            <h6 class="txt-menu mb-4">
-                                RESERVAS Y CONTACTO
-                            </h6>
-                            <p>
-                                <img class="iconos-footer" src="../assets/icons/mail.svg" alt="Icono del Mail">
-                                bikinibottom@aquarium.com
-                            </p>
-                            <p>
-                                <img class="iconos-footer" src="../assets/icons/whats.svg" alt="Icono del número de móvil">
-                                +34 651 35 78 74
-                            </p>
-                            <p>
-                                <img class="iconos-footer" src="../assets/icons/phone.svg" alt="Icono del númrero de teléfono fijo">
-                                93 648 72 58
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col mb-4 pt-4 politicas">
-                            <!-- Links -->
-                            <h6 class="txt-menu mb-4">
-                                PRIVACIDAD
-                            </h6>
-                            <p>
-                                <router-link class="redes" to="/politics">Política de privacidad de datos</router-link>
-                            </p>
-                            <p>
-                                <router-link class="redes" to="/cookies">Política de cookies</router-link>
-                            </p>
-                            <p>
-                                <router-link class="redes" to="/warning">Aviso legal</router-link>
-                            </p>
-                            <p>
-                                <router-link class="redes" to="/reviews">Reseñas</router-link>
-                            </p>
-                        </div>
-
-                    </div>
-                    <!-- Grid row -->
-                </div>
-            </section>
-            <!-- Section: Links  -->
-        </footer>
     </div>
     </div>
 
@@ -166,6 +162,14 @@
     transition: 0.3s;
     margin:auto;
 }
+h6{
+    color:white!important;
+    font-family:'CAfe';
+}
+h6:hover{
+    color:white!important;
+    font-family:'CAfe';
+}
 .nav-link:hover::after{
     color:white!important;
     width: 100%;
@@ -173,6 +177,15 @@
 .nav-link:active{
     color:#be9bde;
 }
-
+p {
+color: white!important;
+text-align: center;
+}
+a {
+color: white!important;
+}
+a:hover {
+color: #be9bde!important;
+}
     </style>
 

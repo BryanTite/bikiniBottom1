@@ -15,7 +15,7 @@
 
 .titulos{
     font-family: 'Aquatic';
-    color:#be9bde;
+    color:#946fb5;
 }
 
 .subtitulos{
@@ -94,9 +94,10 @@
     background-image: url(../assets/img/wall.webp);
 }
 footer{
-    background-image: url('../assets/img/wallpaper.webp');
+    background-color:#0892a6 ;
     width:100%;
     height: auto;
+    
 }
 p{
     font-family:'Cafe';
@@ -125,7 +126,6 @@ p{
     width: 240px;
     height: 240px;
     background-color: white;
-
 }
 .contenedor-info:hover{
     border-radius:50%;
@@ -180,7 +180,7 @@ p{
 
 }
 .imagen-mapa{
-    width: 500px;
+    width: 400px;
     
 }
 .morado{
