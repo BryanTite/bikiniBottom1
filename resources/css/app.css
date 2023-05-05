@@ -12,7 +12,11 @@
 }
 
 
-
+.precio{
+    font-size: 50px;
+    font-family: 'Cafe';
+    color:black;
+}
 .titulos{
     font-family: 'Aquatic';
     color:#946fb5;

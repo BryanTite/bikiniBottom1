@@ -1,66 +1,26 @@
 <template>
-    <head>
 
-        <title>CARRITO - Reyna's Seafood</title>
+<div class="carrito">
+  <div class="titulo">Producto</div>
+  <div class="cantidad">Cantidad</div>
+  <div class="precio">Precio</div>
+</div>
+<div class="resumen">
+  <h2>Resumen</h2>
+  <div class="subtotal">
+    <span>Subtotal:</span>
+    <span>$0.00</span>
+  </div>
+  <div class="total">
+    <span>Total:</span>
+    <span>$0.00</span>
+  </div>
+</div>
 
-    </head>
-
-    <body>
-
-    <h1></h1>
-    <div class="carritoPrincipal">
-        <div class="row categoriasProductos">
-            <h2 class="col-12 col-md-4">ENTRADAS</h2>
-            <h2 class="col-12 col-md-4">CANTIDAD</h2>
-            <h2 class="col-12 col-md-4">PRECIO</h2>
-        </div>
-
-
-        <!--editar -->
-        <div class="row tableCarrito" v-for="(ticket, index) in cart" :key="index">
-
-            <div class="col-12 col-md-4 nomProducto">
-                {{ ticket.name }}
-            </div>
-
-            <div class="col-12 col-md-4 cantidadBotones">
-                <form action="" method="post">
-
-                    <input type="hidden" name="pos" value="">
-                    <button class="boton-personalizado2" type="" name="Add"> + </button>
-
-                    <button class="boton-personalizado2" type="" name="Del"> - </button>
-
-                </form>
-            </div>
-            <div class="col-12 col-md-4 precioProducto">
-                <p>{{ ticket.price }}€</p>
-            </div>
-
-
-        </div>
-    </div>
-    <div class="row finalizar">
-        <div class="col-6 col-md-4 finalizarCompra">
-            <form action="" method="post">
-                <button class="boton-personalizado3" type="submit" name="finalizarCompra"><a href="">FINALIZAR COMPRA </a></button>
-            </form>
-        </div>
-
-
-        <div class="col-6 col-md-4 nada">
-            <p>*IVA incluido en el pedido*</p>
-        </div>
-
-        <div class="col-6 col-md-4 precioFinalProducto">
-
-        </div>
-    </div>
-
-    </body>
-</template>
+    </template>
 
 <script>
+
 export default {
     data() {
         return {
@@ -85,5 +45,32 @@ export default {
 
 
 <style scoped>
+.carrito {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.titulo {
+  font-weight: bold;
+}
+
+.resumen {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.subtotal,
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.subtotal span:first-child,
+.total span:first-child {
+  font-weight: bold;
+}
 
 </style>
