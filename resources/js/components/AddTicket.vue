@@ -37,6 +37,17 @@
                     <textarea class="form-control" rows="3" v-model="description" placeholder="Enter post description"></textarea>
                 </div>
 
+
+                <div class="form-group mb-2">
+                    <label>Categorias</label><span class="text-danger"> *</span>
+                    <select class="form-control mb-2" v-model="categories">
+                        <option value="1">Tickets</option>
+                        <option value="2">Packs</option>
+                        <option value="3">Actividades</option>
+                    </select>
+                </div>
+
+
                 <div class="form-group mb-2">
                     <label>Precio</label><span class="text-danger"> *</span>
                     <input type="number" class="form-control" v-model="price" placeholder="Enter post name">
@@ -71,6 +82,7 @@
         return {
             name: '',
             description: '',
+            categories: '',
             price: '',
             img: '',
             strSuccess: '',
@@ -94,41 +106,42 @@
                     reader.readAsDataURL( this.img );
                 }
             }
+        },
+        /* INICIO */
+        addTicket(e){
+            this.$axios.get('/sanctum/csrf-cookie').then(response => {
+                let existObj = this;
+                const config = {
+                    headers:{
+                        'content-type': 'multipart/form-data'
+                    }
+                }
+
+                const formData = new FormData();
+                formData.append('name', this.name);
+                formData.append('description', this.description);
+                formData.append('id_categorie', this.categories);
+                formData.append('price', this.price);
+                formData.append('file', this.img);
+
+                this.$axios.post('/api/tickets/add', formData, config)
+                    .then(response => {
+                            existObj.strError = "";
+                            existObj.strSuccess = response.data.success;
+                        }
+                    )
+                    .catch(function (error){
+                            existObj.strError = error.response.data.message;
+                            existObj.strSuccess = response.data.success;
+                        }
+                    );
+
+            });
         }
 
 
     },
 
-    /* INICIO */
-    addTicket(e){
-        this.$axios.get('/sanctum/csrf-cookie').then(response => {
-            let existObj = this;
-            const config = {
-                headers:{
-                    'content-type': 'multipart/form-data'
-                }
-            }
-
-            const formData = new FormData();
-            formData.append('name', this.name);
-            formData.append('description', this.description);
-            formData.append('price', this.price);
-            formData.append('file', this.img);
-
-            this.$axios.post('/api/tickets/add', formData, config)
-                .then(response => {
-                    existObj.strError = "";
-                    existObj.strSuccess = response.data.success;
-                }
-            )
-                .catch(function (error){
-                    existObj.strError = error.response.data.message;
-                    existObj.strSuccess = response.data.success;
-                }
-                );
-
-        });
-    }
 
     /* FIN */
 

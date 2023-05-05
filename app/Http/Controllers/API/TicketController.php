@@ -19,6 +19,7 @@ class TicketController extends Controller
 
             'name'=> 'required',
             'description'=> 'required',
+            'id_categorie'=> 'required',
             'price'=> 'required',
             'file'=> 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
 
@@ -35,6 +36,8 @@ class TicketController extends Controller
             //Nombre de la base de datos "image"
             $input['image'] = $imageName;
         }
+
+        $input['id_categorie'] = $request->input('id_categorie');
 
         Tickets::create($input);
 
@@ -54,7 +57,11 @@ class TicketController extends Controller
         $tickets = Tickets::find($id);
         $request->validate([
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'id_categorie' => 'required',
+            'price' => 'required',
+            'file'=> 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
+
         ]);
 
 

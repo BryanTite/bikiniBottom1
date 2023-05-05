@@ -37,6 +37,20 @@
                     <textarea class="form-control" rows="3" v-model="description" placeholder="Enter post description"></textarea>
                 </div>
 
+                <div class="form-group mb-2">
+                    <label>Categorias</label><span class="text-danger"> *</span>
+                    <select class="form-control mb-2" v-model="categories">
+                        <option value="1">Tickets</option>
+                        <option value="2">Packs</option>
+                        <option value="3">Actividades</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label>Precio</label><span class="text-danger"> *</span>
+                    <input type="number" class="form-control" v-model="price" placeholder="Enter post name">
+                </div>
+
 
                 <div class="form-gorup mb-2">
                     <label>Image</label><span class="text-danger"> *</span>
@@ -67,6 +81,8 @@ export default{
             id:'',
             name: '',
             description: '',
+            categories: '',
+            price:'',
             img: '',
             strSuccess: '',
             strError: '',
@@ -81,6 +97,8 @@ export default{
                 .then(response => {
                     this.name = response.data['name'];
                     this.description = response.data['description'];
+                    this.categories = response.data['id_categorie'];
+                    this.price = response.data['price'];
                     this.img = "/img/"+response.data['image'];
                     this.imgPreview = this.img;
                 })
@@ -117,6 +135,8 @@ export default{
                 const formData = new FormData();
                 formData.append('name', this.name);
                 formData.append('description', this.description);
+                formData.append('id_categorie', this.categories);
+                formData.append('price', this.price);
                 formData.append('file', this.img);
 
 

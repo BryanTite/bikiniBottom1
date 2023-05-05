@@ -17,8 +17,7 @@ return new class extends Migration
             $table->foreignId('id_categorie')->references('id')->on('categories')->onDelete('cascade');;
             $table->integer('ratings');
             $table->string('comment');
-            $table->timestamp('date');
-
+            $table->timestamps();
 
         });
     }
