@@ -52,7 +52,6 @@
 </template>
 <style scooped>
 .card{
-    width:350px;
     border-radius: 0%;
 }
 .card-img-top{

@@ -29,29 +29,36 @@
         </div>
         <!-- fin carrusel con imagenes -->
         <!-- consultar, informaion, calendario -->
-            <div class="row centrado mt-3">
+        <div class="container mt-3">
+  <div class="row">
 
-  <div class="col-sm-4">
-    <div class="card" style="border-radius: 0%;">
-        <h2 class="card-title titulos ">EXPERIENCIA</h2>
-        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios"><br>
-      <router-link  to="/" class="btn btn-basico">consultar</router-link>
+    <div class="col-md-4 mb-3">
+      <div class="card text-center">
+        <h2 class="card-title titulos">EXPERIENCIA</h2>
+        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios">
+        <br>
+        <router-link to="/" class="btn btn-basico">Consultar</router-link>
+      </div>
     </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card" style="border-radius: 0%;">
-        <h2 class="card-title titulos ">HORARIOS</h2>
-        <img class="iconos-info " src="../../assets/icons/horario.svg" alt="Ver horario disponible"><br>
-        <router-link  to="/horarios" class="btn btn-basico">consultar</router-link> 
-    </div>
-  </div>
 
-  <div class="col-sm-4">
-    <div class="card" style="border-radius: 0%;">
-        <h2 class="card-title titulos ">ENTRADAS</h2>
-        <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="ver disponibilidad entradas"><br>
-        <router-link  to="/" class="btn btn-basico">consultar</router-link> 
+    <div class="col-md-4 mb-3">
+      <div class="card text-center">
+        <h2 class="card-title titulos">HORARIOS</h2>
+        <img class="iconos-info" src="../../assets/icons/horario.svg" alt="Ver horario disponible">
+        <br>
+        <router-link to="/horarios" class="btn btn-basico">Consultar</router-link>
+      </div>
     </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card text-center">
+        <h2 class="card-title titulos">ENTRADAS</h2>
+        <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="ver disponibilidad entradas">
+        <br>
+        <router-link to="/" class="btn btn-basico">Consultar</router-link>
+      </div>
+    </div>
+
   </div>
 </div>
 
