@@ -19,7 +19,7 @@
                     <th>Descripcion</th>
                     <th class="text-center" width="120">Imagen</th>
                     <th class="text-center" width="120">Precio</th>
-                    <th class="text-center" width="130">Acciones</th>
+                    <th class="text-center" width="10">Acciones</th>
                 </tr>
                 </thead>
                 <tbody class="texto">

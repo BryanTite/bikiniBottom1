@@ -26,54 +26,89 @@
         </div>
     </div>
 </div> -->
+    <!-- </div> -->
+<!-- </div> -->
 <div class="row centrado mt-3">
-
-    <div class="col-sm-4"  v-for="(ticket, index) in tickets" :key="ticket.id">
-        <div class="card" style="border-radius: 0%;">
-    <h5 class="card-title titulos">{{ticket.name}}</h5>
-    <div style="position: relative;">
-        <img v-if="ticket.image" v-bind:src="'/img/' + ticket.image" class="card-img-top" alt="...">
-        <div style="position: absolute; top: 10px; left: 10px;">
-            <div class="descripcion-precio box-form" style="opacity: 0;">
-                <p class="precio text-center">{{ticket.price}}€</p>
-                <p class="descripcion text-center">{{ticket.description}}</p>
-            </div>
+        <div class="card" v-for="(ticket, index) in tickets" :key="ticket.id">
+        <div class="card-front">
+            
+            <h2 class="titulos text-center">{{ticket.name}}<p class="precio text-center">{{ticket.price}} €</p></h2>
+            <img v-if="ticket.image" v-bind:src="'/img/' + ticket.image" class="card-img-top" alt="Imagen">
+            
         </div>
-    </div>
-    <button class="btn btn-basico" @click="insertarEntrada(ticket.id, ticket.name, ticket.price)">COMPRAR</button>   
+        <div class="card-back">
+            <p>{{ticket.description}}</p>
+            <button class="btn btn-basico" @click="insertarEntrada(ticket.id, ticket.name, ticket.price)">COMPRAR</button>
+        </div>
+        </div>
 </div>
 
-
-
-
-    </div>
-</div>
    <!-- fin packs y tarifas -->
 </template>
 <style scooped>
-.card{
-    border-radius: 0%;
+.card {
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+  position: relative;
+  margin:10px;
+  border-radius: 0%;
 }
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+
+.precio {
+  margin: 0;
+  font-size: 24px;
+}
+
+.desplegable {
+  margin-top: 20px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.informacion-adicional {
+  display: none;
+  margin-top: 20px;
+}
+
+.producto:hover .informacion-adicional {
+  display: block;
+}
+
+
 .card-img-top{
     border-radius: 0%;
-    widows: 10px;
 }
-.dropdown-menu{
-    border-radius: 0%;
-    padding: 10px;
 
-}
 .box-form{
     margin-bottom: 0%!important;
     background-color: #6fcbfe!important;
 
-}
-
-.descripcion-precio:hover {
-    opacity: 1!important;
-    background-color: #6fcbfe;
-    transform: rotate(360deg);
-    transition-duration: 1s;
 }
 
 </style>

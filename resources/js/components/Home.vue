@@ -29,36 +29,29 @@
         </div>
         <!-- fin carrusel con imagenes -->
         <!-- consultar, informaion, calendario -->
-        <div class="container mt-3">
-  <div class="row">
+            <div class="row centrado mt-3">
 
-    <div class="col-md-4 mb-3">
-      <div class="card text-center">
-        <h2 class="card-title titulos">EXPERIENCIA</h2>
-        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios">
-        <br>
-        <router-link to="/" class="btn btn-basico">Consultar</router-link>
-      </div>
+  <div class="col-sm-4">
+    <div class="card" style="border-radius: 0%;">
+        <h2 class="card-title titulos ">EXPERIENCIA</h2>
+        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios"><br>
+      <router-link  to="/" class="btn btn-basico">consultar</router-link>
     </div>
-
-    <div class="col-md-4 mb-3">
-      <div class="card text-center">
-        <h2 class="card-title titulos">HORARIOS</h2>
-        <img class="iconos-info" src="../../assets/icons/horario.svg" alt="Ver horario disponible">
-        <br>
-        <router-link to="/horarios" class="btn btn-basico">Consultar</router-link>
-      </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card" style="border-radius: 0%;">
+        <h2 class="card-title titulos ">HORARIOS</h2>
+        <img class="iconos-info " src="../../assets/icons/horario.svg" alt="Ver horario disponible"><br>
+        <router-link  to="/horarios" class="btn btn-basico">consultar</router-link> 
     </div>
+  </div>
 
-    <div class="col-md-4 mb-3">
-      <div class="card text-center">
-        <h2 class="card-title titulos">ENTRADAS</h2>
-        <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="ver disponibilidad entradas">
-        <br>
-        <router-link to="/" class="btn btn-basico">Consultar</router-link>
-      </div>
+  <div class="col-sm-4">
+    <div class="card" style="border-radius: 0%;">
+        <h2 class="card-title titulos ">ENTRADAS</h2>
+        <img class="iconos-info" src="../../assets/icons/entradas.svg" alt="ver disponibilidad entradas"><br>
+        <router-link  to="/" class="btn btn-basico">consultar</router-link> 
     </div>
-
   </div>
 </div>
 
@@ -67,42 +60,31 @@
         <h1 id="noticias" class=" mt-2 centrado titulos"><img class="jellyfish2"  src="../../assets/icons/jellyfish.svg" alt="medusa bikini bottom"> NOTICIAS DE COLABORADRES <img class="jellyfish" src="../../assets/icons/jellyfish.svg" alt="medusa bikini bottom"></h1>
         <div class="row centrado mt-3">
   <div class="col-sm-3">
-    <div class="card" style="border-radius: 0%;">
-      <div class="card">
-        <h5 class="card-txt titulos ">LOS PINGUINOS SUFREN Y NO LO SABES</h5>
-        <img class="" src="../../assets/img/acuario2.jpg" alt="los pinguinos sufren noticias"><br>
-        
-      </div>
-      <a href="#" class="btn btn-basico">SABER MÁS</a>
+    <div class="card" style="border-radius: 0%; border-width: 0px; background-color: #6fcbfe;">
+
+        <h5 class="card-txt titulos ">LOS PINGUINOS SUFREN </h5>
+        <img class="card-image" src="../../assets/img/acuario2.webp" alt="los pinguinos sufren noticias">
+        <a href="#" class="btn btn-basico">SABER MÁS</a>
     </div>
   </div>
   <div class="col-sm-3">
-    <div class="card" style="border-radius: 0%;">
-      <div class="card">
+    <div class="card" style="border-radius: 0%; border-width: 0px; background-color: #6fcbfe;">
         <h5 class="card-title titulos ">EL COMBUSTIBLE DE LOS BUQUES</h5>
-        <img class="card-image" src="../../assets/img/descarga.jpg" alt="combustible para buques noticias"><br>
-       
-      </div>
+        <img class="card-image" src="../../assets/img/descarga.webp" alt="combustible para buques noticias">
       <a href="#" class="btn btn-basico">SABER MÁS</a>
     </div>
   </div>
   <div class="col-sm-3">
-    <div class="card" style="border-radius: 0%;">
-      <div class="card">
+    <div class="card" style="border-radius: 0%; border-width: 0px; background-color: #6fcbfe;">
         <h5 class="card-title titulos ">PANAMA EN ESTADO CRITICO</h5>
-        <img class="" src="../../assets/img/Panama-flag-on-ship.png" alt="panama en estado critico noticias"><br>
-        
-      </div>
+        <img class="card-image" src="../../assets/img/Panama-flag-on-ship.webp" alt="panama en estado critico noticias">
       <a href="#" class="btn btn-basico">SABER MÁS</a> 
     </div>
   </div>
   <div class="col-sm-3">
-    <div class="card" style="border-radius: 0%; background-image: url('../../assets/img/GZC3ZI5ZQ5HHRIJRRF6ZVSEC7M.avif');">
-      <div class="card">
-        <h5 class="card-title titulos ">SE DESCUBRE UNA NUEVA ESPECIE</h5>
-        <img class="" src="../../assets/img/noticia4.jpg" alt="descubren una especie nueva noticia"><br>
-        
-      </div>
+    <div class="card" style="border-radius: 0%; border-width: 0px; background-color: #6fcbfe;">
+        <h5 class="card-title titulos ">NUEVA ESPECIE DESCUBIERTA</h5>
+        <img class="card-image" src="../../assets/img/noticia4.webp" alt="descubren una especie nueva noticia">
       <a href="https://www.levante-emv.com/tendencias21/2022/11/11/descubren-coleccion-extranas-criaturas-marinas-78446564.html" class="btn btn-basico">SABER MÁS</a> 
     </div>
   </div>
@@ -123,10 +105,10 @@ const date = ref();
 
     <style scoped>
 
-.card-img-top{
-    border-radius: 0px!important;
-}
-
+.card-image{
+border-width: 2px;
+border-style: solid;
+border-color: white;}
 .contenedor-info-grande{
     display: inline-flex;
     
