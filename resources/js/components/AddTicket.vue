@@ -1,7 +1,7 @@
 <template>
 
 
-    <div class="card cabecera-bg">
+    <div class="card ">
         <div class="card-body box-form" style="border-width: 0%!important;">
             <div class="d-flex justify-content-between pb-2 mb-2">
                 <h2 class="card-title titulos">AÑADIR ENTRADA</h2>

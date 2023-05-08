@@ -71,9 +71,7 @@ tr:hover > td{
 }.bg{
     background-color:#be9bde;
 }
-td > a{
-    margin-right: 20px;
-}
+
 </style>
 
  <script>
