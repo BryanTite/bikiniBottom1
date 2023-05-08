@@ -1,12 +1,12 @@
 <template>
 
 
-    <div class="card">
-        <div class="card-body">
+    <div class="card cabecera-bg">
+        <div class="card-body box-form" style="border-width: 0%!important;">
             <div class="d-flex justify-content-between pb-2 mb-2">
-                <h5 class="card-title">Add New Post Data</h5>
+                <h2 class="card-title titulos">AÑADIR ENTRADA</h2>
                 <div>
-                    <router-link :to="{name: 'tickets'}" class="btn btn-success">Go Back</router-link>
+                    <router-link :to="{name: 'tickets'}" class="btn btn-basico">atras</router-link>
                 </div>
             </div>
 
@@ -27,19 +27,19 @@
 
             <form enctype="multipart/form-data" @submit.prevent="addTicket">
                 <div class="form-group mb-2">
-                    <label>Name</label><span class="text-danger"> *</span>
+                    <label class="texto">Titulo</label><span class="text-danger"> *</span>
                     <input type="text" class="form-control" v-model="name" placeholder="Enter post name">
                 </div>
 
 
                 <div class="form-group mb-2">
-                    <label>Name</label><span class="text-danger"> *</span>
+                    <label class="texto">Descripcion</label><span class="text-danger"> *</span>
                     <textarea class="form-control" rows="3" v-model="description" placeholder="Enter post description"></textarea>
                 </div>
 
 
                 <div class="form-group mb-2">
-                    <label>Categorias</label><span class="text-danger"> *</span>
+                    <label class="texto">Categoria</label><span class="text-danger"> *</span>
                     <select class="form-control mb-2" v-model="categories">
                         <option value="1">Tickets</option>
                         <option value="2">Packs</option>
@@ -49,13 +49,13 @@
 
 
                 <div class="form-group mb-2">
-                    <label>Precio</label><span class="text-danger"> *</span>
+                    <label class="texto">Precio</label><span class="text-danger"> *</span>
                     <input type="number" class="form-control" v-model="price" placeholder="Enter post name">
                 </div>
 
 
                 <div class="form-gorup mb-2">
-                    <label>Image</label><span class="text-danger"> *</span>
+                    <label class="texto">Imagen</label><span class="text-danger"> *</span>
                     <input type="file" class="form-control mb-2" v-on:change="onChangeImg">
 
 
@@ -65,7 +65,7 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-primary mt-4 mb-4"> Add Post</button>
+                <button type="submit" class="btn btn-basico mt-4 mb-4"> nuevo   </button>
 
 
             </form>
@@ -149,3 +149,21 @@
 
 
  </script>
+ <style scoped>
+ input{
+    border-color:#946fb5;
+    border-radius: 0!important;
+    border-width: 2px;
+    width: 400px;
+}
+input:hover{
+    border-color:white;
+
+}
+select{
+    border-color:#946fb5;
+    border-radius: 0!important;;
+    border-width: 2px;
+    width: 400px;
+ }
+</style>

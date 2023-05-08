@@ -45,14 +45,14 @@
 
    <!-- fin packs y tarifas -->
 </template>
-<style scooped>
+<style scoped>
 .card {
-  width: 250px;
-  height: 250px;
-  perspective: 1000px;
-  position: relative;
-  margin:10px;
-  border-radius: 0%;
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+    position: relative;
+    margin:10px;
+    border-radius: 0%;
 }
 
 .card-front, .card-back {
