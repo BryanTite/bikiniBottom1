@@ -28,7 +28,7 @@
             <form @submit.prevent="updatePost" enctype="multipart/form-data">
                 <div class="form-group mb-2">
                     <label>Name</label><span class="text-danger"> *</span>
-                    <input type="text" class="form-control" v-model="name" placeholder="Enter post name">
+                    <input type="text" class="form-control" v-model="name" placeholder="{{ticket.price}}">
                 </div>
 
 
@@ -62,14 +62,13 @@
                     </div>
                 </div>
 
-
                 <button type="submit" class="btn btn-primary mt-4 mb-4"> Update Post</button>
 
 
-            </form>
+    </form>
 
 
-        </div>
+    </div>
     </div>
 </template>
 

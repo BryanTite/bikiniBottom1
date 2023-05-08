@@ -83,16 +83,16 @@ class TicketsSeeder extends Seeder
                 'name' => 'Actividad con pingüinos',
                 'description' => 'Da de comer a los pingüinos y poder estar cerca de ellos!',
                 'price' => 3,
-                'image' => '8.webp'
+                'image' => '9.webp'
 
             ],
             [
                 'id' => 9,
                 'id_categorie' => 3,
-                'name' => 'Bucear con medusas.',
+                'name' => 'Bucear con medusas',
                 'description' => 'Bucea con medusas durante 10 min y disfruta!',
                 'price' => 3,
-                'image' => '9.webp'
+                'image' => '8.webp'
 
             ],
         ];

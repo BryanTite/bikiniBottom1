@@ -48,6 +48,7 @@ class TicketController extends Controller
     public function edit($id)
     {
         $tickets = Tickets::find($id);
+        var_dump($tickets);
         return response()->json($tickets);
     }
 
@@ -63,7 +64,6 @@ class TicketController extends Controller
             'file'=> 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
 
         ]);
-
 
         $input = $request->all();
         $imageName = NULL;
