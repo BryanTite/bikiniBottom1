@@ -21,15 +21,11 @@ Route::post('login',[UserController::class,'login']);
 Route::post('register',[UserController::class,'register']);
 Route::post('logout',[UserController::class,'logout'])->middleware(['auth:sanctum']);
 
-
-Route::group(['prefix' => 'tickets', 'middleware' => 'auth:sanctum'], function(){
-    Route::get('/', [TicketController::class, 'index']);
-    Route::post('add', [TicketController::class, 'add']);
-
+Route::group(['prefix' => 'tickets'], function() {
+    Route::get('/', [TicketController::class,'index']);
 });
 
 Route::group(['prefix' => 'tickets','middleware' => 'auth:sanctum'], function() {
-    Route::get('/', [TicketController::class,'index']);
     Route::post('add', [TicketController::class,'add']);
     Route::post('update/{id}', [TicketController::class,'update']);
     Route::get('edit/{id}', [TicketController::class,'edit']);
