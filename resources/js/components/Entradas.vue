@@ -1,115 +1,89 @@
 <template>
     <!-- filtros -->
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+    <form class="d-flex texto" role="search" method="GET">
+        <input class="form-control me-2" type="search" name="busqueda" placeholder="Buscar ahora . . ." aria-label="Search">
+        <button class="btn btn-basico" type="submit">🔎</button>
     </form>
+
     <!-- fin filtros -->
    <!-- packs y tarifas -->
-   <!-- <div class="row centrado mt-3">
-<div class="col-sm-4">
-        <div class="card mt-3" v-for="(ticket, index) in tickets" :key="ticket.id">
-        <img v-if="ticket.image" v-bind:src="'/img/' + ticket.image" class="card-img-top" alt="...">
-        <div class="card-body box-form">
-            
-            <h5 class="card-title titulos">{{ticket.name}}
-                <p class="texto">{{ticket.price}}€</p>
-            </h5>
-            
+<div class="container">
+    <div class="row centrado">
+        <div class="col-md-4 col-sm-6" v-for="(ticket, index) in enlistarEntradas" :key="ticket.id">
+        <div class="card" style="border-radius: 0%;" v-bind:style="{ backgroundImage: `url(/img/${ticket.image})` }">
+            <h2 class="titulos">{{ticket.name}}</h2>
+            <p class="precio difuminado">{{ticket.price}}<span class="signo">€</span></p>
             <button class="btn btn-basico" @click="insertarEntrada(ticket.id, ticket.name, ticket.price)">COMPRAR</button>
-            <div class="dropdown">
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><p class="card-text texto">{{ticket.description}}</p></li>
-                </ul>
-            </div>
         </div>
         </div>
     </div>
-</div> -->
-    <!-- </div> -->
-<!-- </div> -->
-<div class="row centrado mt-3">
-        <div class="card" v-for="(ticket, index) in tickets" :key="ticket.id">
-        <div class="card-front">
-            
-            <h2 class="titulos text-center">{{ticket.name}}<p class="precio text-center">{{ticket.price}} €</p></h2>
-            <img v-if="ticket.image" v-bind:src="'/img/' + ticket.image" class="card-img-top" alt="Imagen">
-            
-        </div>
-        <div class="card-back">
-            <p>{{ticket.description}}</p>
-            <button class="btn btn-basico" @click="insertarEntrada(ticket.id, ticket.name, ticket.price)">COMPRAR</button>
-        </div>
-        </div>
 </div>
+
+
 
    <!-- fin packs y tarifas -->
 </template>
 <style scoped>
-.card {
-    width: 250px;
-    height: 250px;
-    perspective: 1000px;
-    position: relative;
-    margin:10px;
+
+.card-image{
+border-width: 2px;
+border-style: solid;
+border-color: white;}
+.d-flex {
+  display: flex;
+  justify-content: center;
+}
+
+input{
+    border-color:#946fb5;
+    border-radius: 0!important;
+    border-width: 2px;
+    width: 400px
+}
+input:hover{
+    border-color:white;
+
+}
+
+h1 {
+color: #946fb5;
+text-shadow: white 1px 1px;
+  
+}
+.precio{
+margin-top: -20px
+}
+.card{
     border-radius: 0%;
+    background-size: cover;
+    background-position: center;
+    border-style:solid;
+    border-color:white;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 5%;
+
 }
 
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transition: transform 0.6s;
-}
-
-.card-front {
-  transform: rotateY(0deg);
-}
-
-.card-back {
-  transform: rotateY(180deg);
-}
-
-.card:hover .card-front {
-  transform: rotateY(-180deg);
-}
-
-.card:hover .card-back {
-  transform: rotateY(0deg);
+.difuminado {
+  background-image: radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 40%);
 }
 
 
-.precio {
-  margin: 0;
-  font-size: 24px;
-}
 
-.desplegable {
-  margin-top: 20px;
-  color: #007bff;
-  cursor: pointer;
-}
-
-.informacion-adicional {
-  display: none;
-  margin-top: 20px;
-}
-
-.producto:hover .informacion-adicional {
-  display: block;
+.titulos {
+  color: white;
+  -webkit-text-stroke: 1px #946fb5;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,3), rgba(0, 0, 0, 0));
 }
 
 
-.card-img-top{
-    border-radius: 0%;
-}
-
-.box-form{
-    margin-bottom: 0%!important;
-    background-color: #6fcbfe!important;
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
 }
+
 
 </style>
 <script>
@@ -120,7 +94,8 @@ export default {
 
             tickets: [],
             strSuccess: '',
-            strError: ''
+            strError: '',
+            busqueda:''
 
         }
     },
@@ -150,6 +125,15 @@ export default {
             }).catch(error => {
                 console.log('Error al añadir entrada al carrito', error);
             });
+        },enlistarEntradas(){
+            if(this.tickets.trim() == ''){
+                this.tickets;
+            }else{
+                this.busqueda = busqueda;
+                this.tickets.includes().this.busqueda;
+            }
+
+
         }
     },
 }

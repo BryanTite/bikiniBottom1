@@ -7,15 +7,28 @@
     src: url('../assets/font/Louis-George-Cafe.otf');
 }
 @font-face {
+    font-family: 'Numeros';
+    src: url('../assets/font/CHERI___.ttf');
+}
+@font-face {
     font-family: 'Botones';
     src: url('../assets/font/Aquatic-PersonalUse.otf');
 }
 
 
 .precio{
+    font-size: 80px;
+    font-family: 'Aquatic';
+    color:white;
+    -webkit-text-stroke: #946fb5 1px;
+    text-align: center;
+}
+.signo{
     font-size: 50px;
-    font-family: 'Cafe';
-    color:black;
+    font-family: 'Aquatic';
+    color:white;
+    -webkit-text-stroke: #946fb5 1px;
+    text-align: center; 
 }
 .titulos{
     font-family: 'Aquatic';
