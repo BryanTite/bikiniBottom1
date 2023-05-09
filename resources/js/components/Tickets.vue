@@ -59,6 +59,7 @@ tr:hover{
 }
 tr:hover > td{
     color: white;
+    
 }
 .image{
     box-shadow: black 2px 2px 10px;
@@ -66,14 +67,16 @@ tr:hover > td{
 .titulos{
     color: #946fb5 !important;
 }
+table{
+    background-color: whitesmoke;
+    vertical-align: middle;
+}
 .card{
     border-width: 0px!important;
 }.bg{
      background-color:#be9bde;
  }
-td > a{
-    margin-right: 20px;
-}
+
 </style>
 
 <script>
