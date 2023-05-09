@@ -40,10 +40,15 @@ class RoleSeeder extends Seeder
         Role::insert($roles);
 
 
-        User::all()
-            ->each(function($user){
+        User::all()->each(function($user) {
+            if ($user->id == 1) {
+                $user->roles()->sync([1]);
+            } elseif ($user->id == 2) {
+                $user->roles()->sync([2]);
+            } else {
                 $user->roles()->sync([3]);
-            });
+            }
+        });
 
     }
 }

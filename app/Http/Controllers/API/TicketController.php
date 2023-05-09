@@ -48,7 +48,6 @@ class TicketController extends Controller
     public function edit($id)
     {
         $tickets = Tickets::find($id);
-        var_dump($tickets);
         return response()->json($tickets);
     }
 

@@ -59,7 +59,7 @@ tr:hover{
 }
 tr:hover > td{
     color: white;
-    
+
 }
 .image{
     box-shadow: black 2px 2px 10px;
@@ -120,6 +120,17 @@ export default {
                 });
         }
 
+    },
+    beforeRouteEnter(to, from, next){
+        if(!window.Laravel.isLoggedin){
+            window.location.href = "/";
+        }else{
+            if((window.Laravel.user.roles[0].name === 'Admin') || (window.Laravel.user.roles[0].name === 'Moderator')){
+                next();
+            }else{
+                next('/');
+            }
+        }
     }
 }
 </script>

@@ -86,6 +86,11 @@ class UserController extends Controller{
 
         return response()->json($response);
     }
+
+    public function panel(){
+        $roles = User::with('roles')->get();
+        return response()->json($roles);
+    }
 }
 
 
