@@ -35,7 +35,7 @@
                     </td>
                     <td class="text-center">{{ticket.price}} €</td>
                     <td class="text-center">
-                        <router-link :to="{name:'editticket'}" class="btn btn-admin"><img src="../../assets/icons/editar.svg" alt="eliminar elemento" class="iconos-footer"></router-link>
+                        <router-link :to="{name:'editticket', params: { id: ticket.id }}" class="btn btn-admin"><img src="../../assets/icons/editar.svg" alt="eliminar elemento" class="iconos-footer"></router-link>
                         <button class="btn btn-admin" @click="deleteTicket(ticket.id)"><img src="../../assets/icons/eliminar.svg" alt="eliminar elemento" class="iconos-header"></button>
                     </td>
                 </tr>
@@ -51,7 +51,7 @@
 
 
 
- </template>
+</template>
 
 <style scoped>
 tr:hover{
@@ -69,14 +69,16 @@ tr:hover > td{
 .card{
     border-width: 0px!important;
 }.bg{
-    background-color:#be9bde;
+     background-color:#be9bde;
+ }
+td > a{
+    margin-right: 20px;
 }
-
 </style>
 
- <script>
- export default {
-     name: "Tickets",
+<script>
+export default {
+    name: "Tickets",
     data() {
         return {
 
@@ -116,5 +118,5 @@ tr:hover > td{
         }
 
     }
- }
- </script>
+}
+</script>
