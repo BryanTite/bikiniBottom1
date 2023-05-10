@@ -4,9 +4,9 @@
   <div class="card">
       <div class="card-body cabecera-bg">
           <div class="d-flex justify-content-between pb-2 mb-2">
-              <h2 class="card-title titulos">BINIKI BOTTOM  ·  ENTRADAS  ·  CESTA</h2>
+              <h2 class="card-title titulos">BINIKI BOTTOM · CESTA</h2>
           </div>
-          <table class="table table-hover table-sm background box-form">
+          <table class="table table-hover table-sm box-form">
               <thead class="texto bg">
               <tr>
                   <th width="50" class="text-center">Cantidad</th>
@@ -26,12 +26,12 @@
                     </select>
                   </td>
                   <td>{{ticket.name}}</td>
-                  <td class="text-center">{{ticket.price}} €</td>
+                  <td class="text-center ">{{ticket.price}} €</td>
                   <td class="text-center"><img src="../../assets/icons/eliminar.svg" alt="eliminar elemento" class="iconos-footer"></td>
               </tr>
               </tbody>
           </table>
-
+          <button class="btn-basico btn" type="submit" name="finalizarCompra">FINALIZAR</button>
 
 
 
@@ -76,17 +76,17 @@ table {
 }
 
 table th, table td {
-  border: 1px solid black;
   padding: 8px;
   text-align: left;
 }
 
 table th {
   background-color: #ddd;
+  color:#946fb5;
 }
 
-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+table tbody tr {
+  background-color: white;
 }
 
 table tfoot td {
