@@ -1,23 +1,47 @@
 <template>
 
-<div class="carrito">
-  <div class="titulo">Producto</div>
-  <div class="cantidad">Cantidad</div>
-  <div class="precio">Precio</div>
-</div>
-<div class="resumen">
-  <h2>Resumen</h2>
-  <div class="subtotal">
-    <span>Subtotal:</span>
-    <span>$0.00</span>
-  </div>
-  <div class="total">
-    <span>Total:</span>
-    <span>$0.00</span>
-  </div>
-</div>
 
-    </template>
+  <div class="card">
+      <div class="card-body cabecera-bg">
+          <div class="d-flex justify-content-between pb-2 mb-2">
+              <h2 class="card-title titulos">BINIKI BOTTOM  ·  ENTRADAS  ·  CESTA</h2>
+          </div>
+          <table class="table table-hover table-sm background box-form">
+              <thead class="texto bg">
+              <tr>
+                  <th width="50" class="text-center">Cantidad</th>
+                  <th class="text-center" width="120">Nombre</th>
+                  <th class="text-center" width="120">Precio</th>
+                  <th class="text-center" width="10"></th>
+              </tr>
+              </thead>
+              <tbody class="texto">
+              <tr v-for="(ticket, index) in cart" :key="index">
+                  <td class="text-center">
+                    <select v-model="ticket.quantity">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </td>
+                  <td>{{ticket.name}}</td>
+                  <td class="text-center">{{ticket.price}} €</td>
+                  <td class="text-center"><img src="../../assets/icons/eliminar.svg" alt="eliminar elemento" class="iconos-footer"></td>
+              </tr>
+              </tbody>
+          </table>
+
+
+
+
+      </div>
+  </div>
+
+
+
+
+</template>
 
 <script>
 
@@ -45,32 +69,35 @@ export default {
 
 
 <style scoped>
-.carrito {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
 }
 
-.titulo {
+table th, table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #ddd;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tfoot td {
+  text-align: right;
   font-weight: bold;
 }
 
-.resumen {
-  border: 1px solid #ccc;
-  padding: 10px;
+h1 {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.subtotal,
-.total {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-.subtotal span:first-child,
-.total span:first-child {
-  font-weight: bold;
-}
 
 </style>

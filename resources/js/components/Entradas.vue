@@ -1,13 +1,13 @@
 <template>
     <!-- filtros -->
-    <form class="d-flex texto" role="search" method="GET">
-        <input class="form-control me-2" type="search" name="busqueda" placeholder="Buscar ahora . . ." aria-label="Search">
+    <form class="d-flex texto" role="search" method="GET" @submit.prevent>
+        <input class="form-control me-2" type="search" v-model="busqueda" placeholder="Buscar ahora . . ." aria-label="Search">
         <button class="btn btn-basico" type="submit">🔎</button>
     </form>
 
     <!-- fin filtros -->
    <!-- packs y tarifas -->
-<div class="container">
+   <div class="container">
     <div class="row centrado">
         <div class="col-md-4 col-sm-6" v-for="(ticket, index) in enlistarEntradas" :key="ticket.id">
         <div class="card" style="border-radius: 0%;" v-bind:style="{ backgroundImage: `url(/img/${ticket.image})` }">
@@ -113,6 +113,16 @@ export default {
 
         });
 
+    }, computed:{
+        enlistarEntradas() {
+      if (this.busqueda.trim() == '') {
+        return this.tickets;
+      } else {
+        return this.tickets.filter((ticket) =>
+          ticket.name.toLowerCase().includes(this.busqueda.toLowerCase())
+        );
+      }
+    },
     },
     methods: {
         insertarEntrada(id, name, price) {
@@ -125,16 +135,8 @@ export default {
             }).catch(error => {
                 console.log('Error al añadir entrada al carrito', error);
             });
-        },enlistarEntradas(){
-            if(this.tickets.trim() == ''){
-                this.tickets;
-            }else{
-                this.busqueda = busqueda;
-                this.tickets.includes().this.busqueda;
-            }
+        }, 
 
-
-        }
     },
 }
 </script>
