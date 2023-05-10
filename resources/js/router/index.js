@@ -7,6 +7,9 @@ import Dashboard from '../components/Dashboard.vue';
 import Tickets from '../components/Tickets.vue';
 import AddTicket from '../components/AddTicket.vue';
 import EditTicket from '../components/EditTicket.vue';
+import Users from '../components/Users.vue';
+import AddUser from '../components/AddUser.vue';
+import EditUser from '../components/EditUser.vue';
 import Purchase from '../components/Purchase.vue';
 import Entradas from '../components/Entradas.vue';
 import Politics from '../components/Politics.vue';
@@ -51,6 +54,21 @@ export const routes = [
     path: '/tickets/edit',
     component: EditTicket
    },
+    {
+        name: 'users',
+        path: '/users',
+        component: Users
+    },
+    {
+        name: 'adduser',
+        path: '/users/add',
+        component: AddUser
+    },
+    {
+        name: 'edituser',
+        path: '/users/edit',
+        component: EditUser
+    },
    {
     name: 'purchase',
     path: '/purchase',
