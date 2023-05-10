@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller{
+
+    public function index(){
+        $users = User::all()->toArray();
+        return $users;
+    }
     public function login(Request $request){
 
 
@@ -87,9 +92,80 @@ class UserController extends Controller{
         return response()->json($response);
     }
 
+
+    //Panel admin/moderator
     public function panel(){
         $roles = User::with('roles')->get();
         return response()->json($roles);
+    }
+
+    public function add(Request $request){
+
+        $request->validate([
+
+            'email'=> 'required',
+            'name'=> 'required',
+            'surname'=> 'required',
+            'password'=> 'required',
+            'phone'=> 'required'
+
+        ]);
+
+        $input = $request->all();
+
+        $input['role_id'] = $request->input('role_id');
+
+        User::create($input);
+
+        return response()->json(['success'=>'Post creado correctamente!']);
+
+    }
+
+    /*
+    public function edit($id)
+    {
+        $tickets = Tickets::find($id);
+        return response()->json($tickets);
+    }
+
+
+    public function update($id, Request $request)
+    {
+        $tickets = Tickets::find($id);
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'id_categorie' => 'required',
+            'price' => 'required',
+            'file'=> 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
+
+        ]);
+
+        $input = $request->all();
+        $imageName = NULL;
+        if ($image = $request->file('file')) {
+            $destinationPath = 'img/';
+            $imageName = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $imageName);
+            $input['image'] = $imageName;
+            unlink('img/'.$tickets->image);
+        }
+        $tickets->update($input);
+
+
+        return response()->json(['success'=> 'Post update successfully']);
+    }
+    */
+
+
+    public function delete($id)
+    {
+        var_dump($id);
+        $tickets = User::find($id);
+        $tickets->delete();
+        return response()->json(['success'=> 'Post deleted successfully']);
+
+
     }
 }
 

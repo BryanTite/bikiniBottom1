@@ -22,14 +22,17 @@
           <router-link  to="/entradas" class="nav-link">ENTRADAS</router-link>
         </li>
         <li class="nav-item" v-if="isLoggedin">
-            <router-link  to="/tickets" class="nav-link">PANEL CONFIGURACION</router-link>
+            <router-link  to="/tickets" class="nav-link">PANEL ENTRADAS</router-link>
         </li>
+      <li class="nav-item" v-if="isLoggedin">
+          <router-link  to="/users" class="nav-link">PANEL USERS</router-link>
+      </li>
 
       </ul>
         <div class="d-flex">
             <router-link v-if="isLoggedin" to="/login" class="nav-item txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
             <router-link v-if="isLoggedin" to="/profile" class="nav-item txt-menu"><img src="../assets/icons/jellyfish.svg" class="iconos-header" alt="Editar perfil"></router-link>
-            
+
 
             <router-link to="/login" class="nav-item txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
             <router-link to="/purchase" class="nav-item txt-menu ms-2"><img src="../assets/icons/buy.svg" class="iconos-header" alt="ir al carro de la compra"></router-link>
@@ -97,7 +100,7 @@
                 </p>
                 <a class="redes" href="https://www.instagram.com/"><img class="iconos-footer" src="../assets/icons/ig.svg" alt="Icono de Instagram"> @aquariumBikiniBottom</a><br><br>
                 <a class="redes" href="https://www.facebook.com/"><img class="iconos-footer" src="../assets/icons/fb.svg" alt="Icono de Facebook"> Aquarium Bikini Bottom</a>
-                
+
         </div>
         <!-- Grid column -->
       </div>

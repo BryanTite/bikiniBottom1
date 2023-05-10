@@ -35,6 +35,21 @@ Route::group(['prefix' => 'tickets','middleware' => 'auth:sanctum'], function() 
 Route::post('insTickets', [PurchaseController::class,'insertarEntrada']);
 Route::get('mosTickets', [PurchaseController::class,'mostrarEntrada']);
 
+
+Route::group(['prefix' => 'users'], function() {
+    Route::get('/', [UserController::class,'index']);
+});
+
+Route::group(['prefix' => 'users','middleware' => 'auth:sanctum'], function() {
+    Route::post('add', [UserController::class,'add']);
+    Route::post('update/{id}', [UserController::class,'update']);
+    Route::get('edit/{id}', [UserController::class,'edit']);
+    Route::delete('delete/{id}', [UserController::class,'delete']);
+});
+
+Route::post('insUsers', [PurchaseController::class,'insertarUsuario']);
+Route::get('mosUsers', [PurchaseController::class,'mostrarUsuario']);
+
 /*
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
