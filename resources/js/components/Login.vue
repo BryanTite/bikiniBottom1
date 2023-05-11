@@ -9,7 +9,7 @@
                 </div>
                 <div class="box-form mt-5">
                 <h1 class="titulos centrado">INICIAR SESION</h1>
-                     
+
                         <form class="centrado">
                             <label for="email" class="col-sm-4 col-form-label text-md-right texto">Correo electronico:</label>
 
@@ -86,7 +86,7 @@ export default {
     },
     beforeRouteEnter(to, from, next){
         if(window.Laravel.isLoggedin){
-            return next('dashboard');
+            return next('/');
         }
         next();
     }
