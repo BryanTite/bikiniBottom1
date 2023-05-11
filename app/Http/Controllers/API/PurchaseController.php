@@ -4,9 +4,15 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class PurchaseController extends Controller
 {
+    public function index(){
+        $users = User::all()->toArray();
+        return $users;
+    }
+
     public function insertarEntrada(Request $request)
     {
 
@@ -32,5 +38,6 @@ class PurchaseController extends Controller
 
         return response()->json($cart);
     }
+    
 
 }

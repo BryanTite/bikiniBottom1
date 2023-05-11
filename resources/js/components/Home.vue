@@ -64,28 +64,28 @@
 
         <h5 class="card-txt titulos ">LOS PINGUINOS SUFREN </h5>
         <img class="card-image" src="../../assets/img/acuario2.webp" alt="los pinguinos sufren noticias">
-        <a href="#" class="btn btn-basico">SABER MÁS</a>
+        <a target="blank" href="https://www.nationalgeographic.com.es/naturaleza/actualidad/peligros-que-acechan-a-pinguinos_12626" class="btn btn-basico">SABER MÁS</a>
     </div>
   </div>
   <div class="col-sm-3">
     <div class="card" style="border-radius: 0%; border-width: 0px; background-color: #6fcbfe;">
         <h5 class="card-title titulos ">EL COMBUSTIBLE DE LOS BUQUES</h5>
         <img class="card-image" src="../../assets/img/descarga.webp" alt="combustible para buques noticias">
-      <a href="#" class="btn btn-basico">SABER MÁS</a>
+      <a target="blank" href="https://www.imo.org/es/MediaCentre/HotTopics/Pages/Sulphur-2020.aspx" class="btn btn-basico">SABER MÁS</a>
     </div>
   </div>
   <div class="col-sm-3">
     <div class="card" style="border-radius: 0%; border-width: 0px; background-color: #6fcbfe;">
         <h5 class="card-title titulos ">PANAMA EN ESTADO CRITICO</h5>
         <img class="card-image" src="../../assets/img/Panama-flag-on-ship.webp" alt="panama en estado critico noticias">
-      <a href="#" class="btn btn-basico">SABER MÁS</a> 
+      <a target="blank" href="https://www.lavanguardia.com/vida/20230302/8796310/panama-eleva-mas-54-aguas-marinas-protegidas.html" class="btn btn-basico">SABER MÁS</a> 
     </div>
   </div>
   <div class="col-sm-3">
     <div class="card" style="border-radius: 0%; border-width: 0px; background-color: #6fcbfe;">
         <h5 class="card-title titulos ">NUEVA ESPECIE DESCUBIERTA</h5>
         <img class="card-image" src="../../assets/img/noticia4.webp" alt="descubren una especie nueva noticia">
-      <a href="https://www.levante-emv.com/tendencias21/2022/11/11/descubren-coleccion-extranas-criaturas-marinas-78446564.html" class="btn btn-basico">SABER MÁS</a> 
+      <a target="blank" href="https://www.levante-emv.com/tendencias21/2022/11/11/descubren-coleccion-extranas-criaturas-marinas-78446564.html" class="btn btn-basico">SABER MÁS</a> 
     </div>
   </div>
 </div>

@@ -31,8 +31,6 @@
       </ul>
         <div class="d-flex">
             <router-link v-if="isLoggedin" to="/login" class="nav-item txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
-
-
             <router-link to="/login" class="nav-item txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
             <router-link to="/purchase" class="nav-item txt-menu ms-2"><img src="../assets/icons/buy.svg" class="iconos-header" alt="ir al carro de la compra"></router-link>
 
@@ -46,7 +44,7 @@
 
 <footer class=" text-center text-lg-start">
   <section>
-    <div class="container text-center text-lg-start mt-5 ">
+    <div class="container text-center text-lg-start mt-2 ">
       <!-- Grid row -->
       <div class="row mt-3">
         <!-- Grid column -->
