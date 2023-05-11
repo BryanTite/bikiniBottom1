@@ -21,12 +21,12 @@
         <li class="nav-item">
           <router-link  to="/entradas" class="nav-link">ENTRADAS</router-link>
         </li>
-        <li class="nav-item" v-if="isLoggedin">
-            <router-link  to="/tickets" class="nav-link">PANEL ENTRADAS</router-link>
-        </li>
-      <li class="nav-item" v-if="isLoggedin">
-          <router-link  to="/users" class="nav-link">PANEL USERS</router-link>
-      </li>
+          <li class="nav-item" v-if="user?.roles && ((isLoggedin) && (user.roles[0].name === 'Admin') || (user.roles[0].name === 'Moderator'))">
+              <router-link  to="/tickets" class="nav-link">PANEL ENTRADAS</router-link>
+          </li>
+          <li class="nav-item" v-if="user?.roles && ((isLoggedin) && (user.roles[0].name === 'Admin') || (user.roles[0].name === 'Moderator'))">
+              <router-link  to="/users" class="nav-link">PANEL USERS</router-link>
+          </li>
 
       </ul>
         <div class="d-flex">
