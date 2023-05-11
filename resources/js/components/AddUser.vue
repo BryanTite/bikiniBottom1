@@ -120,6 +120,17 @@
 
 
     },
+     beforeRouteEnter(to, from, next){
+         if(!window.Laravel.isLoggedin){
+             window.location.href = "/";
+         }else{
+             if((window.Laravel.user.roles[0].name === 'Admin') || (window.Laravel.user.roles[0].name === 'Moderator')){
+                 next();
+             }else{
+                 next('/');
+             }
+         }
+     }
 
  }
 
