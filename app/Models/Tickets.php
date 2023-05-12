@@ -18,6 +18,6 @@ class Tickets extends Model
     ];
     public function purchase()
     {
-        return $this->belongsToMany(Purchases::class,'purchase_services');
+        return $this->belongsToMany(Purchases::class,'purchases_services');
     }
 }
