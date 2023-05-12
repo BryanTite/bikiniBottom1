@@ -13,4 +13,8 @@ class Purchases extends Model
         'user_id',
         'total_price',
     ];
+    public function purchase()
+    {
+        return $this->belongsToMany(Purchases::class,'purchase_services','id_purchase','id_ticket');
+    }
 }

@@ -4,7 +4,7 @@
     <div class="card box-form">
         <div class="card-body " style="border-width: 0%!important;">
             <div class="d-flex justify-content-between pb-2 mb-2">
-                <h2 class="card-title titulos">AÑADIR ENTRADA</h2>
+                <h2 class="card-title titulos">AÑADIR USUARIO</h2>
                 <div>
                     <router-link :to="{name: 'users'}" class="btn btn-basico">atras</router-link>
                 </div>

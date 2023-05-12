@@ -16,5 +16,8 @@ class Tickets extends Model
         'price',
         'image',
     ];
-
+    public function purchase()
+    {
+        return $this->belongsToMany(Purchases::class,'purchase_services');
+    }
 }

@@ -1,8 +1,8 @@
 <template>
 
-
-    <div class="card">
-        <div class="card-body">
+<div class="container cabecera-bg">
+    <div class="card box-form">
+        <div class="card-body " style="border-width: 0%!important;">
             <div class="d-flex justify-content-between pb-2 mb-2">
                 <h5 class="card-title">Update Post Data</h5>
                 <div>
@@ -68,6 +68,7 @@
 
     </div>
     </div>
+</div>
 </template>
 
 
@@ -166,3 +167,34 @@ export default{
 
 
 </script>
+<style scoped>
+ input{
+    border-color:#946fb5;
+    border-radius: 0!important;
+    border-width: 2px;
+    width: 400px;
+}
+input:hover{
+    border-color:white;
+
+}
+select{
+    border-color:#946fb5;
+    border-radius: 0!important;;
+    border-width: 2px;
+    width: 400px;
+ }
+ textarea{
+    border-color:#946fb5;
+    border-radius: 0!important;
+    border-width: 2px;
+    width: 400px;
+ }
+ textarea:hover{
+    border-color:white;
+
+}
+.card-body{
+    background-color: none;
+}
+</style>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Purchases;
+use App\Models\Tickets;
 
 class PurchaseController extends Controller
 {
@@ -39,5 +41,24 @@ class PurchaseController extends Controller
         return response()->json($cart);
     }
     
+    public function store(Request $request)
+    {
+        $purchase = new Purchases();
+        $purchase->user_id = $request->user_id;
+        $purchase->total_price = $request->total_price;
+        $purchase->save();
+    
+        $tickets = collect($request->tickets)->pluck('id')->toArray();
+    
+        // $purchase->purchase()->sync($tickets); 
+    
+        $response = [
+            'success' => true
+        ];
+    
+        return response()->json($response);
+    }
+    
+
 
 }

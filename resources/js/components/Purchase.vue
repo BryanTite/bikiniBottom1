@@ -55,21 +55,6 @@ export default {
       cart: [],
       total: 0  
     };
-  }, computed:{
-    finalizarCompra() {
-  const userId = 1;
-  const data = {
-    user_id: userId,
-    total_price: this.total
-  };
-  this.$axios.post('/api/purchase', data)
-    .then(response => {
-      console.log('Compra realizada con éxito', response.data);
-    })
-    .catch(error => {
-      console.log('Error al finalizar la compra', error);
-    });
-},
   },
   methods: {
     mostrarEntrada() {
@@ -88,9 +73,28 @@ export default {
     }, 
     eliminarEntradaDelCarrito(index) {
       this.cart.splice(index, 1);
-    }
+    },    
+    finalizarCompra() {
+  const userId = 1;
+  const data = {
+    user_id: userId,
+    total_price: this.total,
+    tickets: this.cart
+  };
+  this.$axios.post('/api/purchase', data)
+    .then(response => {
+      console.log('Compra realizada con éxito', response.data);
+      this.cart = []; // clear the cart after successful purchase
+    })
+    .catch(error => {
+      console.log('Error al finalizar la compra', error);
+    });
+},
   },
   created() {
+    // if(window.Laravel.isLoggedin){
+    //   this.user = windows.laravel.user;
+    // }
     this.mostrarEntrada();
   }
 };
