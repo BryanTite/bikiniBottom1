@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" style="border-width: 0px;">
     <div class="card-body cabecera-bg">
       <div class="d-flex justify-content-between pb-2 mb-2">
         <h2 class="card-title titulos">BINIKI BOTTOM · CESTA</h2>
@@ -92,9 +92,6 @@ export default {
 },
   },
   created() {
-    // if(window.Laravel.isLoggedin){
-    //   this.user = windows.laravel.user;
-    // }
     this.mostrarEntrada();
   }
 };
