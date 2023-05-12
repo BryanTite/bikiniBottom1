@@ -1,87 +1,99 @@
 <template>
 
-<div class="container cabecera-bg">
-    <div class="card box-form">
-        <div class="card-body " style="border-width: 0%!important;">
-            <div class="d-flex justify-content-between pb-2 mb-2">
-                <h2 class="card-title titulos">AÑADIR USUARIO</h2>
-                <div>
-                    <router-link :to="{name: 'users'}" class="btn btn-basico">atras</router-link>
-                </div>
-            </div>
-
-
-            <div v-if="strSuccess" class="alert alert-success alert-dismissible fade show" role="alert">
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                <strong>{{strSuccess}}</strong>
-            </div>
-
-
-            <div v-if="strError" class="alert alert-danger alert-dismissible fade show" role="alert">
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                <strong>{{strError}}</strong>
-            </div>
-
-
-
-
-            <form enctype="multipart/form-data" @submit.prevent="addUser">
-                <div class="form-group mb-2">
-                    <label>Email</label><span class="text-danger"> *</span>
-                    <input type="email" class="form-control" v-model="email" placeholder="Email">
+    <div class="container cabecera-bg">
+        <div class="card box-form">
+            <div class="card-body " style="border-width: 0%!important;">
+                <div class="d-flex justify-content-between pb-2 mb-2">
+                    <h2 class="card-title titulos">AÑADIR ENTRADA</h2>
+                    <div>
+                        <router-link :to="{name: 'users'}" class="btn btn-basico">atras</router-link>
+                    </div>
                 </div>
 
-                <div class="form-group mb-2">
-                    <label>Name</label><span class="text-danger"> *</span>
-                    <input type="text" class="form-control" v-model="name" placeholder="Nombre">
+
+                <div v-if="strSuccess" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <strong>{{strSuccess}}</strong>
                 </div>
 
-                <div class="form-group mb-2">
-                    <label>Apellidos</label><span class="text-danger"> *</span>
-                    <input type="text" class="form-control" v-model="surname" placeholder="Nombre">
+
+                <div v-if="strError" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <strong>{{strError}}</strong>
                 </div>
 
-                <div class="form-group mb-2">
+
+
+
+                <form enctype="multipart/form-data" @submit.prevent="addUser">
+                    <div class="form-group mb-2">
+                        <label>Email</label><span class="text-danger"> *</span>
+                        <input type="email" class="form-control" v-model="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label>Name</label><span class="text-danger"> *</span>
+                        <input type="text" class="form-control" v-model="name" placeholder="Nombre">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label>Apellidos</label><span class="text-danger"> *</span>
+                        <input type="text" class="form-control" v-model="surname" placeholder="Nombre">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label>Contraseña</label><span class="text-danger"> *</span>
+                        <input type="password" class="form-control" v-model="password" placeholder="Enter post name">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label>Teléfono</label><span class="text-danger"> *</span>
+                        <input type="number" class="form-control" v-model="phone" placeholder="Nombre">
+                    </div>
+
                     <label>Rol</label><span class="text-danger"> *</span>
-                    <select class="form-control mb-2" v-model="categories">
-                        <option value="1">Admin</option>
-                        <option value="2">Moderador</option>
-                        <option value="3">User</option>
-                    </select>
-                </div>
+                    <div>
+                        <input type="checkbox" name="role" value="1" v-model="categories">AccesoAdmin
+                    </div>
 
-                <div class="form-group mb-2">
-                    <label>Contraseña</label><span class="text-danger"> *</span>
-                    <input type="password" class="form-control" v-model="password" placeholder="Enter post name">
-                </div>
+                    <div>
+                        <input type="checkbox" name="role" value="2" v-model="categories">AccesoModerador
+                    </div>
 
-                <div class="form-group mb-2">
-                    <label>Teléfono</label><span class="text-danger"> *</span>
-                    <input type="number" class="form-control" v-model="phone" placeholder="Nombre">
-                </div>
+                    <div>
+                        <input type="checkbox" name="role" value="4" v-model="categories">Añadir
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="role" value="5" v-model="categories">Actualizar
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="role" value="6" v-model="categories">Eliminar
+                    </div>
 
 
-                <button type="submit" class="btn btn-basico mt-4 mb-4"> nuevo   </button>
+                    <button type="submit" class="btn btn-basico mt-4 mb-4"> nuevo   </button>
 
 
-            </form>
+                </form>
 
+            </div>
         </div>
     </div>
-</div>
 
- </template>
+</template>
 
 
- <script>
+<script>
 
- export default {
+export default {
     data() {
         return {
             email: '',
             name: '',
             surname: '',
-            categories: '',
+            categories: [],
             password:'',
             phone: '',
             strSuccess: '',
@@ -99,9 +111,11 @@
                 formData.append('email', this.email);
                 formData.append('name', this.name);
                 formData.append('surname', this.surname);
-                formData.append('role_id', this.categories);
                 formData.append('password', this.password);
                 formData.append('phone', this.phone);
+                this.categories.forEach(role => {
+                    formData.append('roles[]', role)
+                });
 
                 this.$axios.post('/api/users/add', formData)
                     .then(response => {
@@ -120,24 +134,24 @@
 
 
     },
-     beforeRouteEnter(to, from, next){
-         if(!window.Laravel.isLoggedin){
-             window.location.href = "/";
-         }else{
-             if((window.Laravel.user.roles[0].name === 'Admin') || (window.Laravel.user.roles[0].name === 'Moderator')){
-                 next();
-             }else{
-                 next('/');
-             }
-         }
-     }
+    beforeRouteEnter(to, from, next){
+        if(!window.Laravel.isLoggedin){
+            window.location.href = "/";
+        }else{
+            if(window.Laravel.user.roles[0].name === 'Admin'){
+                next();
+            }else{
+                next('/');
+            }
+        }
+    }
 
- }
+}
 
 
- </script>
- <style scoped>
- input{
+</script>
+<style scoped>
+input{
     border-color:#946fb5;
     border-radius: 0!important;
     border-width: 2px;
@@ -152,14 +166,14 @@ select{
     border-radius: 0!important;;
     border-width: 2px;
     width: 400px;
- }
- textarea{
+}
+textarea{
     border-color:#946fb5;
     border-radius: 0!important;
     border-width: 2px;
     width: 400px;
- }
- textarea:hover{
+}
+textarea:hover{
     border-color:white;
 
 }

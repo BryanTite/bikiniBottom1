@@ -100,27 +100,32 @@ class UserController extends Controller{
 
     public function add(Request $request){
 
-        $request->validate([
+        try{
+            $user = new User();
+            $user->email = $request->email;
+            $user->name = $request->name;
+            $user->surname = $request->surname;
+            $user->password = Hash::make($request->password);
+            $user->phone = $request->phone;
+            $user->save();
+            $user->roles()->attach(3);
+            $roles = $request->input('roles', []);
+            $user->roles()->attach($roles);
+            $success = true;
+            $message = "Usuario registrado correctamente";
+        }catch(\Illuminate\Database\QueryException $ex){
+            $success = false;
+            $message = $ex->getMessage();
+        }
 
-            'email'=> 'required',
-            'name'=> 'required',
-            'surname'=> 'required',
-            'password'=> 'required',
-            'phone'=> 'required'
-
-        ]);
-
-        $input = $request->all();
-
-        $input['role_id'] = $request->input('role_id');
-
-        User::create($input);
-
-        return response()->json(['success'=>'Post creado correctamente!']);
+        $response=[
+            'success' => $success,
+            'message' => $message,
+        ];
+        return response()->json($response);
 
     }
 
-    /*
     public function edit($id)
     {
         $tickets = Tickets::find($id);
@@ -130,31 +135,24 @@ class UserController extends Controller{
 
     public function update($id, Request $request)
     {
-        $tickets = Tickets::find($id);
+        $users = User::find($id);
         $request->validate([
+            'email' => 'required',
             'name' => 'required',
-            'description' => 'required',
-            'id_categorie' => 'required',
-            'price' => 'required',
-            'file'=> 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048'
-
+            'surname' => 'required',
+            'password' => 'required',
+            'phone'=> 'required'
         ]);
 
         $input = $request->all();
-        $imageName = NULL;
-        if ($image = $request->file('file')) {
-            $destinationPath = 'img/';
-            $imageName = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $imageName);
-            $input['image'] = $imageName;
-            unlink('img/'.$tickets->image);
-        }
-        $tickets->update($input);
+        $input['password'] = bcrypt($input['password']);
+        $users->update($input);
 
+        $users->roles()->sync($request->roles);
+        $users->roles()->attach('3');
 
         return response()->json(['success'=> 'Post update successfully']);
     }
-    */
 
 
     public function delete($id)

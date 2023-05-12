@@ -21,10 +21,10 @@
         <li class="nav-item">
           <router-link  to="/entradas" class="nav-link">ENTRADAS</router-link>
         </li>
-          <li class="nav-item" v-if="user?.roles && ((isLoggedin) && (user.roles[0].name === 'Admin') || (user.roles[0].name === 'Moderator'))">
+          <li class="nav-item" v-if="restriccion('AccesoAdmin') && restriccion('AccesoModerador')">
               <router-link  to="/tickets" class="nav-link">PANEL ENTRADAS</router-link>
           </li>
-          <li class="nav-item" v-if="user?.roles && ((isLoggedin) && (user.roles[0].name === 'Admin') || (user.roles[0].name === 'Moderator'))">
+          <li class="nav-item" v-if="restriccion('AccesoAdmin')">
               <router-link  to="/users" class="nav-link">PANEL USERS</router-link>
           </li>
 
@@ -145,19 +145,14 @@
             })
 
 
+        },
+        restriccion(role){
+            if(this.user && this.user.roles){
+                return this.user.roles.some(userRol => userRol.name === role);
+            }
+            return false;
         }
     },
-     beforeRouteEnter(to, from, next){
-         if(!window.Laravel.isLoggedin){
-             window.location.href = "/";
-         }else{
-             if((window.Laravel.user.roles[0].name === 'Admin') || (window.Laravel.user.roles[0].name === 'Moderator')){
-                 next();
-             }else{
-                 next('/');
-             }
-         }
-     }
  }
  </script>
      <style scoped>

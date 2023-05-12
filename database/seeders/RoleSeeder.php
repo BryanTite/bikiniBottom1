@@ -20,18 +20,32 @@ class RoleSeeder extends Seeder
 
             [
                 'id'             => 1,
-                'name'           => 'Admin',
+                'name'           => 'AccesoAdmin',
 
             ],
-
             [
                 'id'             => 2,
-                'name'           => 'Moderator',
+                'name'           => 'AccesoModerador',
 
             ],
             [
                 'id'             => 3,
-                'name'           => 'User',
+                'name'           => 'AccesoUser',
+
+            ],
+            [
+                'id'             => 4,
+                'name'           => 'Añadir',
+
+            ],
+            [
+                'id'             => 5,
+                'name'           => 'Actualizar',
+
+            ],
+            [
+                'id'             => 6,
+                'name'           => 'Eliminar',
 
             ],
 
@@ -42,9 +56,9 @@ class RoleSeeder extends Seeder
 
         User::all()->each(function($user) {
             if ($user->id == 1) {
-                $user->roles()->sync([1]);
+                $user->roles()->sync([1,2,3,4,5,6]);
             } elseif ($user->id == 2) {
-                $user->roles()->sync([2]);
+                $user->roles()->sync([2,3,4,5,6]);
             } else {
                 $user->roles()->sync([3]);
             }
