@@ -4,9 +4,9 @@
     <div class="card box-form">
         <div class="card-body " style="border-width: 0%!important;">
             <div class="d-flex justify-content-between pb-2 mb-2">
-                <h5 class="card-title">Update Post Data</h5>
+                <h5 class="card-title titulos">ACTUALIZAR USUARIOS</h5>
                 <div>
-                    <router-link :to="{name: 'users'}" class="btn btn-success">Go Back</router-link>
+                    <router-link :to="{name: 'users'}" class="btn btn-success">ATRAS</router-link>
                 </div>
             </div>
 
@@ -25,14 +25,14 @@
 
 
 
-            <form @submit.prevent="updatePost" enctype="multipart/form-data">
+            <form @submit.prevent="updatePost" enctype="multipart/form-data" class="texto">
                 <div class="form-group mb-2">
                     <label>Email</label><span class="text-danger"> *</span>
                     <input type="email" class="form-control" v-model="email" placeholder="Email">
                 </div>
 
                 <div class="form-group mb-2">
-                    <label>Name</label><span class="text-danger"> *</span>
+                    <label>Nombre</label><span class="text-danger"> *</span>
                     <input type="text" class="form-control" v-model="name" placeholder="Nombre">
                 </div>
 
@@ -56,11 +56,11 @@
                 </div>
 
                 <div class="form-group mb-2">
-                    <label>Teléfono</label><span class="text-danger"> *</span>
+                    <label>Telefono</label><span class="text-danger"> *</span>
                     <input type="number" class="form-control" v-model="phone" placeholder="Nombre">
                 </div>
 
-                <button type="submit" class="btn btn-primary mt-4 mb-4"> Update Post</button>
+                <button type="submit" class="btn btn-basico mt-4 mb-4"> ACTUALIZAR</button>
 
 
     </form>
