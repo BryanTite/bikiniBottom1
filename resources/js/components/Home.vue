@@ -34,8 +34,8 @@
   <div class="col-sm-4">
     <div class="card" style="border-radius: 0%;">
         <h2 class="card-title titulos ">EXPERIENCIA</h2>
-        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios"><br>
-      <router-link  to="/" class="btn btn-basico">consultar</router-link>
+        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ir a ver las instalaciones"><br>
+      <router-link  to="/park" class="btn btn-basico">consultar</router-link>
     </div>
   </div>
   <div class="col-sm-4">
