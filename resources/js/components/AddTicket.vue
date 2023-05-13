@@ -147,7 +147,7 @@
          if(!window.Laravel.isLoggedin){
              window.location.href = "/";
          }else{
-             if((window.Laravel.user.roles[0].name === 'Admin') || (window.Laravel.user.roles[0].name === 'Moderator')){
+             if((window.Laravel.user.roles[0].name === 'AccesoAdmin') || (window.Laravel.user.roles[0].name === 'AccesoModerador') || (window.Laravel.user.roles[0].name === 'Añadir')){
                  next();
              }else{
                  next('/');

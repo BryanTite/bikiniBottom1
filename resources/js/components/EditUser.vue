@@ -42,15 +42,6 @@
                 </div>
 
                 <div class="form-group mb-2">
-                    <label>Rol</label><span class="text-danger"> *</span>
-                    <select class="form-control mb-2" v-model="categories">
-                        <option value="1">Admin</option>
-                        <option value="2">Moderador</option>
-                        <option value="3">User</option>
-                    </select>
-                </div>
-
-                <div class="form-group mb-2">
                     <label>Contraseña</label><span class="text-danger"> *</span>
                     <input type="password" class="form-control" v-model="password" placeholder="Enter post name">
                 </div>
@@ -58,6 +49,27 @@
                 <div class="form-group mb-2">
                     <label>Teléfono</label><span class="text-danger"> *</span>
                     <input type="number" class="form-control" v-model="phone" placeholder="Nombre">
+                </div>
+
+                <label>Rol</label><span class="text-danger"> *</span>
+                <div>
+                    <input class="espacioDiv" type="checkbox" name="role" value="1" v-model="categories">AccesoAdmin
+                </div>
+
+                <div>
+                    <input class="espacioDiv" type="checkbox" name="role" value="2" v-model="categories">AccesoModerador
+                </div>
+
+                <div>
+                    <input class="espacioDiv" type="checkbox" name="role" value="4" v-model="categories">Añadir
+                </div>
+
+                <div>
+                    <input class="espacioDiv" type="checkbox" name="role" value="5" v-model="categories">Actualizar
+                </div>
+
+                <div>
+                    <input class="espacioDiv" type="checkbox" name="role" value="6" v-model="categories">Eliminar
                 </div>
 
                 <button type="submit" class="btn btn-primary mt-4 mb-4"> Update Post</button>
@@ -80,15 +92,13 @@ export default{
             email: '',
             name: '',
             surname: '',
-            categories: '',
             password:'',
             phone: '',
+            categories: [],
             strSuccess: '',
             strError: ''
         }
     },
-
-
     created() {
         this.$axios.get('/sanctum/csrf-cookie').then(response => {
             this.$axios.get(`/api/users/edit/${this.$route.params.id}`)
@@ -96,9 +106,12 @@ export default{
                     this.email = response.data['email'];
                     this.name = response.data['name'];
                     this.surname = response.data['surname'];
-                    this.categories = response.data['role_id'];
                     this.password = response.data['password'];
                     this.phone = response.data['phone'];
+
+                    //EDITAAAR no pilla los roles
+                    this.categories = response.data['roles'];
+
                 })
                 .catch(function(error) {
                     console.log(error);
@@ -106,20 +119,6 @@ export default{
         })
     },
     methods: {
-        onChange(e) {
-            this.img = e.target.files[0];
-            let reader = new FileReader();
-            reader.addEventListener("load", function () {
-                this.imgPreview = reader.result;
-            }.bind(this), false);
-
-
-            if (this.img) {
-                if ( /\.(jpe?g|png|gif)$/i.test( this.img.name ) ) {
-                    reader.readAsDataURL( this.img );
-                }
-            }
-        },
         updatePost(e) {
             this.$axios.get('/sanctum/csrf-cookie').then(response => {
                 let existingObj = this;
@@ -131,11 +130,14 @@ export default{
 
 
                 const formData = new FormData();
+                formData.append('email', this.email);
                 formData.append('name', this.name);
-                formData.append('description', this.description);
-                formData.append('id_categorie', this.categories);
-                formData.append('price', this.price);
-                formData.append('file', this.img);
+                formData.append('surname', this.surname);
+                formData.append('password', this.password);
+                formData.append('phone', this.phone);
+                this.categories.forEach(role => {
+                    formData.append('roles[]', role)
+                });
 
 
                 this.$axios.post(`/api/tickets/update/${this.$route.params.id}`, formData, config)
@@ -156,7 +158,7 @@ export default{
         if(!window.Laravel.isLoggedin){
             window.location.href = "/";
         }else{
-            if((window.Laravel.user.roles[0].name === 'Admin') || (window.Laravel.user.roles[0].name === 'Moderator')){
+            if((window.Laravel.user.roles[0].name === 'AccesoAdmin') || (window.Laravel.user.roles[0].name === 'Actualizar')){
                 next();
             }else{
                 next('/');
@@ -168,6 +170,9 @@ export default{
 
 </script>
 <style scoped>
+.espacioDiv{
+    width: 20px;
+}
  input{
     border-color:#946fb5;
     border-radius: 0!important;

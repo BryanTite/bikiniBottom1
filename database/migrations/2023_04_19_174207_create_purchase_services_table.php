@@ -12,9 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('purchases_services', function (Blueprint $table) {
-            $table->foreignId('id_purchase')->references('id')->on('purchases')->onDelete('cascade');;
-            $table->foreignId('id_ticket')->references('id')->on('tickets')->onDelete('cascade');;
+            $table->id();
+            //id_purchase-> el nombre del campo
+            $table->foreignId('purchases_id')->references('id')->on('purchases')->onDelete('cascade');
+            //$table->foreignId('id_ticket')->references('id')->on('tickets')->onDelete('cascade');
 
+            $table->string('name');
             $table->integer('quantity');
             $table->integer('price');
             $table->timestamps();

@@ -48,8 +48,8 @@ class PurchaseController extends Controller
         $purchase->total_price = $request->total_price;
         $purchase->save();
 
-        $roles = $request->input('tickets', []);
-        $purchase->tickets()->attach($roles);
+        $tickets = $request->input('tickets', []);
+        $purchase->tickets()->attach($tickets);
 
         $response = [
             'success' => true

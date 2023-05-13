@@ -15,6 +15,6 @@ class Purchases extends Model
     ];
     public function tickets()
     {
-        return $this->belongsToMany(Purchases::class,'purchases_services','id_purchase','id_ticket');
+        return $this->belongsToMany(Purchases::class,'purchases_services')->withTimestamps();
     }
 }

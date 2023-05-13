@@ -21,7 +21,7 @@
         <li class="nav-item">
           <router-link  to="/entradas" class="nav-link">ENTRADAS</router-link>
         </li>
-          <li class="nav-item" v-if="restriccion('AccesoAdmin') && restriccion('AccesoModerador')">
+          <li class="nav-item" v-if="restriccion('AccesoAdmin') || restriccion('AccesoModerador')">
               <router-link  to="/tickets" class="nav-link">PANEL ENTRADAS</router-link>
           </li>
           <li class="nav-item" v-if="restriccion('AccesoAdmin')">
@@ -30,9 +30,9 @@
 
       </ul>
         <div class="d-flex">
-            <router-link v-if="isLoggedin" to="/login" class="nav-item txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
-            <router-link to="/login" class="nav-item txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
-            <router-link to="/purchase" class="nav-item txt-menu ms-2"><img src="../assets/icons/buy.svg" class="iconos-header" alt="ir al carro de la compra"></router-link>
+            <router-link v-if="isLoggedin" to="/login" class="nav-item nav-link txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+            <router-link to="/login" class="nav-item nav-link txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
+            <router-link to="/purchase" class="nav-item nav-link txt-menu ms-2"><img src="../assets/icons/buy.svg" class="iconos-header" alt="ir al carro de la compra"></router-link>
 
         </div>
     </div>

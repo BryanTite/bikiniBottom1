@@ -53,23 +53,23 @@
 
                     <label>Rol</label><span class="text-danger"> *</span>
                     <div>
-                        <input type="checkbox" name="role" value="1" v-model="categories">AccesoAdmin
+                        <input class="espacioDiv" type="checkbox" name="role" value="1" v-model="categories">AccesoAdmin
                     </div>
 
                     <div>
-                        <input type="checkbox" name="role" value="2" v-model="categories">AccesoModerador
+                        <input class="espacioDiv" type="checkbox" name="role" value="2" v-model="categories">AccesoModerador
                     </div>
 
                     <div>
-                        <input type="checkbox" name="role" value="4" v-model="categories">Añadir
+                        <input class="espacioDiv" type="checkbox" name="role" value="4" v-model="categories">Añadir
                     </div>
 
                     <div>
-                        <input type="checkbox" name="role" value="5" v-model="categories">Actualizar
+                        <input class="espacioDiv" type="checkbox" name="role" value="5" v-model="categories">Actualizar
                     </div>
 
                     <div>
-                        <input type="checkbox" name="role" value="6" v-model="categories">Eliminar
+                        <input class="espacioDiv" type="checkbox" name="role" value="6" v-model="categories">Eliminar
                     </div>
 
 
@@ -138,7 +138,7 @@ export default {
         if(!window.Laravel.isLoggedin){
             window.location.href = "/";
         }else{
-            if(window.Laravel.user.roles[0].name === 'Admin'){
+            if((window.Laravel.user.roles[0].name === 'AccesoAdmin') || (window.Laravel.user.roles[0].name === 'Añadir')){
                 next();
             }else{
                 next('/');
@@ -151,6 +151,9 @@ export default {
 
 </script>
 <style scoped>
+.espacioDiv{
+    width: 20px;
+}
 input{
     border-color:#946fb5;
     border-radius: 0!important;

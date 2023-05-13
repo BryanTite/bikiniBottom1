@@ -92,12 +92,6 @@ class UserController extends Controller{
     }
 
 
-    //Panel admin/moderator
-    public function panel(){
-        $roles = User::with('roles')->get();
-        return response()->json($roles);
-    }
-
     public function add(Request $request){
 
         try{
@@ -128,8 +122,8 @@ class UserController extends Controller{
 
     public function edit($id)
     {
-        $tickets = Tickets::find($id);
-        return response()->json($tickets);
+        $users = User::find($id);
+        return response()->json($users);
     }
 
 
