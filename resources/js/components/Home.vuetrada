@@ -9,13 +9,13 @@
          </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <router-link to="/"><img src="../../assets/img/oferta1.svg" class="d-block w-100" alt="imagen publicitaria"></router-link>
+                    <router-link to="/entradas"><img src="../../assets/img/oferta1.svg" class="d-block w-100" alt="imagen publicitaria"></router-link>
                 </div>
                 <div class="carousel-item">
-                    <router-link to="/"><img src="../../assets/img/oferta3.svg" class="d-block w-100" alt="imagen publicitaria"></router-link>
+                    <router-link to="/entradas"><img src="../../assets/img/oferta3.svg" class="d-block w-100" alt="imagen publicitaria"></router-link>
                 </div>
                 <div class="carousel-item">
-                    <router-link to="/"><img src="../../assets/img/oferta2.svg" class="d-block w-100" alt="imagen publicitaria"></router-link>
+                    <router-link to="/entradas"><img src="../../assets/img/oferta2.svg" class="d-block w-100" alt="imagen publicitaria"></router-link>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -34,8 +34,8 @@
   <div class="col-sm-4">
     <div class="card" style="border-radius: 0%;">
         <h2 class="card-title titulos ">EXPERIENCIA</h2>
-        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ver los testimonios"><br>
-      <router-link  to="/" class="btn btn-basico">consultar</router-link>
+        <img class="iconos-info" src="../../assets/icons/consultar.svg" alt="ir a ver las instalaciones"><br>
+      <router-link  to="/park" class="btn btn-basico">consultar</router-link>
     </div>
   </div>
   <div class="col-sm-4">

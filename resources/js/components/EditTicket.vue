@@ -5,9 +5,9 @@
     <div class="card box-form">
         <div class="card-body " style="border-width: 0%!important;">
             <div class="d-flex justify-content-between pb-2 mb-2">
-                <h5 class="card-title">ACTUALIZAR ENTRADAS</h5>
+                <h5 class="card-title titulos">ACTUALIZAR ENTRADAS</h5>
                 <div>
-                    <router-link :to="{name: 'tickets'}" class="btn btn-success">Go Back</router-link>
+                    <router-link :to="{name: 'tickets'}" class="btn btn-success">ATRAS</router-link>
                 </div>
             </div>
 
