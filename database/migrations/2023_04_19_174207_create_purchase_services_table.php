@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('purchases_services', function (Blueprint $table) {
             $table->id();
-            //id_purchase-> el nombre del campo
+            //id_purchase-> el nombre del campo tabla
             $table->foreignId('purchases_id')->references('id')->on('purchases')->onDelete('cascade');
             //$table->foreignId('id_ticket')->references('id')->on('tickets')->onDelete('cascade');
 
