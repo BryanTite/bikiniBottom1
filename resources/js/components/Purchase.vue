@@ -53,7 +53,7 @@ export default {
   data() {
     return {
       cart: [],
-      total: 0  
+      total: 0
     };
   },
   methods: {
@@ -70,10 +70,11 @@ export default {
       tickets.forEach(ticket => {
         this.total += ((ticket.quantity === undefined)? 0: ticket.quantity)*ticket.price;
       });
-    }, 
+    },
     eliminarEntradaDelCarrito(index) {
-      this.cart.splice(index, 1);
-    },    
+        this.cart.splice(index, 1);
+        this.actualizarCantidad(this.cart);
+    },
     finalizarCompra() {
   const userId = 1;
   const data = {

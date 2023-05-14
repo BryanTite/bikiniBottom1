@@ -13,7 +13,8 @@
         <div class="card" style="border-radius: 0%;" v-bind:style="{ backgroundImage: `url(/img/${ticket.image})` }">
             <h2 class="titulos">{{ticket.name}}</h2>
             <p class="precio difuminado">{{ticket.price}}<span class="signo">€</span></p>
-            <button class="btn btn-basico" @click="insertarEntrada(ticket.id, ticket.name, ticket.price)">COMPRAR</button>
+            <button v-if="isLoggedin" class="btn btn-basico" @click="insertarEntrada(ticket.id, ticket.name, ticket.price)">COMPRAR</button>
+            <button v-else class="btn btn-basico" @click="$router.push('/login')">COMPRAR</button>
         </div>
         </div>
     </div>
@@ -48,7 +49,7 @@ input:hover{
 h1 {
 color: #946fb5;
 text-shadow: white 1px 1px;
-  
+
 }
 .precio{
 margin-top: -20px
@@ -95,7 +96,9 @@ export default {
             tickets: [],
             strSuccess: '',
             strError: '',
-            busqueda:''
+            busqueda:'',
+            isLoggedin: false,
+            user: null,
 
         }
     },
@@ -112,6 +115,11 @@ export default {
                 });
 
         });
+        this.$axios.get('api/user')
+        if(window.Laravel.isLoggedin){
+            this.isLoggedin =true;
+            this.user = window.Laravel.user;
+        }
 
     }, computed:{
         enlistarEntradas() {
@@ -135,7 +143,13 @@ export default {
             }).catch(error => {
                 console.log('Error al añadir entrada al carrito', error);
             });
-        }, 
+        },
+        restriccion(role){
+            if(this.user && this.user.roles){
+                return this.user.roles.some(userRol => userRol.name === role);
+            }
+            return false;
+        }
 
     },
 }

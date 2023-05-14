@@ -32,7 +32,7 @@
         <div class="d-flex">
             <router-link v-if="isLoggedin" to="/login" class="nav-item nav-link txt-menu" @click="logout"><img src="../assets/icons/salir.svg" class="iconos-header" alt="iniciar sesion"></router-link>
             <router-link to="/login" class="nav-item nav-link txt-menu ms-2"><img src="../assets/icons/user.svg" class="iconos-header" alt="iniciar sesion"></router-link>
-            <router-link to="/purchase" class="nav-item nav-link txt-menu ms-2"><img src="../assets/icons/buy.svg" class="iconos-header" alt="ir al carro de la compra"></router-link>
+            <router-link v-if="isLoggedin" to="/purchase" class="nav-item nav-link txt-menu ms-2"><img src="../assets/icons/buy.svg" class="iconos-header" alt="ir al carro de la compra"></router-link>
 
         </div>
     </div>
