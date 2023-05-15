@@ -97,6 +97,7 @@ input:hover{
         }
     },
     methods: {
+    //registro
        register(e){
            e.preventDefault()
            if(this.password.length > 0) {
