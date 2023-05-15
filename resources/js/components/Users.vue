@@ -104,7 +104,7 @@ export default {
 
     },
     methods: {
-
+//elimina un usuario
         deleteUser(id) {
             axios.delete(`api/users/delete/${id}`)
                 .then(response => {
