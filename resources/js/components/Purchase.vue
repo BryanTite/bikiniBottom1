@@ -57,6 +57,7 @@ export default {
     };
   },
   methods: {
+  //muestra el array de todas las entradas en la bd
     mostrarEntrada() {
       this.$axios.get('/api/mosTickets').then(response => {
         this.cart = response.data;
@@ -65,16 +66,19 @@ export default {
         console.log('Error al cargar el carrito', error);
       });
     },
+    //actualiza la cantidad seleccionada de la cantidad
     actualizarCantidad(tickets) {
       this.total=0;
       tickets.forEach(ticket => {
         this.total += ((ticket.quantity === undefined)? 0: ticket.quantity)*ticket.price;
       });
     },
+    //elimina la entrada
     eliminarEntradaDelCarrito(index) {
         this.cart.splice(index, 1);
         this.actualizarCantidad(this.cart);
     },
+    //finaliza el proceso de compra
     finalizarCompra() {
   const userId = 1;
   const data = {
