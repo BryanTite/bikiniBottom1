@@ -45,6 +45,7 @@
         }
     },
     methods: {
+    //cerrar sesion
         logout(e) {
             e.preventDefault()
             this.$axios.get('/sanctum/csrf-cookie').then(response => {
