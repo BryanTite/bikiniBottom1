@@ -109,6 +109,7 @@ export default{
         })
     },
     methods: {
+    //evento para cambiar la imagen de la entrada
         onChange(e) {
             this.img = e.target.files[0];
             let reader = new FileReader();
