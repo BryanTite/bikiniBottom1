@@ -94,7 +94,7 @@
         }
     },
     methods: {
-
+//para cambiar la iamgen
         onChangeImg(e) {
             this.img = e.target.files[0];
             let reader = new FileReader();
