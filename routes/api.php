@@ -16,11 +16,11 @@ use App\Http\Controllers\API\PurchaseController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
+// apra login y registro
 Route::post('login',[UserController::class,'login']);
 Route::post('register',[UserController::class,'register']);
 Route::post('logout',[UserController::class,'logout'])->middleware(['auth:sanctum']);
-
+//entradas
 Route::group(['prefix' => 'tickets'], function() {
     Route::get('/', [TicketController::class,'index']);
 });
@@ -46,10 +46,11 @@ Route::group(['prefix' => 'users','middleware' => 'auth:sanctum'], function() {
     Route::get('edit/{id}', [UserController::class,'edit']);
     Route::delete('delete/{id}', [UserController::class,'delete']);
 });
-
+//usuarios
 Route::post('insUsers', [PurchaseController::class,'insertarUsuario']);
 Route::get('mosUsers', [PurchaseController::class,'mostrarUsuario']);
-Route::post('purchase', [PurchaseController::class,'store']); //para el carrito
+ //para el carrito
+Route::post('purchase', [PurchaseController::class,'store']);
 
 /*
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
