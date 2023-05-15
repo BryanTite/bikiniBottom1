@@ -40,6 +40,7 @@ export default {
     };
   },
   mounted() {
+  //canvas para el mapa ionteractivo
     this.canvas = this.$refs.canRef;
     this.ctx = this.canvas.getContext("2d");
     this.canvasWidth = this.canvas.width;
@@ -57,6 +58,7 @@ export default {
     this.drawDefaultImage();
   },
   methods: {
+  //cuando se mueve el raton encima del mapa para mostrar una imagen u otra
     onMouseMove(event) {
       const x = event.offsetX;
       const y = event.offsetY;
@@ -75,6 +77,7 @@ export default {
       }
       this.drawImage();
     },
+    //pintar la imagen por defecto del mapa
     drawDefaultImage() {
       const img = new Image();
       img.src = this.defaultImgSrc;
@@ -83,6 +86,7 @@ export default {
         this.ctx.drawImage(img, 0, 0, this.canvasWidth, this.canvasHeight);
       };
     },
+    //pintar la imagen
     drawImage() {
       const img = new Image();
       img.src = this.items[this.currentImgIndex - 1].src;
