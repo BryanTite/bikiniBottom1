@@ -109,8 +109,6 @@ export default{
                     this.password = response.data['password'];
                     this.phone = response.data['phone'];
 
-                    //EDITAAAR no pilla los roles
-                    this.categories = response.data['roles'];
 
                 })
                 .catch(function(error) {
@@ -140,7 +138,7 @@ export default{
                 });
 
 
-                this.$axios.post(`/api/tickets/update/${this.$route.params.id}`, formData, config)
+                this.$axios.post(`/api/users/update/${this.$route.params.id}`, formData, config)
                     .then(response => {
                         existingObj.strError = "";
                         existingObj.strSuccess = response.data.success;
