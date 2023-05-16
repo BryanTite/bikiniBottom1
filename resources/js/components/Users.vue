@@ -106,15 +106,19 @@ export default {
     methods: {
 //elimina un usuario
         deleteUser(id) {
-            axios.delete(`api/users/delete/${id}`)
-                .then(response => {
-                    console.log(response.data);
-                    const index = this.users.findIndex(user => user.id === id);
-                    this.users.splice(index, 1);
-                })
-                .catch(error => {
-                    console.log(error.response.data);
-                });
+            if (window.Laravel.user.roles.some(role => role.name === 'Eliminar')) {
+                axios.delete(`api/users/delete/${id}`)
+                    .then(response => {
+                        console.log(response.data);
+                        const index = this.users.findIndex(user => user.id === id);
+                        this.users.splice(index, 1);
+                    })
+                    .catch(error => {
+                        console.log(error.response.data);
+                    });
+            } else {
+                console.log("No tienes permiso para eliminar.");
+            }
         }
 
     },
@@ -122,9 +126,9 @@ export default {
         if(!window.Laravel.isLoggedin){
             window.location.href = "/";
         }else{
-            if(window.Laravel.user.roles[0].name === 'AccesoAdmin'){
+            if (window.Laravel.user.roles.some(role => role.name === 'AccesoAdmin')) {
                 next();
-            }else{
+            } else {
                 next('/');
             }
         }

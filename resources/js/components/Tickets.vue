@@ -109,15 +109,19 @@ export default {
     methods: {
 
         deleteTicket(id) {
-            axios.delete(`api/tickets/delete/${id}`)
-                .then(response => {
-                    console.log(response.data);
-                    const index = this.tickets.findIndex(ticket => ticket.id === id);
-                    this.tickets.splice(index, 1);
-                })
-                .catch(error => {
-                    console.log(error.response.data);
-                });
+            if (window.Laravel.user.roles.some(role => role.name === 'Eliminar')) {
+                axios.delete(`api/tickets/delete/${id}`)
+                    .then(response => {
+                        console.log(response.data);
+                        const index = this.tickets.findIndex(ticket => ticket.id === id);
+                        this.tickets.splice(index, 1);
+                    })
+                    .catch(error => {
+                        console.log(error.response.data);
+                    });
+            } else {
+                console.log("No tienes permiso para eliminar.");
+            }
         }
 
     },
@@ -125,9 +129,11 @@ export default {
         if(!window.Laravel.isLoggedin){
             window.location.href = "/";
         }else{
-            if((window.Laravel.user.roles[0].name === 'AccesoAdmin') || (window.Laravel.user.roles[0].name === 'AccesoModerador')){
+            if (window.Laravel.user.roles.some(role => role.name === 'AccesoAdmin')) {
                 next();
-            }else{
+            } else if (window.Laravel.user.roles.some(role => role.name === 'AccesoModerador')) {
+                next();
+            } else {
                 next('/');
             }
         }

@@ -156,9 +156,11 @@ export default{
         if(!window.Laravel.isLoggedin){
             window.location.href = "/";
         }else{
-            if((window.Laravel.user.roles[0].name === 'AccesoAdmin') || (window.Laravel.user.roles[0].name === 'Actualizar')){
+            if (window.Laravel.user.roles.some(role => role.name === 'AccesoAdmin') && window.Laravel.user.roles.some(role => role.name === 'Actualizar')) {
                 next();
-            }else{
+            } else if (window.Laravel.user.roles.some(role => role.name === 'AccesoModerador') && window.Laravel.user.roles.some(role => role.name === 'Actualizar')) {
+                next();
+            } else {
                 next('/');
             }
         }

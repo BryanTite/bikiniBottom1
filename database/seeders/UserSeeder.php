@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'id'             => 2,
-                'email'          => 'moderator@gmail.com',
+                'email'          => 'moderador@gmail.com',
                 'name'           => 'Moderator',
                 'surname'        => 'Moderator',
                 'password'       => bcrypt('1234'),

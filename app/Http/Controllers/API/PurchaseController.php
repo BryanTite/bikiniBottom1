@@ -10,11 +10,13 @@ use App\Models\Tickets;
 
 class PurchaseController extends Controller
 {
+    //Muestra todos los usuarios
     public function index(){
         $users = User::all()->toArray();
         return $users;
     }
 
+    //Inserta las entradas al carrito
     public function insertarEntrada(Request $request)
     {
 
@@ -34,6 +36,7 @@ class PurchaseController extends Controller
 
     }
 
+    //Muestra las entradas en el carrito
     public function mostrarEntrada()
     {
         $cart = session()->get('cart', []);
@@ -41,15 +44,17 @@ class PurchaseController extends Controller
         return response()->json($cart);
     }
 
+    //Guardar carrito // Intento de guardar tabla NM
     public function store(Request $request)
     {
         $purchase = new Purchases();
         $purchase->user_id = $request->user_id;
         $purchase->total_price = $request->total_price;
-        $purchase->save();
-
         $tickets = $request->input('tickets', []);
         $purchase->tickets()->attach($tickets);
+        $purchase->save();
+
+
 
         $response = [
             'success' => true

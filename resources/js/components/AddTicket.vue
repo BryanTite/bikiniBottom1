@@ -94,7 +94,7 @@
         }
     },
     methods: {
-//para cambiar la iamgen
+//para cambiar la imagen
         onChangeImg(e) {
             this.img = e.target.files[0];
             let reader = new FileReader();
@@ -147,9 +147,11 @@
          if(!window.Laravel.isLoggedin){
              window.location.href = "/";
          }else{
-             if((window.Laravel.user.roles[0].name === 'AccesoAdmin') || (window.Laravel.user.roles[0].name === 'AccesoModerador') || (window.Laravel.user.roles[0].name === 'Añadir')){
+             if (window.Laravel.user.roles.some(role => role.name === 'AccesoAdmin') && window.Laravel.user.roles.some(role => role.name === 'Añadir')) {
                  next();
-             }else{
+             } else if (window.Laravel.user.roles.some(role => role.name === 'AccesoModerador') && window.Laravel.user.roles.some(role => role.name === 'Añadir')) {
+                 next();
+             } else {
                  next('/');
              }
          }
